@@ -90,13 +90,10 @@ export default function RootLayout({ children }) {
                   "name": "ORBITIX DIGITAL",
                   "url": "https://orbitixdigital.com",
                    "telephone": "+15105005817",
-                   "email": "precision@orbitixdigital.com",
+                   "email": "info@orbitixdigital.com",
                    "address": {
                      "@type": "PostalAddress",
-                     "streetAddress": "418 Broadway, Suite N",
-                     "addressLocality": "Albany",
-                     "addressRegion": "New York",
-                     "postalCode": "12207",
+                     "streetAddress": "Albany, New York 12207",
                      "addressCountry": "US"
                    },
                   "areaServed": "Worldwide",

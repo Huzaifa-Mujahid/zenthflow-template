@@ -248,8 +248,8 @@ export default function Navbar() {
                 >
                   <div>
                     <span className="font-label text-[#a8a8a8] mb-4 block tracking-widest uppercase">Contact</span>
-                    <a href="mailto:hello@orbitixdigital.com" className="font-body text-xl text-white hover:chrome-text transition-all duration-300 mb-2 block">
-hello@orbitixdigital.com
+                    <a href="mailto:info@orbitixdigital.com" className="font-body text-xl text-white hover:chrome-text transition-all duration-300 mb-2 block">
+                      info@orbitixdigital.com
                     </a>
                     <a href="tel:+15105005817" className="font-body text-lg text-[#c4c7c8] hover:text-white transition-all duration-300">
                       +1 (510) 500-5817

@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Direct Communication",
-    value: "precision@orbitixdigital.com",
-    href: "mailto:precision@orbitixdigital.com",
+    value: "info@orbitixdigital.com",
+    href: "mailto:info@orbitixdigital.com",
   },
   {
     icon: Phone,
@@ -28,7 +28,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Global Hub",
-    value: "418 Broadway, Suite N, Albany, New York 12207",
+    value: "Albany, New York 12207",
   },
 ];
 
