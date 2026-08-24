@@ -9,7 +9,11 @@ import {
   Car,
   Landmark, 
   Briefcase, 
-  GraduationCap
+  GraduationCap,
+  HardHat,
+  ShieldCheck,
+  Activity,
+  Home
 } from "lucide-react"; 
 
 const industries = [
@@ -48,6 +52,30 @@ const industries = [
     name: "Professional Services",
     icon: <Briefcase className="w-14 h-14 text-[#C57035]" strokeWidth={1.2} />,
     imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop",
+  },
+  {
+    id: "contractors",
+    name: "General Contractors",
+    icon: <HardHat className="w-14 h-14 text-[#C57035]" strokeWidth={1.2} />,
+    imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2069&auto=format&fit=crop",
+  },
+  {
+    id: "insurance",
+    name: "Insurance Solutions",
+    icon: <ShieldCheck className="w-14 h-14 text-[#C57035]" strokeWidth={1.2} />,
+    imageUrl: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: "trainers",
+    name: "Personal Trainers",
+    icon: <Activity className="w-14 h-14 text-[#C57035]" strokeWidth={1.2} />,
+    imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: "realestate",
+    name: "Real Estate",
+    icon: <Home className="w-14 h-14 text-[#C57035]" strokeWidth={1.2} />,
+    imageUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop",
   },
 ];
 

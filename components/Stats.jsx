@@ -21,8 +21,8 @@ const statsData = [
     desc: "All 5-star reviews. No compromises. No \"just okay.\""
   },
   {
-    number: "3+",
-    title: "Years of expertise",
+    number: "7+",
+    title: "Years of experience",
     desc: "Expertise in UX, branding, and growth-focused design."
   }
 ];

@@ -20,6 +20,10 @@ const faqData = [
   {
     question: "How do you handle revisions?",
     answer: "We believe in collaborative development. We include dedicated revision cycles during the design and development phases to ensure the final product aligns perfectly with your vision before launch."
+  },
+  {
+    question: "What are your pricing and service packages?",
+    answer: "We don't believe in rigid, one-size-fits-all price lists. Instead, we deliver the best possible service through tailored, cost-effective solutions built around your specific goals and budget. For a personalized quote and to get started, simply reach out to us and we'll take care of the rest."
   }
 ];
 

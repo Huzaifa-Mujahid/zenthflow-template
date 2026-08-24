@@ -188,10 +188,10 @@ export default function Navbar() {
             {/* Grid Pattern */}
             <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-            <div className="max-w-[1440px] w-full mx-auto px-5 md:px-20 h-full flex flex-col md:flex-row items-center pt-24 pb-12 relative z-10">
+            <div className="max-w-[1440px] w-full mx-auto px-5 md:px-20 h-full overflow-y-auto flex flex-col md:flex-row md:items-center md:pt-24 pt-28 pb-12 relative z-10">
               
               {/* Navigation Links */}
-              <div className="w-full md:w-2/3 flex flex-col justify-center h-full gap-2 md:gap-4 overflow-y-auto pt-10 pb-20 no-scrollbar">
+              <div className="w-full md:w-2/3 flex flex-col md:justify-center gap-2 md:gap-4 md:h-full pt-6 pb-10 no-scrollbar">
                 <span className="font-label text-[#a8a8a8] mb-4 md:mb-8 tracking-widest uppercase">Navigation</span>
                 {navLinks.map((link, i) => {
                   const isActive = pathname === link.href || (link.hasDropdown && pathname.startsWith('/services'));
@@ -239,7 +239,7 @@ export default function Navbar() {
               </div>
 
               {/* Info / Contact Widget */}
-              <div className="w-full md:w-1/3 mt-12 md:mt-0 flex flex-col justify-end md:justify-center border-t md:border-t-0 md:border-l border-[rgba(255,255,255,0.08)] pt-8 md:pt-0 md:pl-16 h-full md:h-auto">
+              <div className="w-full md:w-1/3 mt-8 md:mt-0 flex flex-col md:justify-center border-t md:border-t-0 md:border-l border-[rgba(255,255,255,0.08)] pt-8 md:pt-0 md:pl-16 md:h-full">
                 <motion.div 
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
