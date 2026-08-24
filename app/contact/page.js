@@ -49,8 +49,7 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Message sent! We'll get back to you within 24 hours.");
-      setFormData({ name: "", email: "", services: [], message: "" });
+      e.target.submit();
     }
   };
 
@@ -137,14 +136,22 @@ export default function ContactPage() {
           <motion.form
             {...fadeUp(0.15)}
             onSubmit={handleSubmit}
+            action="https://formsubmit.co/info@orbitixdigital.com"
+            method="POST"
             className="glass-card-no-hover p-8 space-y-5"
           >
+            {/* Formsubmit.co configuration */}
+            <input type="hidden" name="_subject" value="New Inquiry - Orbitix Digital" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://orbitixdigital.com/contact" />
             <div className="relative">
               <label className="block font-label text-[#a8a8a8] mb-2 uppercase text-xs">
                 Your Name
               </label>
               <input
                 type="text"
+                name="name"
                 className={`input-field ${errors.name ? 'error' : ''}`}
                 placeholder="John Doe"
                 value={formData.name}
@@ -158,6 +165,7 @@ export default function ContactPage() {
               </label>
               <input
                 type="email"
+                name="email"
                 className={`input-field ${errors.email ? 'error' : ''}`}
                 placeholder="john@example.com"
                 value={formData.email}
@@ -193,6 +201,8 @@ export default function ContactPage() {
                     </div>
                     <input
                       type="checkbox"
+                      name="services"
+                      value={service}
                       className="hidden"
                       checked={formData.services.includes(service)}
                       onChange={(e) => {
@@ -218,6 +228,7 @@ export default function ContactPage() {
                 Message
               </label>
               <textarea
+                name="message"
                 className={`input-field resize-none h-32 ${errors.message ? 'error' : ''}`}
                 placeholder="Tell us about your project..."
                 value={formData.message}
