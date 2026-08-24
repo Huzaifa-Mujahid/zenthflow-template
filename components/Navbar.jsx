@@ -251,8 +251,8 @@ export default function Navbar() {
                     <a href="mailto:hello@orbitixdigital.com" className="font-body text-xl text-white hover:chrome-text transition-all duration-300 mb-2 block">
 hello@orbitixdigital.com
                     </a>
-                    <a href="tel:+1234567890" className="font-body text-lg text-[#c4c7c8] hover:text-white transition-all duration-300">
-                      +1 (234) 567-890
+                    <a href="tel:+15105005817" className="font-body text-lg text-[#c4c7c8] hover:text-white transition-all duration-300">
+                      +1 (510) 500-5817
                     </a>
                   </div>
 

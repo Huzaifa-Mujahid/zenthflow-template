@@ -89,15 +89,16 @@ export default function RootLayout({ children }) {
                   "@id": "https://orbitixdigital.com/#localbusiness",
                   "name": "ORBITIX DIGITAL",
                   "url": "https://orbitixdigital.com",
-                  "telephone": "+923237099044",
-                  "email": "precision@orbitixdigital.com",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Kareem Park",
-                    "addressLocality": "Lahore",
-                    "addressRegion": "Punjab",
-                    "addressCountry": "PK"
-                  },
+                   "telephone": "+15105005817",
+                   "email": "precision@orbitixdigital.com",
+                   "address": {
+                     "@type": "PostalAddress",
+                     "streetAddress": "418 Broadway, Suite N",
+                     "addressLocality": "Albany",
+                     "addressRegion": "New York",
+                     "postalCode": "12207",
+                     "addressCountry": "US"
+                   },
                   "areaServed": "Worldwide",
                   "description": "Providing digital solutions, business growth systems, website development, and AI automation for businesses worldwide."
                 }

@@ -22,13 +22,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Technical Support",
-    value: "03237099044",
-    href: "tel:03237099044",
+    value: "+1 (510) 500-5817",
+    href: "tel:+15105005817",
   },
   {
     icon: MapPin,
     label: "Global Hub",
-    value: "Kareem Park, Lahore",
+    value: "418 Broadway, Suite N, Albany, New York 12207",
   },
 ];
 
