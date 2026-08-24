@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZOVEREX | Contact Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Manrope:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #000000;
+            cursor: none;
+            overflow-x: hidden;
+        }
+        
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out, background-color 0.2s ease;
+            mix-blend-mode: difference;
+        }
+
+        .custom-cursor-dot {
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .chrome-border {
+            border: 1px solid;
+            border-image-source: linear-gradient(to bottom right, #FFFFFF, transparent);
+            border-image-slice: 1;
+        }
+
+        .chrome-text-gradient {
+            background: linear-gradient(to right, #FFFFFF, #A8A8A8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stagger-letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: letter-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes letter-in {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .input-focus-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #FFFFFF;
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        input:focus + .input-focus-line, 
+        textarea:focus + .input-focus-line {
+            transform: scaleY(1);
+        }
+
+        .btn-chrome {
+            background: linear-gradient(135deg, #FFFFFF 0%, #A8A8A8 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-chrome:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary-fixed": "#e2e2e2",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#636565",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "primary-container": "#e2e2e2",
+                        "obsidian-black": "#000000",
+                        "on-tertiary": "#5d1900",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "primary": "#ffffff",
+                        "inverse-primary": "#5d5f5f",
+                        "on-surface-variant": "#c4c7c8",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b8b8b8",
+                        "signal-orange": "#E8602E",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-container": "#ffdbd0",
+                        "tertiary": "#ffffff",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#3a3939",
+                        "secondary-container": "#484949",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline-variant": "#444748",
+                        "on-primary-fixed": "#1a1c1c",
+                        "outline": "#8e9192",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "on-primary": "#2f3131",
+                        "tertiary-fixed": "#ffdbd0",
+                        "surface-tint": "#c6c6c7",
+                        "chrome-dim": "#A8A8A8",
+                        "on-secondary": "#2f3131",
+                        "surface-dim": "#131313",
+                        "secondary": "#c7c6c6",
+                        "on-tertiary-container": "#b43b07",
+                        "on-primary-fixed-variant": "#454747",
+                        "chrome-bright": "#FFFFFF",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary-fixed": "#e3e2e2",
+                        "on-tertiary-fixed-variant": "#832700",
+                        "void-gray": "#1A1A1A",
+                        "on-tertiary-fixed": "#390c00",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "display-2xl": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "120%", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "120%", "fontWeight": "600"}],
+                        "display-2xl": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "display-xl": ["80px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "130%", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-obsidian-black text-on-background selection:bg-chrome-bright selection:text-obsidian-black">
+<div class="custom-cursor" id="cursor"></div>
+<div class="custom-cursor-dot" id="cursor-dot"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-chrome-bright to-chrome-dim bg-clip-text text-transparent">ZOVEREX</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 rounded-none hover:bg-chrome-dim transition-all duration-300 scale-95 hover:scale-100 active:scale-95">Get Started</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg">
+<div class="flex items-center gap-4 mb-stack-md">
+<span class="w-12 h-[1px] bg-chrome-dim"></span>
+<span class="font-label-caps text-label-caps text-chrome-dim uppercase tracking-[0.2em]">Contact Engineering</span>
+</div>
+<h1 class="font-display-2xl text-display-2xl font-bold uppercase tracking-tighter" id="hero-title">
+<!-- Javascript will populate staggered letters here -->
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-stack-md">
+                For precision-engineered solutions and high-fidelity technical consulting. Our team is standing by to translate your vision into reality.
+            </p>
+</header>
+<!-- Contact Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start mt-stack-lg">
+<!-- Left Side: Info -->
+<div class="lg:col-span-5 space-y-stack-lg">
+<div class="glass-card p-10 space-y-12">
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 flex items-center justify-center border border-white/10 group-hover:border-white/40 transition-colors">
+<span class="material-symbols-outlined text-chrome-bright">alternate_email</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-chrome-dim mb-1">Direct Communication</p>
+<a class="font-headline-md text-headline-md hover:text-chrome-bright transition-colors" href="mailto:precision@zoverex.com">precision@zoverex.com</a>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 flex items-center justify-center border border-white/10 group-hover:border-white/40 transition-colors">
+<span class="material-symbols-outlined text-chrome-bright">call</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-chrome-dim mb-1">Technical Support</p>
+<a class="font-headline-md text-headline-md hover:text-chrome-bright transition-colors" href="tel:+10001234567">+1 (000) 123-4567</a>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 flex items-center justify-center border border-white/10 group-hover:border-white/40 transition-colors">
+<span class="material-symbols-outlined text-chrome-bright">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-chrome-dim mb-1">Global Hub</p>
+<p class="font-headline-md text-headline-md">Neo-Industrial District<br/>777 Quartz Blvd, Suite 24</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 glass-card px-6 py-4 w-fit">
+<span class="w-2 h-2 rounded-full bg-signal-orange animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-chrome-dim">We respond within 24 hours</span>
+</div>
+</div>
+<!-- Right Side: Form -->
+<div class="lg:col-span-7">
+<form class="glass-card p-10 space-y-stack-md" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-chrome-dim mb-2 uppercase">Full Identity</label>
+<input class="w-full bg-void-gray/50 border-b border-white/10 focus:border-transparent focus:ring-0 px-4 py-4 font-body-md text-white placeholder:text-white/10 transition-all" placeholder="e.g. Alexander Vance" type="text"/>
+<div class="input-focus-line"></div>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-chrome-dim mb-2 uppercase">Digital Address</label>
+<input class="w-full bg-void-gray/50 border-b border-white/10 focus:border-transparent focus:ring-0 px-4 py-4 font-body-md text-white placeholder:text-white/10 transition-all" placeholder="vance@network.io" type="email"/>
+<div class="input-focus-line"></div>
+</div>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-chrome-dim mb-2 uppercase">Inquiry Vector</label>
+<input class="w-full bg-void-gray/50 border-b border-white/10 focus:border-transparent focus:ring-0 px-4 py-4 font-body-md text-white placeholder:text-white/10 transition-all" placeholder="Systems Integration Request" type="text"/>
+<div class="input-focus-line"></div>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-chrome-dim mb-2 uppercase">Transmission Data</label>
+<textarea class="w-full bg-void-gray/50 border-b border-white/10 focus:border-transparent focus:ring-0 px-4 py-4 font-body-md text-white placeholder:text-white/10 transition-all resize-none" placeholder="Detail your project specifications..." rows="5"></textarea>
+<div class="input-focus-line"></div>
+</div>
+<div class="pt-6">
+<button class="btn-chrome w-full py-5 font-label-caps text-label-caps text-obsidian-black font-bold uppercase tracking-widest" type="submit">
+                            Initialize Transmission
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/5 bg-obsidian-black">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-chrome-bright mb-6 md:mb-0">ZOVEREX</div>
+<div class="flex flex-col md:flex-row items-center gap-12 mb-6 md:mb-0">
+<div class="font-body-md text-body-md text-chrome-dim">© 2024 ZOVEREX. ENGINEERED FOR PRECISION.</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const dot = document.getElementById('cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, input, textarea').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2.5)';
+                cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Staggered Text Animation
+        const heroTitle = document.getElementById('hero-title');
+        const text = "LET'S TALK";
+        const words = text.split(' ');
+        
+        words.forEach((word, wordIdx) => {
+            const wordSpan = document.createElement('span');
+            wordSpan.className = 'inline-block mr-8 last:mr-0';
+            
+            [...word].forEach((letter, letterIdx) => {
+                const span = document.createElement('span');
+                span.className = 'stagger-letter';
+                span.innerText = letter;
+                span.style.animationDelay = `${(wordIdx * 5 + letterIdx) * 0.05}s`;
+                wordSpan.appendChild(span);
+            });
+            
+            heroTitle.appendChild(wordSpan);
+        });
+
+        // Visual Effects: Floating Ambient Light
+        const createAmbientLight = () => {
+            const light = document.createElement('div');
+            light.style.position = 'fixed';
+            light.style.width = '40vw';
+            light.style.height = '40vw';
+            light.style.borderRadius = '50%';
+            light.style.background = 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)';
+            light.style.pointerEvents = 'none';
+            light.style.zIndex = '-1';
+            light.style.filter = 'blur(100px)';
+            
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let dx = (Math.random() - 0.5) * 0.5;
+            let dy = (Math.random() - 0.5) * 0.5;
+
+            const move = () => {
+                x += dx;
+                y += dy;
+                if (x < -200 || x > window.innerWidth + 200) dx *= -1;
+                if (y < -200 || y > window.innerHeight + 200) dy *= -1;
+                light.style.left = x + 'px';
+                light.style.top = y + 'px';
+                requestAnimationFrame(move);
+            };
+            
+            document.body.appendChild(light);
+            move();
+        };
+
+        for(let i = 0; i < 3; i++) createAmbientLight();
+    </script>
+</body></html>

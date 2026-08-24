@@ -1,0 +1,461 @@
+@import "tailwindcss";
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+/* ================================
+   ZOVEREX GLOBAL DESIGN SYSTEM
+   ================================ */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Hide scrollbar on horizontal-scroll carousels */
+.overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Root */
+:root {
+  --chrome-bright: #ffffff;
+  --chrome-dim: #a8a8a8;
+  --obsidian: #000000;
+  --surface: #131313;
+  --void-gray: #1a1a1a;
+  --signal-orange: #e8602e;
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #c4c7c8;
+
+  --radius: 0.625rem;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.18 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.18 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+/* Base */
+html {
+  /* Lenis handles smooth scrolling — native smooth-behavior would fight it */
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: #e5e2e1;
+  font-family: var(--font-geist), sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+
+/* ================================
+   TYPOGRAPHY UTILITIES
+   ================================ */
+
+.font-display {
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+
+.font-headline {
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.font-label {
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ================================
+   CHROME / METALLIC EFFECTS
+   ================================ */
+
+.chrome-text {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.chrome-text-simple {
+  background: linear-gradient(90deg, #ffffff 0%, #a8a8a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================
+   ICON BOX UTILITY
+   ================================ */
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.icon-box:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ================================
+   GLASS CARDS
+   ================================ */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(168, 168, 168, 0.8), transparent);
+  transform: translateY(-100%);
+  transition: transform 0.6s ease;
+  opacity: 0;
+}
+
+.glass-card:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.04), inset 0 0 20px rgba(255, 255, 255, 0.02);
+  transform: translateY(-6px);
+}
+
+.glass-card-static {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.glass-card-no-hover {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-no-hover {
+  transition: none !important;
+}
+.card-no-hover:hover {
+  transform: none !important;
+  border-color: rgba(255,255,255,0.06) !important;
+  box-shadow: none !important;
+}
+
+/* Glass card with orange glow — for founder photo */
+.glass-card-orange {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(232, 96, 46, 0.25);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(232, 96, 46, 0.08);
+}
+
+.glass-card-orange:hover {
+  border-color: rgba(232, 96, 46, 0.5);
+  box-shadow: 0 0 40px rgba(232, 96, 46, 0.18);
+  transform: translateY(-4px);
+}
+
+/* ================================
+   CHROME BORDER GRADIENT
+   ================================ */
+
+.chrome-border {
+  border: 1px solid transparent;
+  background: linear-gradient(#000000, #000000) padding-box,
+              linear-gradient(135deg, #ffffff, #444444, #ffffff) border-box;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.btn-filled {
+  background: linear-gradient(180deg, #f5f5f5 0%, #a8a8a8 100%);
+  color: #000000;
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.9), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-filled:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #b8b8b8 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid transparent;
+  background: linear-gradient(#000000, #000000) padding-box,
+              linear-gradient(90deg, #ffffff, #a8a8a8) border-box;
+  color: #ffffff;
+  font-family: var(--font-geist), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+   MARQUEE TICKER
+   ================================ */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ================================
+   STAGGER CHAR ANIMATION
+   ================================ */
+
+.stagger-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ================================
+   INPUT FIELDS
+   ================================ */
+
+.input-field {
+  width: 100%;
+  background: rgba(26, 26, 26, 0.8);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px;
+  color: #e5e2e1;
+  font-family: var(--font-geist), sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+.input-field:focus {
+  border-bottom-color: #ffffff;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.input-field.error {
+  border-bottom-color: #e8602e;
+}
+
+/* ================================
+   TEAM AVATAR PLACEHOLDER
+   ================================ */
+
+.avatar-gradient {
+  background: linear-gradient(135deg, #353534, #a8a8a8);
+}
+
+/* ================================
+   PROJECT CARD GRADIENT PLACEHOLDERS
+   ================================ */
+
+.project-bg-1 { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d1a 100%); }
+.project-bg-2 { background: linear-gradient(135deg, #0a0d0a 0%, #1a1a1a 50%, #0a0a0a 100%); }
+.project-bg-3 { background: linear-gradient(135deg, #0d0a0a 0%, #1a1212 50%, #0a0a0a 100%); }
+.project-bg-4 { background: linear-gradient(135deg, #0a0a0d 0%, #131320 50%, #0a0a0a 100%); }
+.project-bg-5 { background: linear-gradient(135deg, #0d0a06 0%, #1a1506 50%, #0a0a0a 100%); }
+.project-bg-6 { background: linear-gradient(135deg, #0a0d0d 0%, #061a1a 50%, #0a0a0a 100%); }
+
+/* ================================
+   SECTION TRANSITIONS
+   ================================ */
+
+.section-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   SIGNAL ORANGE PULSE
+   ================================ */
+
+@keyframes orange-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(232, 96, 46, 0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(232, 96, 46, 0); }
+}
+
+.pulse-orange {
+  animation: orange-pulse 2s ease infinite;
+}
+
+/* ================================
+   REDUCED MOTION
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ================================
+   NAV ACTIVE STATE
+   ================================ */
+
+.nav-link-active {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+/* ================================
+   HERO AMBIENT BACKGROUND
+   ================================ */
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: orb-float 8s ease-in-out infinite;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+}

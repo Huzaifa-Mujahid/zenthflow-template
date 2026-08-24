@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZOVEREX | WHO WE ARE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @keyframes staggered-fade-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-staggered span {
+            display: inline-block;
+            opacity: 0;
+            animation: staggered-fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out, background-color 0.3s ease;
+        }
+        .custom-cursor-dot {
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+        }
+        .chrome-border {
+            border: 1px solid transparent;
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.1), transparent) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+        .silver-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#353534",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#131313",
+                    "surface-container": "#201f1f",
+                    "primary-fixed": "#e2e2e2",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#636565",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "primary-container": "#e2e2e2",
+                    "obsidian-black": "#000000",
+                    "on-tertiary": "#5d1900",
+                    "primary-fixed-dim": "#c6c6c7",
+                    "primary": "#ffffff",
+                    "inverse-primary": "#5d5f5f",
+                    "on-surface-variant": "#c4c7c8",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-container": "#b8b8b8",
+                    "signal-orange": "#E8602E",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-container": "#ffdbd0",
+                    "tertiary": "#ffffff",
+                    "on-error": "#690005",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-bright": "#3a3939",
+                    "secondary-container": "#484949",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "outline-variant": "#444748",
+                    "on-primary-fixed": "#1a1c1c",
+                    "outline": "#8e9192",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "on-primary": "#2f3131",
+                    "tertiary-fixed": "#ffdbd0",
+                    "surface-tint": "#c6c6c7",
+                    "chrome-dim": "#A8A8A8",
+                    "on-secondary": "#2f3131",
+                    "surface-dim": "#131313",
+                    "secondary": "#c7c6c6",
+                    "on-tertiary-container": "#b43b07",
+                    "on-primary-fixed-variant": "#454747",
+                    "chrome-bright": "#FFFFFF",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "on-secondary-fixed-variant": "#464747",
+                    "secondary-fixed": "#e3e2e2",
+                    "on-tertiary-fixed-variant": "#832700",
+                    "void-gray": "#1A1A1A",
+                    "on-tertiary-fixed": "#390c00",
+                    "surface-container-lowest": "#0e0e0e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-lg": ["Space Grotesk"],
+                    "display-2xl": ["Space Grotesk"],
+                    "display-xl": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "120%", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "fontWeight": "600"}],
+                    "display-2xl": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "130%", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-chrome-bright selection:text-obsidian-black overflow-x-hidden">
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<div class="custom-cursor-dot hidden md:block" id="cursor-dot"></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-chrome-bright to-chrome-dim bg-clip-text text-transparent">
+                ZOVEREX
+            </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps hover:bg-chrome-dim transition-all active:scale-95 duration-200">
+                Get Started
+            </button>
+</div>
+</nav>
+<main>
+<section class="min-h-screen flex items-center justify-center relative pt-32 overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-2xl text-[80px] md:text-display-2xl animate-staggered tracking-tighter" id="hero-title">
+</h1>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+<span class="font-label-caps text-label-caps text-chrome-dim">Scroll to Explore</span>
+<div class="w-[1px] h-20 bg-gradient-to-b from-chrome-bright to-transparent"></div>
+</div>
+</section>
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+<div class="sticky top-40">
+<div class="font-display-xl text-display-xl text-white/5 select-none leading-none -ml-4">
+                        EST. 2019
+                    </div>
+<div class="mt-4 flex items-center gap-4">
+<div class="w-12 h-[1px] bg-signal-orange"></div>
+<span class="font-label-caps text-label-caps text-signal-orange uppercase">Our Origin Story</span>
+</div>
+</div>
+<div class="space-y-stack-lg">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        Born from the intersection of high-fidelity engineering and cinematic design, ZOVEREX emerged in 2019 as a sanctuary for precision-driven innovation. We don't just build interfaces; we architect digital ecosystems that breathe with purpose and perform with mechanical reliability.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Our journey began with a singular focus: to strip away the noise of the modern web and replace it with "Technical Luxury." This philosophy guides every pixel we push and every line of code we write, ensuring that our clients don't just occupy space in their market—they dominate it through superior user experiences.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Today, ZOVEREX stands as a premier agency, partner to global innovators and visionary founders. We leverage a proprietary blend of glassmorphism, aggressive typography, and atmospheric physics to deliver results that are as visually arresting as they are functionally flawless.
+                    </p>
+</div>
+</div>
+</section>
+<section class="bg-void-gray py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-section-gap">
+<span class="font-label-caps text-label-caps text-chrome-dim block mb-4 uppercase">Core Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg">OUR VALUES</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="glass-card p-12 border border-white/5 relative group overflow-hidden">
+<div class="absolute -right-8 -top-8 text-white/5 text-[120px] font-bold group-hover:text-white/10 transition-colors">01</div>
+<span class="material-symbols-outlined text-signal-orange text-[48px] mb-8 block" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Innovation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pushing the boundaries of the digital canvas through experimental tech and future-proof architectures.</p>
+</div>
+<div class="glass-card p-12 border border-white/5 relative group overflow-hidden">
+<div class="absolute -right-8 -top-8 text-white/5 text-[120px] font-bold group-hover:text-white/10 transition-colors">02</div>
+<span class="material-symbols-outlined text-signal-orange text-[48px] mb-8 block" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A relentless pursuit of technical perfection, ensuring every interaction feels weighted, intentional, and high-end.</p>
+</div>
+<div class="glass-card p-12 border border-white/5 relative group overflow-hidden">
+<div class="absolute -right-8 -top-8 text-white/5 text-[120px] font-bold group-hover:text-white/10 transition-colors">03</div>
+<span class="material-symbols-outlined text-signal-orange text-[48px] mb-8 block" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Transparency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Radical honesty in our process, from raw engineering metrics to collaborative design cycles.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="flex justify-between items-end mb-20">
+<div>
+<span class="font-label-caps text-label-caps text-chrome-dim block mb-4 uppercase">The Collective</span>
+<h2 class="font-headline-lg text-headline-lg">LEADERSHIP</h2>
+</div>
+<div class="hidden md:block w-1/3 text-right">
+<p class="font-body-md text-body-md text-on-surface-variant italic">Engineered by specialists. Driven by passion.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="glass-card silver-glow p-8 flex flex-col items-center text-center transition-all duration-500 border border-white/5">
+<div class="w-32 h-32 mb-8 relative">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-surface-variant to-chrome-dim opacity-20"></div>
+<img class="w-full h-full rounded-full object-cover grayscale brightness-125" data-alt="A cinematic, high-fashion portrait of a tech executive with short hair, wearing a high-collared minimalist black jacket. The lighting is dramatic, with a soft white glow coming from the side and a deep obsidian background. The aesthetic is clean, professional, and slightly futuristic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hT2y7rXdCq1mAfHFVrm_UB79Vvo-FR-8BzEzNUW7lp_HQ0Aiy1d1hlc44BykDKRcKlCM6TAx71EOy_9kiBRtwHktYrDvsCUgnu1Aim9TCTwJesDFvVyoDDdiWILrG8jLrWpk3BM8rH_befUq3zmUVHlIXwbg7996sVuiP1WEi7s9sO013ccZP7j5tHLMvGdYDpccwwSPgb19OwKykf6OS-iNWtqirEI8_SDSAoSFc1KSiQMNEi6YHJvA6nPcIpNjzKQhW-ei6nE_"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">ELARA VOSS</h4>
+<span class="font-label-caps text-label-caps text-signal-orange mb-6">Founder &amp; CEO</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div class="glass-card silver-glow p-8 flex flex-col items-center text-center transition-all duration-500 border border-white/5">
+<div class="w-32 h-32 mb-8 relative">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-surface-variant to-chrome-dim opacity-20"></div>
+<img class="w-full h-full rounded-full object-cover grayscale brightness-125" data-alt="A portrait of a male lead developer with a sharp jawline and thick dark hair, looking off-camera. He is wearing a dark charcoal techwear hoodie. The background is a dimly lit futuristic lab with subtle blue and white light leaks. Professional studio lighting, ultra-high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD03eIp0_aFca92HTlsheoHICl8oZpCjtlsUHIYSzxTPKRTF3KNs67cWRigvBBogH1YSg7VALMqKoFikBRYXx10_3WHWDHpIdyZ19W15C8UnyqK_N3QiE2P0tgevO69wgtwUDI0qTP3XfkBll1RBihQfQ8e4aG8o8FlF7GHia7RzbryF1OHQGZNQIynPRHF37987xAIVwktcRwWfI5-BxxGBMl_F-yB21HgzqUv7EXTUSVKxVm0bFFmxqhe5U1VUqLU64BiAzBW0g1A"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">JAXON KALE</h4>
+<span class="font-label-caps text-label-caps text-signal-orange mb-6">CTO</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div class="glass-card silver-glow p-8 flex flex-col items-center text-center transition-all duration-500 border border-white/5">
+<div class="w-32 h-32 mb-8 relative">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-surface-variant to-chrome-dim opacity-20"></div>
+<img class="w-full h-full rounded-full object-cover grayscale brightness-125" data-alt="Close-up artistic portrait of a female creative director with avant-garde metallic makeup accents around the eyes. She has a sleek bob haircut and is posed against a backdrop of blurred digital data streams. The lighting is high-contrast, black and white palette, modern luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG97e546PgqWNpKlriQ-qOj3ndOGVpAQEmrguv__Cz2nPlsa5YjgXJap8uHcI47pH1PMS0VB1aAkYGr5BkEfKGtywyKScYpbgB9eQXEM5qbKWB7cX5JRjjxrBnFt189la8UFiv_Q_-3is7FrnXA-tmXa5JPG_L5fB4wgn9Q_pSuukHalBQN3o2jWyLZuZHnAZx4WKfp2a4b3Hkr5hRsk0HBb9XCF_6AY5NFIZMhJfagiFlD9N0IHSS7doYmloa6nzgZrUQkK2NizED"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">LYRA CHEN</h4>
+<span class="font-label-caps text-label-caps text-signal-orange mb-6">Design Principal</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div class="glass-card silver-glow p-8 flex flex-col items-center text-center transition-all duration-500 border border-white/5">
+<div class="w-32 h-32 mb-8 relative">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-surface-variant to-chrome-dim opacity-20"></div>
+<img class="w-full h-full rounded-full object-cover grayscale brightness-125" data-alt="A portrait of a mature male strategy officer with graying temples and a sharp black suit. He is standing in a glass-walled office overlooking a futuristic cityscape at night. The mood is sophisticated and powerful, with cool blue ambient tones and sharp highlights on the suit fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-qJg3b2sk6CDqKhMz15qRYPm7D-SfzirX_DCq2Ya8Ey3-tbPmZdtgvQ8S4zriFa7LKrR-ccEqU1dv5xc6L-3NgkuyijtM1FbUGGb61j3KFMSKG0SktbYqxuySNexn3xKi3nW9PTrTMdWeCVmJgGsxm80qOtQdaQM_cX7NvDEp1AvQ9Fk_iJsBBwQLxKsLz_pkw7vQ3B_8LgllPuw9h0iNv_X0qm6w9-27zWRWUfMrzjxxQsau5XkKIb4EJdCK2nclSuo5p83IZAIq"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">MARCUS REED</h4>
+<span class="font-label-caps text-label-caps text-signal-orange mb-6">Head of Growth</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-obsidian-black border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-bold text-chrome-bright">ZOVEREX</div>
+<p class="font-label-caps text-label-caps text-chrome-dim">© 2024 ZOVEREX. ENGINEERED FOR PRECISION.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex gap-10">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-chrome-bright transition-colors" href="#">Cookies</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const dot = document.getElementById('cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, .glass-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2.5)';
+                cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Hero Staggered Animation Logic
+        const heroTitle = "WHO WE ARE";
+        const heroContainer = document.getElementById('hero-title');
+        
+        heroTitle.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.animationDelay = `${index * 0.1}s`;
+            heroContainer.appendChild(span);
+        });
+
+        // Atmosphere interaction logic
+        document.addEventListener('scroll', () => {
+            const scrollVal = window.scrollY;
+            const heroHeight = window.innerHeight;
+            if (scrollVal < heroHeight) {
+                const opacity = 1 - (scrollVal / heroHeight);
+                document.querySelector('webgl-shader').style.opacity = opacity * 0.2;
+            }
+        });
+    </script>
+</body></html>

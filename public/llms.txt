@@ -1,0 +1,19 @@
+# ZOVEREX
+> A premium tech services agency engineering digital excellence. Built for performance, crafted for impact.
+
+## About
+ZOVEREX is a one-person agency by Huzaifa Bin Mujahid, delivering agency-level results in web development, UI/UX design, branding, mobile apps, automation, and AI.
+
+## Services
+- [Website Development](https://zoverex.com/services/website-development)
+- [Web Applications](https://zoverex.com/services/web-applications)
+- [Branding & Identity](https://zoverex.com/services/branding-identity)
+- [SEO & Growth](https://zoverex.com/services/seo-growth)
+- [Social Media Marketing](https://zoverex.com/services/social-media)
+- [Video Editing & Production](https://zoverex.com/services/video-editing)
+- [AI & Automation](https://zoverex.com/services/ai-automation)
+
+## Contact
+- Email: precision@zoverex.com
+- Phone: 03237099044
+- Location: Kareem Park, Lahore

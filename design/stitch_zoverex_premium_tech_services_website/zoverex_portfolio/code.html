@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZOVEREX | OUR WORK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&amp;family=Manrope:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+        }
+
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+            cursor: none;
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out, background 0.3s ease;
+        }
+
+        .custom-cursor-dot {
+            width: 4px;
+            height: 4px;
+            background: #ffffff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), transparent) 1;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .glass-card:hover {
+            border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), transparent) 1;
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-8px);
+        }
+
+        .stagger-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(100%);
+            animation: slideUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chrome-text {
+            background: linear-gradient(90deg, #FFFFFF 0%, #A8A8A8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .active-filter {
+            background: linear-gradient(135deg, #FFFFFF 0%, #A8A8A8 100%);
+            color: #000000 !important;
+        }
+
+        .grid-sizer, .grid-item { width: 33.333%; }
+        @media screen and (max-width: 1024px) { .grid-sizer, .grid-item { width: 50%; } }
+        @media screen and (max-width: 640px) { .grid-sizer, .grid-item { width: 100%; } }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#353534",
+                      "on-error-container": "#ffdad6",
+                      "surface": "#131313",
+                      "surface-container": "#201f1f",
+                      "primary-fixed": "#e2e2e2",
+                      "error": "#ffb4ab",
+                      "on-primary-container": "#636565",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "primary-container": "#e2e2e2",
+                      "obsidian-black": "#000000",
+                      "on-tertiary": "#5d1900",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "primary": "#ffffff",
+                      "inverse-primary": "#5d5f5f",
+                      "on-surface-variant": "#c4c7c8",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-highest": "#353534",
+                      "on-background": "#e5e2e1",
+                      "on-secondary-container": "#b8b8b8",
+                      "signal-orange": "#E8602E",
+                      "inverse-surface": "#e5e2e1",
+                      "tertiary-container": "#ffdbd0",
+                      "tertiary": "#ffffff",
+                      "on-error": "#690005",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-bright": "#3a3939",
+                      "secondary-container": "#484949",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "outline-variant": "#444748",
+                      "on-primary-fixed": "#1a1c1c",
+                      "outline": "#8e9192",
+                      "background": "#131313",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "on-primary": "#2f3131",
+                      "tertiary-fixed": "#ffdbd0",
+                      "surface-tint": "#c6c6c7",
+                      "chrome-dim": "#A8A8A8",
+                      "on-secondary": "#2f3131",
+                      "surface-dim": "#131313",
+                      "secondary": "#c7c6c6",
+                      "on-tertiary-container": "#b43b07",
+                      "on-primary-fixed-variant": "#454747",
+                      "chrome-bright": "#FFFFFF",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-secondary-fixed-variant": "#464747",
+                      "secondary-fixed": "#e3e2e2",
+                      "on-tertiary-fixed-variant": "#832700",
+                      "void-gray": "#1A1A1A",
+                      "on-tertiary-fixed": "#390c00",
+                      "surface-container-lowest": "#0e0e0e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Space Grotesk"],
+                      "label-caps": ["JetBrains Mono"],
+                      "headline-lg": ["Space Grotesk"],
+                      "display-2xl": ["Space Grotesk"],
+                      "display-xl": ["Space Grotesk"],
+                      "body-lg": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "headline-md": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "120%", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "120%", "fontWeight": "600"}],
+                      "display-2xl": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "display-xl": ["80px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "130%", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-obsidian-black font-body-md overflow-x-hidden">
+<!-- Custom Cursor -->
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<div class="custom-cursor-dot hidden md:block" id="cursor-dot"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-chrome-bright to-chrome-dim bg-clip-text text-transparent">
+                ZOVEREX
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+<button class="ml-4 px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps hover:scale-95 duration-200 ease-out transition-all">
+                    Get Started
+                </button>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Background Animation -->
+
+<!-- Hero Section -->
+<section class="relative pt-60 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="overflow-hidden">
+<h1 class="font-display-2xl text-display-2xl chrome-text leading-[0.9]" id="hero-title">
+<!-- Generated by JS for staggered animation -->
+</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-8 opacity-0 translate-y-4 transition-all duration-1000 delay-500 hero-reveal">
+                Pioneering digital frontiers through precision engineering and avant-garde design. Our work is a testament to technical luxury and functional power.
+            </p>
+</section>
+<!-- Filters -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="flex flex-wrap gap-4 items-center border-b border-white/5 pb-8">
+<span class="font-label-caps text-label-caps text-chrome-dim mr-4">FILTER BY:</span>
+<button class="filter-btn active-filter px-6 py-2 border border-white/10 font-label-caps text-label-caps transition-all hover:bg-white/5" onclick="filterProjects('All')">All</button>
+<button class="filter-btn px-6 py-2 border border-white/10 text-on-surface-variant font-label-caps text-label-caps transition-all hover:bg-white/5" onclick="filterProjects('Web')">Web</button>
+<button class="filter-btn px-6 py-2 border border-white/10 text-on-surface-variant font-label-caps text-label-caps transition-all hover:bg-white/5" onclick="filterProjects('Mobile')">Mobile</button>
+<button class="filter-btn px-6 py-2 border border-white/10 text-on-surface-variant font-label-caps text-label-caps transition-all hover:bg-white/5" onclick="filterProjects('Branding')">Branding</button>
+<button class="filter-btn px-6 py-2 border border-white/10 text-on-surface-variant font-label-caps text-label-caps transition-all hover:bg-white/5" onclick="filterProjects('UI/UX')">UI/UX</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="project-container">
+<!-- Project 1: AI Platform -->
+<div class="project-item glass-card p-4 group" data-category="Web, UI/UX">
+<div class="relative overflow-hidden aspect-[4/5] bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic AI dashboard interface with glowing cyan data streams and translucent glass panels, set against a deep obsidian laboratory environment with cold architectural lighting. Cinematic perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg14oNCyVsTEoMus8R7ybCOFukVglawaBSQeD9kr-CojEHGTxuo96ku5ls8QucATldbzkfppsYqJvXLbNChGrIzCNBhwrsXTHY4vv3v6c6wMCtjhKiFvSP79QAalG4tCzHP75-NnY5-2-ojARBjAEFge0do3vV0XVBTZdXB6x6hkaT9gnbZCROiIQqYp0rMsb6EjpzgVwR3C1ntesZP-ZItsAQT9VYEQeOrOEnsUt_YFQfeL-PRTw2JA7y61MmipwD8XH1mtWNSxRC"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">AI / WEB</span>
+<h3 class="font-headline-md text-headline-md text-white">NEXUS CORE</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+<!-- Project 2: SaaS -->
+<div class="project-item glass-card p-4 group" data-category="Web">
+<div class="relative overflow-hidden aspect-square bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist architectural visualization of a high-end SaaS data center, featuring polished metallic floors and sleek monolithic server racks emitting a soft white ambient glow. High contrast, technical luxury style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcT46HEkaIYqo4KWABegDk0-DhJkKop_NU5J9o2gJzFzQUuWNBs9nUQkk44s2H81Bzu66OH1sR8cPiMQ4W3DHOFtz3gxsDBouNmX1lWc-Hclc0p3gP_VTbAiOJnPJU4mnl0CksJSO81xiaTvCp0HRVB3VPxx_3gWW8_oU0915tTFWq6BmzEz-qgadsIKbNdUFZxaFBoPuPWuOZ52f597SvWHJERudVsfpxOyEjY2dHN2eR3jkoALY50OI8J7oVYZwh9ABu88S9HCSd"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">FINTECH / SAAS</span>
+<h3 class="font-headline-md text-headline-md text-white">VELOCITY OS</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+<!-- Project 3: Mobile App -->
+<div class="project-item glass-card p-4 group lg:row-span-2" data-category="Mobile, UI/UX">
+<div class="relative overflow-hidden h-full min-h-[500px] bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro photography of a sleek mobile device displaying a vibrant, fluid holographic interface for a high-end lifestyle app. The lighting is moody with purple and blue rim light highlighting the metallic edges of the hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPWUxGsnK-UUfP3rjnmWL7NUzkuv1bEr454BMzkRAkykIrme6EvRL_8XmyQJzkpGRczgy8WFbQ67pgAKx_bfGGm0vQOlzDYQn9XwH2VmTpHSSvPw3Mt4GDYd1zdldy3GUZTSrhXjFS7MSXv7RiM-9XbbESo61ixIGxIYx7urNoAr3vnrzWURAHiI8gCgGc7go4wxPEBE9V4LKeGVJXzcgIS5LAgjCzuZdaQZKhOlzifA8nAVy6eJzAzfq1kAUORSxlrAIFvS9cMwWX"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">MOBILE / APP</span>
+<h3 class="font-headline-md text-headline-md text-white">AURA FIT</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+<!-- Project 4: Branding -->
+<div class="project-item glass-card p-4 group" data-category="Branding">
+<div class="relative overflow-hidden aspect-video bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract 3D brand identity exploration featuring liquid metal shapes frozen in mid-air, creating a bold monogram logo. The aesthetic is monochromatic silver with extreme reflections and shadows on a deep black background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAts7Z-A7u5kYugYi14FxhCRtneLGnRPhdcbQvOi30KEqY-4PSfnS-oIchoMskHDeVyIuoH60q5lbpJYjSgRBEl3YjiN3TEPsqj1ul-MGH5Bm0cBgrvxgkRjgcAy4q4P_fL-oDij5jEaplxWHv1h0dmotUtx6ozNjH3Y1XatuKgXkruH7aJJ0M9_pcSLtwfVxGw3-f_80rR3hY6jBENz3ikJHB2YP7Cr6nad26pbdjOnS7ej0nbHEY6su3q0fDw-khMuB7LlEAB7x4V"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">BRANDING / VISUAL</span>
+<h3 class="font-headline-md text-headline-md text-white">CHROME X</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+<!-- Project 5: Web3 Platform -->
+<div class="project-item glass-card p-4 group" data-category="Web, UI/UX">
+<div class="relative overflow-hidden aspect-square bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Intricate digital visualization of a blockchain network represented by glowing nodes and crystalline geometric structures floating in a dark vacuum. The style is hyper-detailed with metallic shaders and neon white light pips." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrhBUyYANuRKgExUiZIaOtWcGSdjwTRvi22TFqYB4A2gtQUazwunBADBxGIby7E-VqcWD0M6ggfnVC7C8FvHTuWOYdTsTvrBgMl7LmCiXxYsbG2W1izV0cbK2VxTLggfrOWhk-xaDiGo4_t6dN3-XaXKfC2XDA1S1-kHI9P4loxUNqPmlr_IZv-zddkCAsQsnFRQOJADXKmDsMxV7dGS_Tr1kvOspjJVd-aP8wqLMxkK6MatQPlBfc_UOFXRMn6_frI2llGgHtrqav"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">WEB3 / CRYPTO</span>
+<h3 class="font-headline-md text-headline-md text-white">ETHER FLOW</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+<!-- Project 6: VR Interface -->
+<div class="project-item glass-card p-4 group" data-category="UI/UX, Mobile">
+<div class="relative overflow-hidden aspect-[4/3] bg-void-gray">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A first-person view of a high-fidelity virtual reality interface showing complex data nodes and 3D architectural models. The environment is a dark void with crisp white lines and glowing interactive elements, very futuristic and clinical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALrGSJTWeIlE577ZhNERtt9ticdaSkfI5zd2HdOqj2fwmvJCQnHgOqBDpF2J_Vdqb0Otj9wrnLIZ0AaWddrilQC04BjOrfG_YQ3mK1mwXKNcrPxfvBowBuByELq96viT-IRRlOdv910-q0k-pRSiF0_7B98IVJQBCofpGdMXVreQIP6G-A39DvbQNCKGP5ugmTK8ylkQJ7ryupt_4rWGPY28HrSac-CZurPCndnIYfgjrp2awhvVjzDD2pWxHfLqB5zjhJIYks2M-m"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="px-8 py-3 bg-white text-black font-label-caps text-label-caps flex items-center gap-2">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<span class="font-label-caps text-[10px] text-signal-orange border border-signal-orange/30 px-2 py-1 mb-2 inline-block">AR / VR / UI</span>
+<h3 class="font-headline-md text-headline-md text-white">VOID SPECTRUM</h3>
+</div>
+<span class="material-symbols-outlined text-chrome-dim">north_east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-white text-black">
+<div class="max-w-container-max mx-auto flex flex-col items-center text-center">
+<h2 class="font-display-xl text-display-xl tracking-tighter mb-8">READY TO EVOLVE?</h2>
+<p class="font-body-lg text-body-lg max-w-xl mb-12">Let's build the future of your brand with precision-engineered digital experiences.</p>
+<button class="px-12 py-6 border-2 border-black font-label-caps text-label-caps hover:bg-black hover:text-white transition-all duration-300">
+                    INQUIRE NOW
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-black border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-headline-md font-bold text-chrome-bright">ZOVEREX</div>
+<div class="flex gap-8 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-chrome-bright transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-chrome-bright transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-chrome-bright transition-colors" href="#">Cookies</a>
+</div>
+<div class="font-label-caps text-label-caps text-chrome-dim text-center md:text-right">
+                © 2024 ZOVEREX. ENGINEERED FOR PRECISION.
+            </div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const dot = document.getElementById('cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+            dot.style.left = e.clientX - 2 + 'px';
+            dot.style.top = e.clientY - 2 + 'px';
+        });
+
+        document.querySelectorAll('a, button, .project-item').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2.5)';
+                cursor.style.backgroundColor = 'rgba(255,255,255,0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Staggered Title Logic
+        const titleText = "OUR WORK";
+        const titleContainer = document.getElementById('hero-title');
+        titleText.split('').forEach((char, i) => {
+            const span = document.createElement('span');
+            span.className = 'stagger-char';
+            span.style.animationDelay = `${i * 0.1}s`;
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            titleContainer.appendChild(span);
+        });
+
+        // Initial Reveal
+        setTimeout(() => {
+            document.querySelector('.hero-reveal').style.opacity = '1';
+            document.querySelector('.hero-reveal').style.transform = 'translateY(0)';
+        }, 1200);
+
+        // Filtering Logic with Animation
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.innerText === category) {
+                    btn.classList.add('active-filter');
+                    btn.classList.remove('text-on-surface-variant');
+                } else {
+                    btn.classList.remove('active-filter');
+                    btn.classList.add('text-on-surface-variant');
+                }
+            });
+
+            projects.forEach(project => {
+                const cats = project.getAttribute('data-category');
+                
+                project.style.transition = 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                
+                if (category === 'All' || cats.includes(category)) {
+                    project.style.display = 'block';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                        project.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    project.style.opacity = '0';
+                    project.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        project.style.display = 'none';
+                    }, 500);
+                }
+            });
+        }
+
+        // Project Hover State Interaction
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Potential light trail effect can be added here
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
