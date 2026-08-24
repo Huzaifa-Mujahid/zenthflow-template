@@ -22,8 +22,9 @@ export const metadata = {
     google: "RhVQgAkCQ_L7e9Eer20iAob5Vz4g815U5ouwRcVKF-Q",
   },
   icons: {
-    icon: "/favicon.webp",
-    shortcut: "/favicon.webp",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "ORBITIX DIGITAL | Full Service Digital Agency",
