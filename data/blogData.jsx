@@ -22,7 +22,8 @@ const nextjsPost = {
   updated: "2026-08-27",
   author: "Orbitix Team",
   category: "How-To",
-  heroImage: null,
+  heroImage:
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80",
   content: (
     <>
       <p className="text-neutral-300 text-lg leading-relaxed mb-6">
@@ -435,7 +436,8 @@ const marketingPost = {
   updated: "2026-08-27",
   author: "Orbitix Team",
   category: "Growth",
-  heroImage: null,
+  heroImage:
+    "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=80",
   content: (
     <>
       <p className="text-neutral-300 text-lg leading-relaxed mb-6">

@@ -24,11 +24,11 @@ export default function BlogPage() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              backgroundImage: "url('/sections-bg/diomond gray.png')",
+              backgroundImage: "url('/sections-bg/copper box.png')",
               backgroundSize: "cover",
               backgroundPosition: "center top",
               backgroundRepeat: "no-repeat",
-              opacity: 0.8,
+              opacity: 0.5,
             }}
           />
 
