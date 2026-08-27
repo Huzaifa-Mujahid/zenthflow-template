@@ -37,11 +37,8 @@ export default function PrivacyPolicyPage() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              backgroundImage: "url('/sections-bg/copper box.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              backgroundRepeat: "no-repeat",
-              opacity: 0.5,
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(20,20,20,0.6) 50%, rgba(0,0,0,0.85) 100%)",
             }}
           />
 
