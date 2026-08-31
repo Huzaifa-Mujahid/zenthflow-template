@@ -33,8 +33,14 @@ export default function ServicePage({ params }) {
       <div className="bg-black min-h-screen">
         <RoundedPageHero
           titleLines={[subService.title]}
-          subtitle={service.description}
+          subtitle={subService.description || service.description}
         />
+
+        {subService.pageContent && (
+          <ServicePageContent pageContent={subService.pageContent} />
+        )}
+
+        <CTABanner />
       </div>
     );
   }

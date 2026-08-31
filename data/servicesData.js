@@ -27,7 +27,75 @@ export const servicesShowcaseData = [
     ],
     image: "/services/website_4.webp",
     subServices: [
-      { id: "web-design", title: "Web Design" },
+      { 
+        id: "web-design", 
+        title: "Web Design",
+        description: "Most websites look great on paper but fail where it matters most — converting traffic into real business. We design fast, responsive, and SEO-friendly websites engineered to engage visitors, rank on search engines, and maximize ROI.",
+        pageContent: {
+          intro: "Visitors form an opinion about your business within 50 milliseconds. That instantaneous reaction dictates whether a user stays to explore or bounces to a competitor. A high-converting website requires more than aesthetics — it needs strategic layout, intuitive navigation, and technical perfection.",
+
+          included: [
+            {
+              label: "UX & User Flow Mapping",
+              detail: "We structure your site based on user intent, reducing navigation depth to 2 clicks or less for key pages."
+            },
+            {
+              label: "UI & Custom Brand Design",
+              detail: "Unique design tailored to your brand identity — no generic templates or cookie-cutter solutions."
+            },
+            {
+              label: "Scalable Design Systems",
+              detail: "Component libraries that keep your branding consistent and make future content updates seamless."
+            },
+            {
+              label: "Mobile-First & Accessibility",
+              detail: "Designed to WCAG standards for flawless display across all screen sizes and mobile devices."
+            },
+            {
+              label: "Core Web Vitals Optimization",
+              detail: "Lean code and optimized assets to guarantee top-tier speed and performance scores."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Discovery & Strategy",
+              body: "We analyze your industry, competitive landscape, target audience, and SEO content requirements."
+            },
+            {
+              step: "02",
+              title: "Wireframing & UI/UX Design",
+              body: "We structure user journeys through wireframes, applying your unique brand elements to high-fidelity mockups."
+            },
+            {
+              step: "03",
+              title: "Engineered Development",
+              body: "We build your website using clean, semantic, and high-performance code with SEO foundations pre-baked."
+            },
+            {
+              step: "04",
+              title: "Testing, Launch & Handoff",
+              body: "Rigorous cross-browser QA, 301 redirect mapping for ranking preservation, and complete handoff documentation."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "Will a website redesign affect my current Google rankings?",
+              a: "Not when handled correctly. We preserve your existing content equity, maintain URL structures, and map proper redirects so your SEO rankings remain protected — and often improve due to better site performance."
+            },
+            {
+              q: "Why choose custom web design over template builders?",
+              a: "Template builders often come with heavy code bloat, slow page load times, and rigid structures. Custom development gives you total control over performance, scalability, and user conversion paths."
+            },
+            {
+              q: "Is the final design optimized for mobile devices first?",
+              a: "Yes. Google uses mobile-first indexing, and the majority of web traffic comes from mobile screens. Every layout is optimized for mobile responsiveness from the ground up."
+            }
+          ]
+        }
+      },
       { id: "web-development", title: "Web Development" },
       { id: "landing-pages", title: "Landing Pages" },
       { id: "wordpress", title: "WordPress" },
