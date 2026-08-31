@@ -31,7 +31,36 @@ export const servicesShowcaseData = [
         id: "web-design", 
         title: "Web Design",
         description: "Most websites look great on paper but fail where it matters most — converting traffic into real business. We design fast, responsive, and SEO-friendly websites engineered to engage visitors, rank on search engines, and maximize ROI.",
+        serviceSection: {
+          tag: "Service 01",
+          title: "Web Design",
+          headline: "High-Performance Websites That Convert",
+          description: "We combine creative UI/UX design with robust engineering to deliver websites that perform flawlessly. Every pixel is intentional — from zero-latency loading to buttery-smooth interactions.",
+          solvesWhat: "Visitors form an opinion about your business within 50 milliseconds. We design fast, responsive, and SEO-friendly websites that turn that instant reaction into trust — and trust into revenue.",
+          features: [
+            "UX & User Flow Mapping — navigation depth reduced to 2 clicks or less",
+            "Custom Brand Design — unique layouts, no generic templates",
+            "Mobile-First & Accessibility — designed to WCAG standards",
+            "Core Web Vitals Optimization — 95+ PageSpeed scores guaranteed"
+          ],
+          images: [
+            "/services/website_1.webp",
+            "/services/website_2.webp",
+            "/services/website_3.webp",
+            "/services/website_4.webp",
+            "/services/website_5.webp"
+          ],
+          image: "/services/website_4.webp",
+          layout: "website-scroll"
+        },
         pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "Design is the fastest judgment a prospect makes about your business",
+            description: "Visitors form an opinion of your site in about 50 milliseconds, before they read a word. That snap judgment becomes their opinion of your company: trustworthy or sketchy, established or fly-by-night, worth their money or not. You never get a neutral first impression, only a good one or a bad one, and design decides which.",
+            body: "But looking good is table stakes. A design that ignores how people actually move through a page, where the eye lands, what the thumb can reach, how many fields stand between a visitor and a conversion, is an expensive brochure. And a beautiful site that loads slowly or can't be crawled is worse than that: it's a brochure Google won't show anyone and impatient visitors abandon before it paints.",
+            highlight: "We design and build as one discipline. Every layout decision is also a performance decision, an accessibility decision, and an SEO decision, because on the live web they're inseparable."
+          },
           intro: "Visitors form an opinion about your business within 50 milliseconds. That instantaneous reaction dictates whether a user stays to explore or bounces to a competitor. A high-converting website requires more than aesthetics — it needs strategic layout, intuitive navigation, and technical perfection.",
 
           included: [

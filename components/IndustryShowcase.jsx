@@ -96,9 +96,9 @@ export default function IndustryShowcase() {
 
   return (
     <section className="py-6 px-3 sm:px-4 lg:px-5 bg-black relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto bg-[#0D0D0D] rounded-[24px] border border-neutral-800 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url("/sections-bg/copper dot.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.25 }} />
-        
+      <div className="max-w-[1440px] mx-auto rounded-[24px] border border-neutral-800 overflow-hidden relative">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url("/sections-bg/blur copper.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.4 }} />
+        <div className="absolute inset-0 bg-[#0D0D0D]/50 pointer-events-none" />
         <div className="relative z-10 px-5 md:px-20 pt-10 pb-10">
           {/* Header */}
           <motion.div
