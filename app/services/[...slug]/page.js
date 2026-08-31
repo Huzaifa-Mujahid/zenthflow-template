@@ -1,7 +1,6 @@
 "use client";
 
 import { use } from "react";
-
 import { notFound } from "next/navigation";
 import ServiceSection from "@/components/ServiceSection";
 import ServicePageContent from "@/components/ServicePageContent";
@@ -9,16 +8,38 @@ import CTABanner from "@/components/CTABanner";
 import RoundedPageHero from "@/components/RoundedPageHero";
 import { servicesShowcaseData } from "@/data/servicesData";
 
-/* ─── PAGE ───────────────────────────────────────────────── */
 export default function ServicePage({ params }) {
   const unwrappedParams = use(params);
-  const index = servicesShowcaseData.findIndex((s) => s.id === unwrappedParams.slug);
+  const slugArray = unwrappedParams.slug;
+
+  const serviceId = slugArray[0];
+  const subServiceId = slugArray[1];
+
+  const index = servicesShowcaseData.findIndex((s) => s.id === serviceId);
   const service = servicesShowcaseData[index];
 
   if (!service) {
     notFound();
   }
 
+  // Sub-service page
+  if (subServiceId) {
+    const subService = service.subServices?.find((sub) => sub.id === subServiceId);
+    if (!subService) {
+      notFound();
+    }
+
+    return (
+      <div className="bg-black min-h-screen">
+        <RoundedPageHero
+          titleLines={[subService.title]}
+          subtitle={service.description}
+        />
+      </div>
+    );
+  }
+
+  // Main service page
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -54,19 +75,15 @@ export default function ServicePage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
-      {/* ── HERO ── */}
       <RoundedPageHero
         titleLines={[service.title]}
         subtitle={service.description}
       />
 
-      {/* ── SERVICE DETAILS (Reusing Home Page Component) ── */}
       <ServiceSection service={{...service, isServicePage: true}} index={index} />
 
-      {/* ── SEO PAGE CONTENT ── */}
       <ServicePageContent pageContent={service.pageContent} />
 
-      {/* ── CTA ── */}
       <CTABanner />
     </div>
   );

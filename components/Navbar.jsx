@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { servicesShowcaseData } from "@/data/servicesData";
 import { socialsData } from "@/data/socials";
 import OrangeButton from "@/components/OrangeButton";
+import MegaMenu from "@/components/MegaMenu";
 
 const navLinks = [
   { href: "/", label: "Home", num: "01" },
@@ -22,6 +23,9 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [expandedMobileService, setExpandedMobileService] = useState(null);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -64,6 +68,19 @@ export default function Navbar() {
     })
   };
 
+  const handleDropdownEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setServicesDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setServicesDropdownOpen(false);
+    }, 100);
+  };
+
   return (
     <>
       <motion.nav
@@ -90,7 +107,12 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (link.hasDropdown && pathname.startsWith('/services'));
               return (
-                <div key={link.label} className="relative group/nav">
+                <div 
+                  key={link.label} 
+                  className="relative"
+                  onMouseEnter={() => link.hasDropdown && handleDropdownEnter()}
+                  onMouseLeave={() => link.hasDropdown && handleDropdownLeave()}
+                >
                   <Link
                     href={link.href}
                     className={`relative group font-label text-[12px] overflow-hidden px-3 lg:px-5 py-2.5 rounded-[10px] transition-all duration-150 hover:shadow-[0_6px_12px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,1),inset_0_-2px_0_rgba(0,0,0,0.2)] hover:-translate-y-0.5 inline-flex items-center ${isActive ? 'shadow-[0_6px_12px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,1),inset_0_-2px_0_rgba(0,0,0,0.2)] -translate-y-0.5' : ''}`}
@@ -107,20 +129,12 @@ export default function Navbar() {
 
                   {/* Dropdown */}
                   {link.hasDropdown && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto transition-all duration-300 z-50">
-                      <div className="bg-[#111] rounded-2xl shadow-2xl p-2 w-72 border border-white/10 relative overflow-hidden">
-                         <div className="relative z-10 flex flex-col gap-1">
-                           {servicesShowcaseData.map((service) => (
-                             <Link 
-                               key={service.id} 
-                               href={`/services/${service.id}`} 
-                               className="block px-4 py-3 text-sm text-[#c4c7c8] hover:text-white hover:bg-white/5 rounded-xl transition-colors font-body font-medium"
-                             >
-                               {service.title}
-                             </Link>
-                           ))}
-                         </div>
-                      </div>
+                    <div 
+                      className={`fixed left-1/2 -translate-x-1/2 top-[80px] pt-6 transition-all duration-300 z-50 ${servicesDropdownOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                      onMouseEnter={handleDropdownEnter}
+                      onMouseLeave={handleDropdownLeave}
+                    >
+                      <MegaMenu />
                     </div>
                   )}
                 </div>
@@ -221,15 +235,65 @@ export default function Navbar() {
                       {link.hasDropdown && (
                          <motion.div custom={i} variants={linkVariants} initial="closed" animate="open" exit="closed" className="pl-12 md:pl-20 flex flex-col gap-3 pb-4">
                            {servicesShowcaseData.map((service, idx) => (
-                              <Link 
-                                key={service.id} 
-                                href={`/services/${service.id}`}
-                                className="font-display text-[5vw] md:text-[2vw] text-[#a8a8a8] hover:text-white uppercase transition-colors"
-                                onClick={() => setMenuOpen(false)}
-                                style={{ fontFamily: "var(--font-geist)" }}
-                              >
-                                {service.title}
-                              </Link>
+                             <div key={service.id} className="flex flex-col">
+                               <div 
+                                 className="flex items-center justify-between cursor-pointer group/mobile-service"
+                                 onClick={() => setExpandedMobileService(expandedMobileService === service.id ? null : service.id)}
+                               >
+                                 <Link 
+                                   href={`/services/${service.id}`}
+                                   className="font-display text-[5vw] md:text-[2vw] text-[#a8a8a8] hover:text-white uppercase transition-colors"
+                                   onClick={(e) => {
+                                     // Optional: Prevent default if we just want to expand, but for SEO it's an actual link
+                                     // If we don't prevent default, it will navigate. 
+                                     // The user requested: Click to expand/collapse. Let's make the text clickable to navigate, 
+                                     // and a specific button or clicking the row to expand.
+                                     // Since it's mobile, we'll navigate on text click, expand on arrow click.
+                                     // We will allow navigating, and just close the menu.
+                                     setMenuOpen(false);
+                                   }}
+                                   style={{ fontFamily: "var(--font-geist)" }}
+                                 >
+                                   {service.title}
+                                 </Link>
+                                 <button 
+                                   className="p-2 text-[#a8a8a8] hover:text-white"
+                                   onClick={(e) => {
+                                     e.stopPropagation();
+                                     setExpandedMobileService(expandedMobileService === service.id ? null : service.id);
+                                   }}
+                                 >
+                                   <ChevronDown 
+                                     size={16} 
+                                     className={`transition-transform duration-300 ${expandedMobileService === service.id ? 'rotate-180' : 'rotate-0'}`} 
+                                   />
+                                 </button>
+                               </div>
+                               
+                               <AnimatePresence>
+                                 {expandedMobileService === service.id && (
+                                   <motion.div 
+                                     initial={{ height: 0, opacity: 0 }}
+                                     animate={{ height: "auto", opacity: 1 }}
+                                     exit={{ height: 0, opacity: 0 }}
+                                     transition={{ duration: 0.3 }}
+                                     className="overflow-hidden flex flex-col gap-2 pl-4 pt-2 border-l border-white/10 ml-2"
+                                   >
+                                     {service.subServices?.map((sub, subIdx) => (
+                                       <Link
+                                         key={subIdx}
+                                         href={`/services/${service.id}`}
+                                         onClick={() => setMenuOpen(false)}
+                                         className="text-sm md:text-base text-[#777] hover:text-white transition-colors py-1 flex items-center gap-2 group/sub"
+                                       >
+                                         <span>{sub}</span>
+                                         <ArrowUpRight size={12} className="opacity-0 -translate-x-2 translate-y-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 group-hover/sub:translate-y-0 transition-all duration-300" />
+                                       </Link>
+                                     ))}
+                                   </motion.div>
+                                 )}
+                               </AnimatePresence>
+                             </div>
                            ))}
                          </motion.div>
                       )}

@@ -26,6 +26,15 @@ export const servicesShowcaseData = [
       "/services/website_5.webp",
     ],
     image: "/services/website_4.webp",
+    subServices: [
+      { id: "web-design", title: "Web Design" },
+      { id: "web-development", title: "Web Development" },
+      { id: "landing-pages", title: "Landing Pages" },
+      { id: "wordpress", title: "WordPress" },
+      { id: "shopify", title: "Shopify" },
+      { id: "ecommerce-development", title: "E-commerce Development" },
+      { id: "website-migration", title: "Website Migration" },
+    ],
     layout: "website-scroll",
 
     pageContent: {
@@ -153,6 +162,13 @@ export const servicesShowcaseData = [
     ],
     images: ["/services/webapp_3.webp"],
     image: "/services/webapp_3.webp",
+    subServices: [
+      { id: "saas-dashboards", title: "SaaS Dashboards" },
+      { id: "client-portals", title: "Client Portals" },
+      { id: "booking-systems", title: "Booking Systems" },
+      { id: "api-development", title: "API Development" },
+      { id: "saas-mvp-development", title: "SaaS and MVP Development" },
+    ],
     layout: "image-grid",
 
     pageContent: {
@@ -275,7 +291,13 @@ export const servicesShowcaseData = [
       "Social media kit + print-ready assets delivered in 48h",
     ],
     images: ["/services/brand_3.webp"],
-    image: "/services/brand_3.webp",
+    image: "/services/brand_2.webp",
+    subServices: [
+      { id: "logo-design", title: "Logo Design" },
+      { id: "brand-guidelines", title: "Brand Guidelines" },
+      { id: "visual-identity", title: "Visual Identity" },
+      { id: "brand-strategy", title: "Brand Strategy" },
+    ],
     layout: "image-grid",
 
     pageContent: {
@@ -400,6 +422,14 @@ export const servicesShowcaseData = [
     ],
     images: ["/services/seo_1.webp"],
     image: "/services/seo_1.webp",
+    subServices: [
+      { id: "local-seo", title: "Local SEO" },
+      { id: "technical-seo", title: "Technical SEO" },
+      { id: "on-site-seo", title: "On-Site SEO" },
+      { id: "seo-audits", title: "SEO Audits" },
+      { id: "all-seo-services", title: "All SEO Services" },
+      { id: "google-business-profile", title: "Google Business Profile" },
+    ],
     layout: "image-grid",
 
     pageContent: {
@@ -519,6 +549,12 @@ export const servicesShowcaseData = [
     ],
     images: ["/services/social_1.webp"],
     image: "/services/social_1.webp",
+    subServices: [
+      { id: "facebook", title: "Facebook" },
+      { id: "instagram", title: "Instagram" },
+      { id: "youtube", title: "YouTube" },
+      { id: "linkedin", title: "LinkedIn" },
+    ],
     layout: "image-grid",
 
     pageContent: {
@@ -638,6 +674,12 @@ export const servicesShowcaseData = [
     ],
     images: ["/services/video_2.webp"],
     image: "/services/video_2.webp",
+    subServices: [
+      { id: "short-form-content", title: "Short-form Content" },
+      { id: "brand-films", title: "Brand Films" },
+      { id: "ad-creatives", title: "Ad Creatives" },
+      { id: "motion-graphics", title: "Motion Graphics" },
+    ],
     layout: "image-grid",
 
     pageContent: {
@@ -766,6 +808,11 @@ export const servicesShowcaseData = [
     ],
     images: ["/services/ai_1.webp"],
     image: "/services/ai_1.webp",
+    subServices: [
+      { id: "ai-development", title: "AI Development" },
+      { id: "ai-agents", title: "AI Agents" },
+      { id: "ai-chatbots", title: "AI Chatbots" },
+    ],
     layout: "image-grid",
 
     pageContent: {
