@@ -13,6 +13,7 @@ import IndustriesWeServe from "@/components/IndustriesWeServe";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Stats from "@/components/Stats";
+import WebsiteAudit from "@/components/WebsiteAudit";
 import CTABanner from "@/components/CTABanner";
 
 if (typeof window !== "undefined") {
@@ -385,6 +386,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── WEBSITE AUDIT ──────────────────────────── */}
+      <WebsiteAudit />
 
       {/* ── FAQ ────────────────────────────────────── */}
       <FAQ />
