@@ -77,6 +77,11 @@ export const servicesShowcaseData = [
               step: "04",
               title: "Testing, Launch & Handoff",
               body: "Rigorous cross-browser QA, 301 redirect mapping for ranking preservation, and complete handoff documentation."
+            },
+            {
+              step: "05",
+              title: "Post-Launch Optimization",
+              body: "We monitor performance metrics, analyze user behavior, and make data-driven refinements to maximize conversions after your site goes live."
             }
           ],
 
