@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Globe, Loader2, ChevronDown, ChevronUp, ArrowUpRight, Gauge, Accessibility, SearchCheck, ShieldCheck } from "lucide-react";
 
@@ -54,40 +54,67 @@ function ScoreRing({ score, size = 80 }) {
   );
 }
 
-export default function WebsiteAudit() {
+export default function WebsiteAudit({ initialUrl = "" }) {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [error, setError] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const progressInterval = useRef(null);
 
-  const handleAudit = async (e) => {
-    e.preventDefault();
-    if (!url.trim()) return;
+  useEffect(() => {
+    if (initialUrl && !loading && !results) {
+      setUrl(initialUrl);
+      runAudit(initialUrl);
+    }
+  }, [initialUrl]);
 
-    let auditUrl = url.trim();
-    if (!auditUrl.startsWith("http://") && !auditUrl.startsWith("https://")) {
-      auditUrl = "https://" + auditUrl;
+  const runAudit = async (auditUrl) => {
+    if (!auditUrl.trim()) return;
+
+    let formattedUrl = auditUrl.trim();
+    if (!formattedUrl.startsWith("http://") && !formattedUrl.startsWith("https://")) {
+      formattedUrl = "https://" + formattedUrl;
     }
 
     setLoading(true);
     setError(null);
     setResults(null);
+    setProgress(0);
+
+    progressInterval.current = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 90) {
+          clearInterval(progressInterval.current);
+          return 90;
+        }
+        return prev + Math.random() * 8;
+      });
+    }, 300);
 
     try {
-      const res = await fetch(`/api/audit?url=${encodeURIComponent(auditUrl)}&strategy=mobile`);
+      const res = await fetch(`/api/audit?url=${encodeURIComponent(formattedUrl)}&strategy=mobile`);
       const data = await res.json();
 
       if (!res.ok) {
         throw new Error(data.error || "Failed to audit website");
       }
 
+      setProgress(100);
+      setTimeout(() => setProgress(0), 500);
       setResults(data);
     } catch (err) {
       setError(err.message);
     } finally {
+      clearInterval(progressInterval.current);
       setLoading(false);
     }
+  };
+
+  const handleAudit = async (e) => {
+    e.preventDefault();
+    runAudit(url);
   };
 
   return (
