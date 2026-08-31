@@ -91,10 +91,17 @@ export default function WebsiteAudit() {
   };
 
   return (
-    <section className="py-16 px-3 sm:px-4 lg:px-5 bg-black relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto bg-[#0D0D0D] rounded-[24px] border border-neutral-800 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url("/sections-bg/copper dot.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
-
+    <section id="free-audit" className="py-16 px-3 sm:px-4 lg:px-5 bg-black relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto rounded-[24px] border border-neutral-800 overflow-hidden relative">
+        <div 
+          className="absolute inset-0 pointer-events-none" 
+          style={{ 
+            backgroundImage: 'url("/sections-bg/blur copper.png")', 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            opacity: 0.15 
+          }} 
+        />
         <div className="relative z-10 px-5 md:px-20 py-16">
           {/* Header */}
           <motion.div
@@ -127,13 +134,13 @@ export default function WebsiteAudit() {
           >
             <div className="flex gap-3">
               <div className="flex-1 relative">
-                <Globe size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#666]" />
+                <Globe size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#666] z-10 pointer-events-none" />
                 <input
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   placeholder="Enter your website URL (e.g., google.com)"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-4 text-white placeholder-[#666] focus:outline-none focus:border-white/30 transition-colors text-sm"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder-[#666] focus:outline-none focus:border-white/30 transition-colors text-sm"
                 />
               </div>
               <button

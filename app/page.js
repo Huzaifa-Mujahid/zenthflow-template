@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Globe, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import HeroTitle from "@/components/HeroTitle";
 import AppleCardsCarouselDemo from "@/components/apple-cards-carousel-demo";
@@ -77,6 +77,7 @@ const heroBgImages = [
 export default function HomePage() {
   const marqueeContent = marqueeItems.join(" · ") + " · ";
   const [heroIndex, setHeroIndex] = useState(0);
+  const [auditUrl, setAuditUrl] = useState("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -138,29 +139,55 @@ export default function HomePage() {
           </div>
 
           {/* Card Content */}
-          <div className="relative z-10 flex flex-col items-start text-left max-w-3xl mt-10">
-            {/* Main Heading — Vertically Stacked Lines */}
-            <h1
-              className="font-bold tracking-tight uppercase"
-              style={{ lineHeight: 1.05 }}
-            >
-              <span className="sr-only">We build tech infrastructure for the future of business</span>
-              <span aria-hidden="true" className="flex flex-col gap-0">
-                {heroHeadingLines.map((line, i) => (
-                  <span key={i} className="block overflow-hidden">
-                    <motion.span
-                      className="block"
-                      style={{ fontSize: "clamp(24px, 3.5vw, 52px)" }}
-                      initial={{ y: "110%", opacity: 0, filter: "blur(8px)" }}
-                      animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                      transition={{
-                        duration: 0.85,
-                        ease: [0.16, 1, 0.3, 1],
-                        delay: 0.08 + i * 0.12,
-                      }}
-                    >
-                      {line.highlightWord ? (
-                        <>
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-10 mt-10">
+            {/* Left - Main Content */}
+            <div className="flex flex-col items-start text-left max-w-3xl">
+              {/* Main Heading — Vertically Stacked Lines */}
+              <h1
+                className="font-bold tracking-tight uppercase"
+                style={{ lineHeight: 1.05 }}
+              >
+                <span className="sr-only">We build tech infrastructure for the future of business</span>
+                <span aria-hidden="true" className="flex flex-col gap-0">
+                  {heroHeadingLines.map((line, i) => (
+                    <span key={i} className="block overflow-hidden">
+                      <motion.span
+                        className="block"
+                        style={{ fontSize: "clamp(24px, 3.5vw, 52px)" }}
+                        initial={{ y: "110%", opacity: 0, filter: "blur(8px)" }}
+                        animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                        transition={{
+                          duration: 0.85,
+                          ease: [0.16, 1, 0.3, 1],
+                          delay: 0.08 + i * 0.12,
+                        }}
+                      >
+                        {line.highlightWord ? (
+                          <>
+                            <span
+                              className="inline-block"
+                              style={{
+                                backgroundImage: "linear-gradient(to bottom, #ffffff 0%, #b8b8b8 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                                marginRight: "0.25em",
+                              }}
+                            >
+                              {line.text.replace(line.highlightWord, "")}
+                            </span>
+                            <span
+                              className="inline-block text-[0.9em] rounded-lg px-3 sm:px-4 py-1 text-black"
+                              style={{
+                                background: "linear-gradient(to bottom, #ffffff 0%, #b8b8b8 100%)",
+                                boxShadow: "inset 0 0 0 1px #d1d5db, inset 0 -1px #d1d5db",
+                                marginBottom: "0.15em",
+                              }}
+                            >
+                              {line.highlightWord}
+                            </span>
+                          </>
+                        ) : (
                           <span
                             className="inline-block"
                             style={{
@@ -168,72 +195,85 @@ export default function HomePage() {
                               WebkitBackgroundClip: "text",
                               WebkitTextFillColor: "transparent",
                               backgroundClip: "text",
-                              marginRight: "0.25em",
                             }}
                           >
-                            {line.text.replace(line.highlightWord, "")}
+                            {line.text}
                           </span>
-                          <span
-                            className="inline-block text-[0.9em] rounded-lg px-3 sm:px-4 py-1 text-black"
-                            style={{
-                              background: "linear-gradient(to bottom, #ffffff 0%, #b8b8b8 100%)",
-                              boxShadow: "inset 0 0 0 1px #d1d5db, inset 0 -1px #d1d5db",
-                              marginBottom: "0.15em",
-                            }}
-                          >
-                            {line.highlightWord}
-                          </span>
-                        </>
-                      ) : (
-                        <span
-                          className="inline-block"
-                          style={{
-                            backgroundImage: "linear-gradient(to bottom, #ffffff 0%, #b8b8b8 100%)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent",
-                            backgroundClip: "text",
-                          }}
-                        >
-                          {line.text}
-                        </span>
-                      )}
-                    </motion.span>
-                  </span>
-                ))}
-              </span>
-            </h1>
+                        )}
+                      </motion.span>
+                    </span>
+                  ))}
+                </span>
+              </h1>
 
-            {/* Sub Text */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.55 }}
-              className="font-body text-[#a8a8a8] text-base sm:text-lg leading-relaxed max-w-xl mt-6"
-            >
-              Helping businesses launch, grow, and dominate with custom software,
-              web apps, and strategic digital marketing.
-            </motion.p>
+              {/* Sub Text */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.55 }}
+                className="font-body text-[#a8a8a8] text-base sm:text-lg leading-relaxed max-w-xl mt-6"
+              >
+                Helping businesses launch, grow, and dominate with custom software,
+                web apps, and strategic digital marketing.
+              </motion.p>
 
-            {/* CTA Buttons */}
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row items-start gap-4 mt-10"
+              >
+                <Link href="/contact">
+                  <button className="relative group overflow-hidden bg-gradient-to-b from-[#d8d8d8] to-[#ffffff] text-black px-8 py-3.5 rounded-[10px] text-sm font-semibold tracking-wide w-full sm:w-auto border border-[#C57035]/60 transition-all duration-300 hover:shadow-[0_0_15px_rgba(197,112,53,0.4)] hover:-translate-y-0.5 hover:border-[#C57035]">
+                    <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[150%]">Book a Call</span>
+                    <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] translate-y-[150%] group-hover:translate-y-0">Book a Call</span>
+                  </button>
+                </Link>
+                <Link href="/portfolio">
+                  <button className="relative group overflow-hidden px-8 py-3.5 rounded-[10px] text-sm font-semibold tracking-wide w-full sm:w-auto transition-all duration-300 hover:-translate-y-0.5 text-[#c4c7c8] hover:text-[#C57035] border border-[#d1d5db] hover:border-[#C57035] hover:shadow-[0_0_15px_rgba(197,112,53,0.25)]">
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#C57035]/20 to-[#B85D19]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[10px]"></div>
+                    <span className="relative z-10 block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[150%]">View Projects</span>
+                    <span className="absolute inset-0 z-10 flex items-center justify-center translate-y-[150%] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0">View Projects</span>
+                  </button>
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right - Free Audit Input */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-start gap-4 mt-10"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.75 }}
+              className="w-full max-w-sm"
             >
-              <Link href="/contact">
-                <button className="relative group overflow-hidden bg-gradient-to-b from-[#d8d8d8] to-[#ffffff] text-black px-8 py-3.5 rounded-[10px] text-sm font-semibold tracking-wide w-full sm:w-auto border border-[#C57035]/60 transition-all duration-300 hover:shadow-[0_0_15px_rgba(197,112,53,0.4)] hover:-translate-y-0.5 hover:border-[#C57035]">
-                  <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[150%]">Book a Call</span>
-                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] translate-y-[150%] group-hover:translate-y-0">Book a Call</span>
+              <p className="text-[#c4c7c8] text-sm mb-3 font-semibold">Get Free Audit of Your Website</p>
+              <div className="flex gap-2">
+                <div className="flex-1 relative">
+                  <Globe size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#666] z-10 pointer-events-none" />
+                  <input
+                    type="text"
+                    value={auditUrl}
+                    onChange={(e) => setAuditUrl(e.target.value)}
+                    placeholder="Enter your website URL"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-3 py-2.5 text-white placeholder-[#666] focus:outline-none focus:border-white/30 transition-colors text-sm"
+                  />
+                </div>
+                <button
+                  onClick={() => {
+                    if (auditUrl.trim()) {
+                      const section = document.getElementById('free-audit');
+                      if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }
+                  }}
+                  disabled={!auditUrl.trim()}
+                  className="bg-gradient-to-b from-[#d8d8d8] to-[#ffffff] text-black px-4 py-2.5 rounded-lg text-sm font-semibold hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Analyze <ArrowRight size={14} />
                 </button>
-              </Link>
-              <Link href="/portfolio">
-                <button className="relative group overflow-hidden px-8 py-3.5 rounded-[10px] text-sm font-semibold tracking-wide w-full sm:w-auto transition-all duration-300 hover:-translate-y-0.5 text-[#c4c7c8] hover:text-[#C57035] border border-[#d1d5db] hover:border-[#C57035] hover:shadow-[0_0_15px_rgba(197,112,53,0.25)]">
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#C57035]/20 to-[#B85D19]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[10px]"></div>
-                  <span className="relative z-10 block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[150%]">View Projects</span>
-                  <span className="absolute inset-0 z-10 flex items-center justify-center translate-y-[150%] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0">View Projects</span>
-                </button>
-              </Link>
+              </div>
             </motion.div>
           </div>
         </div>
