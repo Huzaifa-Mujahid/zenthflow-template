@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Search, PenTool, Code2, Zap, Rocket } from "lucide-react";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import FAQ from "@/components/FAQ";
+import IndustryShowcase from "@/components/IndustryShowcase";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -36,7 +37,7 @@ const processIcons = [
 
 function WhyItMattersSection({ data }) {
   return (
-    <section className="px-5 md:px-20 max-w-[1440px] mx-auto py-16 md:py-20">
+    <section className="px-5 md:px-20 max-w-[1440px] mx-auto py-16 md:py-20 bg-gradient-to-b from-white/5 to-transparent">
       <motion.div {...fadeUp()} className="text-center">
         <SectionLabel text={data.title} />
         <h2
@@ -107,6 +108,8 @@ export default function ServicePageContent({ pageContent }) {
           <ProcessSection process={process} />
         </>
       )}
+
+      <IndustryShowcase />
 
       {faqs?.length > 0 && (
         <>

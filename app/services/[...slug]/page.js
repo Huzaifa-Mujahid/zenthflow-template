@@ -6,7 +6,6 @@ import ServiceSection from "@/components/ServiceSection";
 import ServicePageContent from "@/components/ServicePageContent";
 import CTABanner from "@/components/CTABanner";
 import RoundedPageHero from "@/components/RoundedPageHero";
-import IndustryShowcase from "@/components/IndustryShowcase";
 import { servicesShowcaseData } from "@/data/servicesData";
 
 export default function ServicePage({ params }) {
@@ -44,8 +43,6 @@ export default function ServicePage({ params }) {
         {subService.pageContent && (
           <ServicePageContent pageContent={subService.pageContent} />
         )}
-
-        <IndustryShowcase />
 
         <CTABanner />
       </div>
