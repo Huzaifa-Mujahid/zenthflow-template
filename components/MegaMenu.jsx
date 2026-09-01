@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { servicesShowcaseData } from "@/data/servicesData";
 
-export default function MegaMenu() {
+export default function MegaMenu({ onClose }) {
   const [activeService, setActiveService] = useState(servicesShowcaseData[0]);
   const timeoutRef = useRef(null);
 
@@ -41,6 +41,7 @@ export default function MegaMenu() {
             href={`/services/${service.id}`}
             onMouseEnter={() => handleMouseEnter(service)}
             onFocus={() => handleMouseEnter(service)}
+            onClick={onClose}
             className={`px-4 py-3 text-sm font-body font-medium transition-colors rounded-xl flex items-center justify-between ${
               activeService.id === service.id
                 ? "bg-white/5 text-white"
@@ -81,6 +82,7 @@ export default function MegaMenu() {
                 <Link
                   key={index}
                   href={`/services/${activeService.id}/${sub.id}`}
+                  onClick={onClose}
                   className="group flex items-center justify-between text-base text-[#a8a8a8] hover:text-white transition-colors py-1.5"
                 >
                   <span>{sub.title}</span>
@@ -92,6 +94,7 @@ export default function MegaMenu() {
             <div className="mt-4 pt-4 border-t border-white/10">
               <Link 
                 href={`/services/${activeService.id}`}
+                onClick={onClose}
                 className="group inline-flex items-center gap-2 text-sm text-white font-medium hover:opacity-80 transition-opacity"
               >
                 View All {activeService.title}

@@ -134,7 +134,7 @@ export default function Navbar() {
                       onMouseEnter={handleDropdownEnter}
                       onMouseLeave={handleDropdownLeave}
                     >
-                      <MegaMenu />
+                      <MegaMenu onClose={() => setServicesDropdownOpen(false)} />
                     </div>
                   )}
                 </div>
