@@ -1008,11 +1008,966 @@ export const servicesShowcaseData = [
     images: ["/services/webapp_3.webp"],
     image: "/services/webapp_3.webp",
     subServices: [
-      { id: "saas-dashboards", title: "SaaS Dashboards" },
-      { id: "client-portals", title: "Client Portals" },
-      { id: "booking-systems", title: "Booking Systems" },
-      { id: "api-development", title: "API Development" },
-      { id: "saas-mvp-development", title: "SaaS and MVP Development" },
+      { 
+        id: "saas-dashboards", 
+        title: "SaaS Dashboards",
+        description: "Custom SaaS dashboard development with real-time analytics, role-based access, and interactive data visualizations that turn raw data into actionable insights.",
+        serviceSection: {
+          tag: "Web 01",
+          title: "SaaS Dashboards",
+          headline: "Dashboards That Turn Raw Data Into Actionable Decisions",
+          description: "A SaaS dashboard isn't just charts on a screen — it's the command center where your team makes decisions. We build custom dashboards with real-time data, interactive filters, and role-based views so every user sees exactly what they need, nothing they don't.",
+          solvesWhat: "Your team exports CSVs, patches together spreadsheets, and waits days for reports. The data exists — it's just not organized for decision-making. We build the layer that makes your data useful.",
+          features: [
+            "Real-time data syncing with live updates",
+            "Interactive charts, filters, and drill-downs",
+            "Role-based views — different data for different users",
+            "Export, reporting, and automated alert systems"
+          ],
+          images: ["/services/webapp_3.webp"],
+          image: "/services/webapp_3.webp",
+          layout: "image-grid"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "Your data is useless if the right people can't see it at the right time",
+            description: "Most businesses have data scattered across tools — CRM, analytics, billing, support tickets. The problem isn't a lack of data. It's that no one can see the full picture without exporting three reports and spending an afternoon in Excel.",
+            body: "A custom dashboard consolidates your data into a single view — real-time, filterable, and role-specific. Your ops team sees operational metrics. Your finance team sees revenue. Your CEO sees everything. The result is faster decisions, fewer surprises, and a team that actually trusts the numbers.",
+            highlight: "A dashboard pays for itself the first time it prevents a bad decision that would have cost more than the build."
+          },
+          intro: "A SaaS dashboard is the interface where your team interacts with data — real-time metrics, KPIs, and operational insights in a single view. We build custom dashboards with live data, interactive filters, and role-based access so every user sees exactly what they need to make decisions.",
+
+          included: [
+            {
+              label: "Real-Time Data Sync",
+              detail: "Live data connections to your databases, APIs, and third-party tools — no manual refresh, no stale numbers."
+            },
+            {
+              label: "Interactive Visualizations",
+              detail: "Charts, graphs, tables, and heatmaps that users can filter, sort, and drill into — not static images."
+            },
+            {
+              label: "Role-Based Access Control",
+              detail: "Different users see different data. Admins see everything. Managers see their team. Everyone else sees their own metrics."
+            },
+            {
+              label: "Automated Reports & Alerts",
+              detail: "Scheduled email reports, threshold alerts, and anomaly detection — so the right person knows when something needs attention."
+            },
+            {
+              label: "Export & Sharing",
+              detail: "PDF exports, CSV downloads, and shareable dashboard links — so insights reach people who don't have login access."
+            },
+            {
+              label: "Mobile-Responsive Design",
+              detail: "Full functionality on phones and tablets — because decisions don't only happen at a desk."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Data Audit",
+              body: "We map every data source, every metric that matters, and every user type — so the dashboard shows the right data to the right people."
+            },
+            {
+              step: "02",
+              title: "Wireframe & Design",
+              body: "Layout, navigation, and visual hierarchy designed around how your team actually makes decisions — not generic chart templates."
+            },
+            {
+              step: "03",
+              title: "Build & Integrate",
+              body: "Real-time data connections, interactive components, and authentication — built and tested with your actual data."
+            },
+            {
+              step: "04",
+              title: "QA & User Testing",
+              body: "We test with real users from your team — finding the confusing flows and missing metrics before launch."
+            },
+            {
+              step: "05",
+              title: "Deploy & Train",
+              body: "Live deployment with user training and documentation — so your team actually uses it on day one."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "What data sources can you connect to?",
+              a: "Any database, API, or service with a public API — PostgreSQL, MySQL, MongoDB, Stripe, HubSpot, Salesforce, Google Analytics, Airtable, and most platforms with a REST or GraphQL API."
+            },
+            {
+              q: "Can different user roles see different data?",
+              a: "Yes. Role-based access control is standard on every dashboard we build. Admins, managers, and end users each get a tailored view."
+            },
+            {
+              q: "How real-time is the data?",
+              a: "Depending on the source — real-time (WebSocket or polling every few seconds), near-real-time (every 1–5 minutes), or scheduled (hourly/daily). We match the update frequency to what the business case actually needs."
+            },
+            {
+              q: "Do you build dashboards on top of existing tools?",
+              a: "Sometimes. If your data is already in a well-structured tool, we might recommend building on top of it. If the tool is limiting you, we build from scratch. We'll be honest about which approach is right."
+            }
+          ],
+
+          industries: [
+            {
+              id: "saas-dash",
+              title: "SaaS Companies",
+              icon: "Building2",
+              headline: "Give Every User the Metrics They Need — In Real Time",
+              description: "SaaS companies need dashboards for admins, customers, and investors — each seeing different metrics at different granularity. A custom dashboard handles all three from one codebase.",
+              challenges: [
+                "Multiple user types needing different metric views",
+                "Real-time data that updates without page refresh",
+                "Usage analytics that inform product decisions",
+                "Investor-ready reporting that looks professional"
+              ],
+              approach: "We build SaaS dashboards with role-based views — admin panels with full control, customer-facing dashboards with their usage data, and investor reports that update automatically."
+            },
+            {
+              id: "ecommerce-dash",
+              title: "E-commerce",
+              icon: "Building2",
+              headline: "See Revenue, Inventory, and Campaign Performance in One Place",
+              description: "E-commerce owners juggle Shopify, Google Analytics, ad platforms, and inventory tools. A custom dashboard pulls everything into one view — real-time revenue, stock levels, and campaign ROI.",
+              challenges: [
+                "Data scattered across Shopify, ads, and analytics",
+                "Inventory alerts that need manual checking",
+                "Campaign performance that requires multiple logins",
+                "Revenue reporting that takes hours to compile"
+              ],
+              approach: "We build e-commerce dashboards that consolidate revenue, inventory, and campaign data — with real-time alerts for stockouts and automated daily revenue reports."
+            },
+            {
+              id: "healthcare-dash",
+              title: "Healthcare",
+              icon: "Building2",
+              headline: "Patient Flow and Operational Metrics at a Glance",
+              description: "Healthcare operations need real-time visibility into patient flow, resource utilization, and staff performance — data that's currently locked in separate systems.",
+              challenges: [
+                "Patient flow data across multiple departments",
+                "Resource utilization that needs real-time visibility",
+                "Staff performance metrics scattered across tools",
+                "HIPAA compliance for data visualization"
+              ],
+              approach: "We build HIPAA-compliant healthcare dashboards that visualize patient flow, resource utilization, and operational metrics — giving administrators the real-time view they need."
+            },
+            {
+              id: "finance-dash",
+              title: "Finance & Fintech",
+              icon: "Building2",
+              headline: "Financial Metrics That Update Without a Spreadsheet",
+              description: "Financial teams need real-time visibility into cash flow, P&L, and portfolio performance — but most of that data is locked in accounting tools and requires manual compilation.",
+              challenges: [
+                "Cash flow data across multiple accounts",
+                "P&L reporting that requires manual compilation",
+                "Portfolio performance needing real-time updates",
+                "Regulatory reporting that demands accuracy"
+              ],
+              approach: "We build financial dashboards that consolidate cash flow, P&L, and portfolio data — with real-time updates and automated regulatory reporting."
+            },
+            {
+              id: "marketing-dash",
+              title: "Marketing Agencies",
+              icon: "Building2",
+              headline: "Client Reporting That Runs Itself",
+              description: "Agencies spend hours compiling client reports from multiple ad platforms. A custom dashboard automates that — pulling campaign data, calculating ROI, and generating client-ready reports.",
+              challenges: [
+                "Reporting across Google, Meta, TikTok, and LinkedIn",
+                "Client-specific views with different KPIs",
+                "Automated report generation that saves hours weekly",
+                "White-labeled dashboards that look like the agency built them"
+              ],
+              approach: "We build agency dashboards that pull campaign data from every ad platform, calculate client-specific ROI, and generate automated reports — saving hours of manual work every week."
+            },
+            {
+              id: "logistics-dash",
+              title: "Logistics & Operations",
+              icon: "Building2",
+              headline: "Track Shipments, Inventory, and Fleet in Real Time",
+              description: "Logistics operations need real-time visibility into shipments, inventory levels, and fleet status — data that's spread across tracking systems, warehouses, and carrier APIs.",
+              challenges: [
+                "Shipment tracking across multiple carriers",
+                "Inventory levels across warehouses",
+                "Fleet status and route optimization data",
+                "Exception alerts for delays and disruptions"
+              ],
+              approach: "We build logistics dashboards that consolidate tracking, inventory, and fleet data — with real-time alerts for delays and automated exception reporting."
+            }
+          ]
+        }
+      },
+      { 
+        id: "client-portals", 
+        title: "Client Portals",
+        description: "Secure client portal development with role-based access, document sharing, real-time messaging, and project tracking — giving your clients a branded space to interact with your business.",
+        serviceSection: {
+          tag: "Web 02",
+          title: "Client Portals",
+          headline: "Branded Client Portals That Replace Email Chains and Shared Drives",
+          description: "Your clients shouldn't have to dig through email threads to find a document, check project status, or submit a request. We build secure client portals — branded, role-based, and designed around how your clients actually interact with your business.",
+          solvesWhat: "Email is not a project management tool. Shared drives become graveyards. Your clients deserve a single place to see progress, download files, submit requests, and communicate — without the chaos.",
+          features: [
+            "Branded portal with your logo, colors, and domain",
+            "Role-based access — clients see only their data",
+            "Document upload, download, and e-signature flows",
+            "Real-time project tracking and status updates"
+          ],
+          images: ["/services/webapp_1.webp"],
+          image: "/services/webapp_1.webp",
+          layout: "image-grid"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "Your clients shouldn't have to email you to find out what's happening",
+            description: "When clients can't see project status, download documents, or submit requests without emailing you, both sides lose time. Your team answers the same questions repeatedly. Your clients feel uninformed.",
+            body: "A client portal gives them self-service access to everything they need — project timelines, documents, invoices, and communication — in a branded space that looks like an extension of your business, not a third-party tool. The result: fewer emails, happier clients, and a team that focuses on delivery instead of updates.",
+            highlight: "A client portal isn't just a convenience — it's a competitive advantage. Clients choose businesses that make them feel informed and in control."
+          },
+          intro: "A client portal is a secure, branded web application where your clients interact with your business — viewing projects, downloading documents, submitting requests, and communicating with your team. We build custom portals that replace email chaos with organized self-service.",
+
+          included: [
+            {
+              label: "Branded Interface",
+              detail: "Your logo, your colors, your domain — the portal looks like your business, not someone else's tool."
+            },
+            {
+              label: "Secure Authentication",
+              detail: "Login, password reset, two-factor authentication, and session management — built to security standards."
+            },
+            {
+              label: "Role-Based Access",
+              detail: "Each client sees only their data. Different permission levels for different users within the same client organization."
+            },
+            {
+              label: "Document Management",
+              detail: "Upload, download, preview, and organize files — with version history and e-signature integration where needed."
+            },
+            {
+              label: "Project Tracking",
+              detail: "Real-time status updates, task lists, and timeline views — so clients see progress without asking."
+            },
+            {
+              label: "Messaging & Notifications",
+              detail: "In-app messaging, email notifications, and activity feeds — keeping communication organized and searchable."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "User Research",
+              body: "We interview your team and, if possible, your clients — understanding what they need to see, do, and access in the portal."
+            },
+            {
+              step: "02",
+              title: "Information Architecture",
+              body: "Navigation, data structure, and permission levels mapped — so every user type finds what they need without confusion."
+            },
+            {
+              step: "03",
+              title: "Design & Prototype",
+              detail: "Branded interface designed around your client's workflow — not generic portal templates."
+            },
+            {
+              step: "04",
+              title: "Build & Integrate",
+              body: "Authentication, document management, project tracking, and messaging — built and tested with your actual client data."
+            },
+            {
+              step: "05",
+              title: "Launch & Onboard",
+              body: "We help you migrate existing clients into the portal and train your team on how to manage it."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "Can we white-label the portal with our branding?",
+              a: "Yes. Every portal is built with your logo, colors, and custom domain. Your clients will think you built it yourself."
+            },
+            {
+              q: "How do clients get access?",
+              a: "You invite them via email. They create an account, set their password, and land in their personalized dashboard. Bulk invitations are supported for large client bases."
+            },
+            {
+              q: "Can different clients see different things?",
+              a: "Yes. Role-based access control ensures each client sees only their own data. Within a client organization, different users can have different permission levels."
+            },
+            {
+              q: "What if we already use a tool like Clientify or Dubsado?",
+              a: "If your current tool works, we won't replace it unnecessarily. But if it's limiting your workflow, charging per seat, or missing features you need — a custom portal gives you full control."
+            }
+          ],
+
+          industries: [
+            {
+              id: "agencies-portal",
+              title: "Agencies & Consultancies",
+              icon: "Building2",
+              headline: "Replace Email Updates With a Self-Service Client Hub",
+              description: "Agencies send the same project updates, share the same documents, and answer the same status questions daily. A client portal automates the routine so your team focuses on strategy.",
+              challenges: [
+                "Clients emailing for status updates constantly",
+                "Documents scattered across email and shared drives",
+                "Multiple stakeholders needing different project views",
+                "Onboarding new clients with repetitive setup"
+              ],
+              approach: "We build agency client portals where clients see project timelines, download deliverables, submit feedback, and track invoices — reducing status emails by 80%."
+            },
+            {
+              id: "healthcare-portal",
+              title: "Healthcare",
+              icon: "Building2",
+              headline: "Patient Portals That Reduce Admin Calls",
+              description: "Healthcare providers get calls for appointment scheduling, test results, and billing questions. A patient portal handles the routine — reducing admin burden and improving patient experience.",
+              challenges: [
+                "Patients calling for test results and appointment times",
+                "Secure document sharing for medical records",
+                "HIPAA compliance for patient data access",
+                "Billing and payment integration"
+              ],
+              approach: "We build HIPAA-compliant patient portals where patients view test results, schedule appointments, message providers, and pay bills — reducing phone calls and improving satisfaction."
+            },
+            {
+              id: "finance-portal",
+              title: "Finance & Accounting",
+              icon: "Building2",
+              headline: "Give Clients Real-Time Access to Their Financial Data",
+              description: "Accounting firms and financial advisors spend hours compiling reports for clients. A portal gives clients self-service access to their financial data — real-time, always current.",
+              challenges: [
+                "Clients requesting reports that could be self-service",
+                "Secure sharing of sensitive financial documents",
+                "Multiple client accounts needing different views",
+                "Integration with accounting software"
+              ],
+              approach: "We build financial client portals where clients view real-time reports, download statements, submit documents, and track their financial health — without emailing for every update."
+            },
+            {
+              id: "legal-portal",
+              title: "Legal",
+              icon: "Building2",
+              headline: "Case Portals That Keep Clients Informed and Documents Organized",
+              description: "Law firms manage cases with documents, deadlines, and communications scattered across email and file systems. A client portal organizes everything in one secure place.",
+              challenges: [
+                "Case documents needing secure, organized access",
+                "Clients asking for case status updates",
+                "Deadline tracking that needs client visibility",
+                "Conflict checks and intake documentation"
+              ],
+              approach: "We build legal client portals where clients view case status, access documents, track deadlines, and communicate with their attorney — organized and secure."
+            },
+            {
+              id: "realestate-portal",
+              title: "Real Estate",
+              icon: "Building2",
+              headline: "Property Portals for Buyers, Sellers, and Investors",
+              description: "Real estate transactions involve multiple parties — buyers, sellers, agents, lenders — all needing different information at different stages. A portal keeps everyone aligned.",
+              challenges: [
+                "Multiple parties needing different transaction views",
+                "Document sharing for contracts and disclosures",
+                "Timeline tracking for closings",
+                "Communication between buyers, sellers, and agents"
+              ],
+              approach: "We build real estate portals where buyers track their purchase timeline, sellers see listing performance, and agents manage transactions — all in one place."
+            },
+            {
+              id: "saas-portal",
+              title: "SaaS & Software",
+              icon: "Building2",
+              headline: "Customer Portals That Reduce Support Tickets",
+              description: "SaaS companies handle support requests, onboarding questions, and account management through email. A customer portal deflects routine tickets with self-service knowledge bases and account management.",
+              challenges: [
+                "Support tickets that could be self-service",
+                "Account management requiring manual intervention",
+                "Onboarding flows that need human guidance",
+                "Feature requests and feedback collection"
+              ],
+              approach: "We build SaaS customer portals with knowledge bases, account management, and feedback systems — reducing support volume while improving customer satisfaction."
+            }
+          ]
+        }
+      },
+      { 
+        id: "booking-systems", 
+        title: "Booking Systems",
+        description: "Custom online booking and appointment scheduling systems with real-time availability, automated reminders, payment integration, and multi-location support.",
+        serviceSection: {
+          tag: "Web 03",
+          title: "Booking Systems",
+          headline: "Online Booking Systems That Fill Your Calendar Without the Back-and-Forth",
+          description: "Every booking you handle via phone, email, or DM is time your team spends scheduling instead of serving. We build custom booking systems with real-time availability, automated confirmations, and payment integration — so clients book themselves and your team focuses on delivery.",
+          solvesWhat: "The back-and-forth of scheduling eats hours every week. Double-bookings happen. No-shows cost revenue. A custom booking system eliminates the friction for both your team and your clients.",
+          features: [
+            "Real-time availability with calendar sync",
+            "Automated confirmations, reminders, and follow-ups",
+            "Payment collection at booking or deposit",
+            "Multi-provider and multi-location scheduling"
+          ],
+          images: ["/services/webapp_2.webp"],
+          image: "/services/webapp_2.webp",
+          layout: "image-grid"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "Every manual booking costs you time, money, and credibility",
+            description: "When clients have to email or call to book, they don't — they go to someone who lets them book online. And every minute your team spends scheduling is a minute they're not serving clients.",
+            body: "A custom booking system handles the entire scheduling workflow: shows real-time availability, prevents double-bookings, sends confirmations and reminders, collects payments, and handles cancellations. The result is a filled calendar, fewer no-shows, and zero time spent on scheduling logistics.",
+            highlight: "The best booking system is the one where your team never has to check a calendar again — it's already handled."
+          },
+          intro: "A booking system is a web application that lets clients self-schedule appointments, classes, or services — with real-time availability, automated confirmations, and payment integration. We build custom booking systems that eliminate scheduling friction and fill your calendar.",
+
+          included: [
+            {
+              label: "Real-Time Availability",
+              detail: "Calendar sync with Google Calendar, Outlook, or your internal system — clients see real-time slots, no double-bookings."
+            },
+            {
+              label: "Automated Reminders",
+              detail: "Email and SMS reminders before appointments — reducing no-shows by 30–50% on average."
+            },
+            {
+              label: "Payment Integration",
+              detail: "Collect full payment, deposits, or cancellation fees at booking — integrated with Stripe, PayPal, or your payment processor."
+            },
+            {
+              label: "Multi-Provider Scheduling",
+              detail: "Multiple staff members with individual availability, skills, and locations — clients book the right person at the right place."
+            },
+            {
+              label: "Recurring & Package Bookings",
+              detail: "Weekly classes, monthly subscriptions, or multi-session packages — with automated scheduling and billing."
+            },
+            {
+              label: "Cancellation & Rescheduling",
+              detail: "Self-service cancellation and rescheduling with policy enforcement — reducing admin work and no-show losses."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Workflow Mapping",
+              body: "We map your current scheduling process — who books, what resources are involved, what confirmation looks like, and what happens on cancellation."
+            },
+            {
+              step: "02",
+              title: "System Design",
+              body: "Calendar logic, availability rules, notification triggers, and payment flow — all designed before development begins."
+            },
+            {
+              step: "03",
+              title: "Build & Integrate",
+              body: "Booking interface, calendar sync, payment processing, and notification system — built and tested with real scheduling scenarios."
+            },
+            {
+              step: "04",
+              title: "QA & Load Testing",
+              body: "We test with concurrent bookings, edge cases, and cancellation scenarios — ensuring the system handles real volume."
+            },
+            {
+              step: "05",
+              title: "Launch & Migrate",
+              body: "Existing appointments migrated, team trained, and clients guided through the new booking flow."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "Can we sync with our existing calendar?",
+              a: "Yes. We integrate with Google Calendar, Outlook, Apple Calendar, and most calendar APIs — so availability stays in sync across all your tools."
+            },
+            {
+              q: "Can different providers have different availability?",
+              a: "Yes. Each provider sets their own schedule, skills, and locations. Clients see only the available slots for the specific provider they're booking."
+            },
+            {
+              q: "Do you handle class bookings or only individual appointments?",
+              a: "Both. We build systems for individual appointments, group classes, workshops, and multi-session packages — with capacity limits and waitlists."
+            },
+            {
+              q: "What payment processors do you support?",
+              a: "Stripe, PayPal, Square, and most processors with a public API. We integrate the one you already use — no need to switch."
+            }
+          ],
+
+          industries: [
+            {
+              id: "healthcare-book",
+              title: "Healthcare & Clinics",
+              icon: "Building2",
+              headline: "Reduce No-Shows and Fill Every Appointment Slot",
+              description: "Healthcare clinics lose revenue to no-shows and spend hours on phone scheduling. A booking system with automated reminders and waitlist management fixes both.",
+              challenges: [
+                "No-show rates costing 10–20% of revenue",
+                "Phone scheduling consuming front desk time",
+                "Multiple providers with different availability",
+                "Insurance and intake form integration"
+              ],
+              approach: "We build healthcare booking systems with automated reminders, waitlist management, and intake form integration — reducing no-shows and freeing front desk staff."
+            },
+            {
+              id: "hospitality-book",
+              title: "Hospitality & Restaurants",
+              icon: "Building2",
+              headline: "Let Guests Book Tables and Rooms Without Calling",
+              description: "Restaurants and hotels handle reservations via phone, DM, and third-party platforms — each adding commission and complexity. A direct booking system keeps the relationship and the margin.",
+              challenges: [
+                "Third-party booking platforms taking 15–30% commission",
+                "Phone reservations consuming staff time",
+                "Table management and capacity optimization",
+                "Special requests and dietary requirements"
+              ],
+              approach: "We build direct booking systems for restaurants and hotels — handling reservations, table management, and special requests without third-party commissions."
+            },
+            {
+              id: "fitness-book",
+              title: "Fitness & Wellness",
+              icon: "Building2",
+              headline: "Book Classes, Sessions, and Memberships in One System",
+              description: "Gyms and studios manage class bookings, personal training sessions, and memberships through separate tools. A unified booking system handles all three.",
+              challenges: [
+                "Class bookings with capacity limits and waitlists",
+                "Personal training sessions with different durations",
+                "Membership management and recurring billing",
+                "Instructor availability across multiple locations"
+              ],
+              approach: "We build fitness booking systems that handle classes, sessions, and memberships — with capacity management, waitlists, and automated billing."
+            },
+            {
+              id: "professional-book",
+              title: "Professional Services",
+              icon: "Building2",
+              headline: "Turn Consultation Requests Into Confirmed Appointments",
+              description: "Law firms, accountants, and consultants spend hours scheduling consultations. A booking system lets prospects book directly — qualified, confirmed, and ready.",
+              challenges: [
+                "Consultation scheduling consuming billable hours",
+                "Qualification questions that need answering before booking",
+                "Multiple service types with different durations and prices",
+                "Integration with CRM and intake systems"
+              ],
+              approach: "We build professional service booking systems with qualification forms, service-specific scheduling, and CRM integration — turning inquiries into confirmed appointments."
+            },
+            {
+              id: "education-book",
+              title: "Education & Tutoring",
+              icon: "Building2",
+              headline: "Schedule Tutoring, Classes, and Office Hours Automatically",
+              description: "Educators and tutoring centers manage schedules through email and spreadsheets. A booking system lets students book sessions based on tutor availability and subject.",
+              challenges: [
+                "Tutor availability across multiple subjects",
+                "Session booking with different durations and prices",
+                "Recurring weekly sessions and package deals",
+                "Integration with learning management systems"
+              ],
+              approach: "We build education booking systems where students book by subject, tutor, and time slot — with package deals and recurring session support."
+            },
+            {
+              id: "realestate-book",
+              title: "Real Estate",
+              icon: "Building2",
+              headline: "Let Buyers Book Property Viewings Without the Phone Tag",
+              description: "Real estate agents spend hours coordinating property viewings. A booking system lets buyers schedule viewings directly — with agent availability and property details.",
+              challenges: [
+                "Viewing scheduling across multiple properties and agents",
+                "Buyer qualification before showing",
+                "Calendar sync for agents in the field",
+                "Cancellation and rescheduling management"
+              ],
+              approach: "We build real estate viewing booking systems where buyers schedule directly — with agent availability, qualification forms, and automated confirmations."
+            }
+          ]
+        }
+      },
+      { 
+        id: "api-development", 
+        title: "API Development",
+        description: "Custom REST and GraphQL API development with authentication, rate limiting, documentation, and third-party integrations — the backend backbone your web application needs.",
+        serviceSection: {
+          tag: "Web 04",
+          title: "API Development",
+          headline: "Backend APIs That Connect Everything and Scale With Your Product",
+          description: "A web application without a solid API is a frontend without a backbone. We build RESTful and GraphQL APIs that handle authentication, data processing, third-party integrations, and real-time communication — engineered for reliability, security, and scale.",
+          solvesWhat: "Your frontend needs data. Your mobile app needs data. Your integrations need data. Without a well-built API, every connection is a hack. We build the backend layer that makes everything work together.",
+          features: [
+            "RESTful and GraphQL API architecture",
+            "JWT authentication, rate limiting, and security",
+            "Third-party API integrations (Stripe, CRM, ERP)",
+            "Auto-generated documentation and SDKs"
+          ],
+          images: ["/services/webapp_4.webp"],
+          image: "/services/webapp_4.webp",
+          layout: "image-grid"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "The API is the foundation — if it's wrong, everything built on top of it breaks",
+            description: "A poorly designed API creates cascading problems: slow responses, security vulnerabilities, broken integrations, and a codebase that becomes impossible to maintain. The frontend can look perfect, but if the API can't handle real traffic or secure real data, nothing works.",
+            body: "API design is architecture, not plumbing. The data models, endpoints, authentication strategy, and error handling need to be right from the start — because everything else depends on them. We build APIs that are documented, tested, secure, and designed to scale without being rewritten.",
+            highlight: "A well-built API is invisible — it just works. A poorly built one is the first thing your users notice when things go wrong."
+          },
+          intro: "An API is the backend layer that connects your frontend, mobile app, and third-party integrations. We build RESTful and GraphQL APIs with authentication, security, rate limiting, and documentation — engineered as the reliable foundation your product depends on.",
+
+          included: [
+            {
+              label: "RESTful & GraphQL APIs",
+              detail: "We build the architecture that fits your use case — REST for straightforward CRUD, GraphQL for complex data relationships and client-driven queries."
+            },
+            {
+              label: "Authentication & Security",
+              detail: "JWT, OAuth 2.0, API keys, rate limiting, input validation, and CORS — built to security standards from day one."
+            },
+            {
+              label: "Third-Party Integrations",
+              detail: "Stripe, PayPal, Twilio, SendGrid, HubSpot, Salesforce, and any API your product needs — with error handling and retry logic."
+            },
+            {
+              label: "Real-Time Endpoints",
+              detail: "WebSocket and Server-Sent Events for live data — chat, notifications, live dashboards, and collaborative features."
+            },
+            {
+              label: "Auto-Generated Documentation",
+              detail: "Interactive API docs with Swagger or Postman collections — so your frontend team and partners know exactly how to use every endpoint."
+            },
+            {
+              label: "Testing & Monitoring",
+              detail: "Automated test suites, health checks, and uptime monitoring — catching issues before your users do."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Data Modeling",
+              body: "We define your data models, relationships, and access patterns — so the API is built on a solid foundation, not bolted together later."
+            },
+            {
+              step: "02",
+              title: "Architecture & Design",
+              body: "Endpoint structure, authentication strategy, error handling, and versioning — all designed before code is written."
+            },
+            {
+              step: "03",
+              title: "Build & Integrate",
+              body: "The API is built with your frontend, third-party services, and real use cases in mind — not in isolation."
+            },
+            {
+              step: "04",
+              title: "Security Audit",
+              body: "Authentication flows, input validation, rate limiting, and injection protection — tested before launch."
+            },
+            {
+              step: "05",
+              title: "Document & Deploy",
+              body: "Interactive docs, deployment to your infrastructure, and handoff to your team with full documentation."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "REST or GraphQL — which should we use?",
+              a: "REST for straightforward CRUD with well-defined resources. GraphQL when clients need flexible queries, you have complex relationships, or multiple frontend types (web, mobile) consume different data subsets. We help you choose based on your actual needs."
+            },
+            {
+              q: "How do you handle API versioning?",
+              a: "URL-based versioning (e.g., /v1/, /v2/) for breaking changes, header-based for minor updates. We plan versioning from the start so updates don't break existing clients."
+            },
+            {
+              q: "Can you build an API on top of an existing database?",
+              yes: "Yes. We design APIs around your existing data models — or refactor them if the current schema is limiting. We'll be honest about what's faster."
+            },
+            {
+              q: "Do you provide API documentation?",
+              a: "Yes. Every API project includes interactive Swagger/OpenAPI documentation and a Postman collection — so your team and partners can start using it immediately."
+            }
+          ],
+
+          industries: [
+            {
+              id: "saas-api",
+              title: "SaaS & Software",
+              icon: "Building2",
+              headline: "Build the Backend Your Product Architecture Demands",
+              description: "SaaS products need APIs that handle authentication, multi-tenancy, billing integration, and real-time features — all while staying fast and secure as you scale.",
+              challenges: [
+                "Multi-tenant data isolation and security",
+                "Real-time features that need WebSocket infrastructure",
+                "Third-party integrations that need reliable error handling",
+                "API performance under growing customer load"
+              ],
+              approach: "We build SaaS backend APIs with multi-tenant architecture, real-time endpoints, and third-party integrations — designed to scale from 10 to 10,000 customers."
+            },
+            {
+              id: "fintech-api",
+              title: "Fintech",
+              icon: "Building2",
+              headline: "Financial APIs Where Security and Accuracy Are Non-Negotiable",
+              description: "Fintech APIs handle sensitive financial data — payments, account information, transactions. Security, compliance, and accuracy are not optional features.",
+              challenges: [
+                "PCI compliance for payment data",
+                "Transaction accuracy with zero tolerance for errors",
+                "Real-time fraud detection and rate limiting",
+                "Integration with banking and payment APIs"
+              ],
+              approach: "We build fintech APIs with PCI-compliant security, transaction accuracy validation, and integration with banking APIs — engineered for the standards finance demands."
+            },
+            {
+              id: "healthcare-api",
+              title: "Healthcare",
+              icon: "Building2",
+              headline: "HIPAA-Compliant APIs for Health Data Exchange",
+              description: "Healthcare APIs exchange sensitive patient data — requiring HIPAA compliance, audit trails, and encryption at every layer.",
+              challenges: [
+                "HIPAA compliance for patient data exchange",
+                "Integration with EHR systems and health databases",
+                "Audit trails for every data access",
+                "Real-time data for patient monitoring"
+              ],
+              approach: "We build HIPAA-compliant healthcare APIs with encrypted data exchange, audit trails, and EHR integration — meeting healthcare standards from day one."
+            },
+            {
+              id: "ecommerce-api",
+              title: "E-commerce",
+              icon: "Building2",
+              headline: "APIs That Connect Your Store to Everything",
+              description: "E-commerce platforms need APIs that connect storefronts, payment processors, inventory systems, and shipping providers — all in real time.",
+              challenges: [
+                "Real-time inventory sync across channels",
+                "Payment processing with error handling",
+                "Shipping integration with rate calculation",
+                "Marketplace API integration (Amazon, Etsy)"
+              ],
+              approach: "We build e-commerce APIs that connect your storefront to payment processors, inventory systems, and shipping providers — real-time, reliable, and scalable."
+            },
+            {
+              id: "logistics-api",
+              title: "Logistics",
+              icon: "Building2",
+              headline: "Real-Time APIs for Tracking, Routing, and Operations",
+              description: "Logistics APIs process real-time data — tracking, routing, inventory, and carrier integration — requiring low latency and high reliability.",
+              challenges: [
+                "Real-time tracking data processing",
+                "Route optimization with multiple constraints",
+                "Multi-carrier API integration",
+                "High-volume data processing"
+              ],
+              approach: "We build logistics APIs that process tracking data, optimize routes, and integrate with carriers — low-latency, high-reliability, and built for real-time operations."
+            },
+            {
+              id: "startup-api",
+              title: "Startups & MVPs",
+              icon: "Building2",
+              headline: "APIs That Scale From Prototype to Production",
+              description: "Startups need APIs that work fast for the MVP but don't need to be rewritten when you hit product-market fit. We build for both stages.",
+              challenges: [
+                "Speed to market without sacrificing architecture",
+                "API design that supports pivots and new features",
+                "Third-party integrations that can be swapped",
+                "Cost-efficient infrastructure at early stage"
+              ],
+              approach: "We build startup APIs that launch fast and scale cleanly — with modular architecture that supports pivots and integrations that can be swapped as you grow."
+            }
+          ]
+        }
+      },
+      { 
+        id: "saas-mvp-development", 
+        title: "SaaS & MVP Development",
+        description: "Full-stack SaaS MVP development — from idea to launch in 6–10 weeks. Custom architecture, authentication, billing, and deployment ready for your first paying customers.",
+        serviceSection: {
+          tag: "Web 05",
+          title: "SaaS & MVP Development",
+          headline: "From Idea to Launch-Ready SaaS in 6–10 Weeks",
+          description: "You don't need a year and a VC budget to launch a SaaS product. We build MVPs that are lean enough to validate fast and solid enough to scale — with authentication, billing, multi-tenancy, and deployment included. Not a no-code prototype. Real software you can build a business on.",
+          solvesWhat: "You have an idea and maybe a design. What you don't have is the engineering team to turn it into a product people pay for. We handle the full build — architecture, frontend, backend, billing, and deployment — so you can focus on customers.",
+          features: [
+            "Full-stack development — frontend, backend, database, hosting",
+            "Authentication, multi-tenancy, and role-based access",
+            "Stripe billing integration — subscriptions, trials, upgrades",
+            "Launch-ready in 6–10 weeks with real deployment"
+          ],
+          images: ["/services/webapp_3.webp"],
+          image: "/services/webapp_3.webp",
+          layout: "image-grid"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "The gap between a SaaS idea and a SaaS product is 10,000 lines of code — and most founders don't have an engineering team",
+            description: "Everyone has a SaaS idea. Very few have the technical team to build it. No-code tools get you a prototype. Freelancers get you a codebase that breaks. What you need is a small, senior team that can ship the product your customers will pay for.",
+            body: "An MVP isn't a toy — it's the minimum product that solves the problem well enough for someone to pay for it. That means real authentication, real billing, real data security, and a deployment that doesn't fall over when you get your first 100 users. We build that — not a prototype, not a demo — the product itself.",
+            highlight: "The goal isn't to build everything. It's to build the right things — and build them well enough that you're not rewriting the codebase six months later."
+          },
+          intro: "SaaS MVP development is building the minimum product that solves a real problem well enough for customers to pay — with real authentication, billing, multi-tenancy, and deployment. We take founders from idea to launch in 6–10 weeks with software they can build a business on.",
+
+          included: [
+            {
+              label: "Product Architecture",
+              detail: "Data models, tech stack selection, and system architecture — designed for the product you're building, not a generic template."
+            },
+            {
+              label: "Full-Stack Development",
+              detail: "Frontend, backend, database, and hosting — one team, one vision, no gaps between layers."
+            },
+            {
+              label: "Authentication & Multi-Tenancy",
+              detail: "User registration, login, password reset, roles, and tenant isolation — built properly from day one."
+            },
+            {
+              label: "Billing Integration",
+              detail: "Stripe or LemonSqueezy integration — subscriptions, trials, upgrades, downgrades, and cancellation flows."
+            },
+            {
+              label: "Admin Panel",
+              detail: "Internal dashboard for user management, analytics, and support — so you can run the business without touching the database."
+            },
+            {
+              label: "Deployment & Infrastructure",
+              detail: "Deployed to Vercel, Railway, or AWS with CI/CD — live and accessible to your first customers on launch day."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Discovery & Scoping",
+              body: "We define the MVP scope — core features, user types, and success criteria. What's in, what's out, and what comes after launch."
+            },
+            {
+              step: "02",
+              title: "Architecture & Design",
+              body: "Tech stack selection, data modeling, API design, and UI/UX — all decided before a line of code is written."
+            },
+            {
+              step: "03",
+              title: "Sprint Development",
+              body: "2-week sprints with working demos at the end of each — so you see progress and can adjust direction as you learn."
+            },
+            {
+              step: "04",
+              title: "Beta Testing",
+              body: "Real users testing the product with real data — finding bugs and UX issues before the public launch."
+            },
+            {
+              step: "05",
+              title: "Launch & Support",
+              body: "Production deployment, monitoring, and 30 days of post-launch support — so you're not alone when the first users arrive."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "How long does it take to build a SaaS MVP?",
+              a: "Typically 6–10 weeks from discovery to launch, depending on complexity. A focused MVP with one user type and core features takes 6 weeks. Multiple user types with integrations takes 8–10."
+            },
+            {
+              q: "What tech stack do you use?",
+              a: "We choose based on the product — Next.js or React for frontend, Node.js or Python for backend, PostgreSQL or MongoDB for database, and Vercel, Railway, or AWS for hosting. No one-size-fits-all."
+            },
+            {
+              q: "Do you handle billing integration?",
+              a: "Yes. Stripe or LemonSqueezy integration is standard — subscriptions, trials, upgrades, and cancellation flows. We set up the billing logic so you can start charging on day one."
+            },
+            {
+              q: "What happens after the MVP launches?",
+              a: "We offer post-launch maintenance and feature development. Many founders start with the MVP and add features as they learn from customers. We build the foundation so the second phase doesn't require a rewrite."
+            }
+          ],
+
+          industries: [
+            {
+              id: "saas-mvp",
+              title: "SaaS Startups",
+              icon: "Building2",
+              headline: "Launch Your SaaS Before Your Competitor Does",
+              description: "SaaS founders need to validate fast. A custom MVP gets you to market with a product that's real enough to charge for — not a no-code prototype that falls apart under real usage.",
+              challenges: [
+                "Speed to market with limited technical resources",
+                "Building for scale without over-engineering",
+                "Stripe billing that handles subscriptions cleanly",
+                "Architecture that supports feature additions"
+              ],
+              approach: "We build SaaS MVPs in 6–10 weeks — full-stack, billing-integrated, and deployment-ready — so you can validate with real customers and real revenue."
+            },
+            {
+              id: "fintech-mvp",
+              title: "Fintech",
+              icon: "Building2",
+              headline: "Fintech MVPs With Security Built In From Day One",
+              description: "Fintech MVPs need security and compliance baked in from the start — not bolted on later. We build with PCI awareness, encryption, and audit trails from the first commit.",
+              challenges: [
+                "Security requirements that can't be deferred",
+                "Payment integration that needs to work perfectly",
+                "Regulatory awareness from the first sprint",
+                "User trust that depends on data protection"
+              ],
+              approach: "We build fintech MVPs with security-first architecture — encryption, audit trails, and payment integration — so you're not retrofitting compliance after launch."
+            },
+            {
+              id: "health-mvp",
+              title: "Healthcare",
+              icon: "Building2",
+              headline: "Health Tech MVPs That Respect Patient Data",
+              description: "Health tech startups need MVPs that handle patient data with HIPAA awareness from the start — not a generic SaaS template with security as an afterthought.",
+              challenges: [
+                "HIPAA awareness even at MVP stage",
+                "Patient data handling that requires encryption",
+                "Integration with health systems and wearables",
+                "Clinical workflows that need user research"
+              ],
+              approach: "We build health tech MVPs with HIPAA-aware architecture, encrypted data handling, and integration with health APIs — launching with patient data protection from day one."
+            },
+            {
+              id: "edtech-mvp",
+              title: "EdTech",
+              icon: "Building2",
+              headline: "EdTech MVPs That Deliver Learning, Not Just Content",
+              description: "EdTech products need more than content delivery — they need progress tracking, assessments, and engagement features that make learning stick.",
+              challenges: [
+                "Learning management features beyond content hosting",
+                "Student engagement and progress tracking",
+                "Integration with existing education tools",
+                "Multi-role access for students, teachers, and admins"
+              ],
+              approach: "We build EdTech MVPs with learning management, progress tracking, and multi-role access — launching a product that delivers education, not just information."
+            },
+            {
+              id: "marketplace-mvp",
+              title: "Marketplaces",
+              icon: "Building2",
+              headline: "Two-Sided Marketplace MVPs With Payment Splitting",
+              description: "Marketplace MVPs need two user types, payment splitting, and trust features — significantly more complex than a single-tenant SaaS. We build the architecture that handles both sides.",
+              challenges: [
+                "Two-sided user experience (buyers and sellers)",
+                "Payment splitting and escrow",
+                "Trust and review systems",
+                "Search and matching logic"
+              ],
+              approach: "We build marketplace MVPs with dual user types, payment splitting, and trust systems — handling the complexity that single-tenant SaaS doesn't have."
+            },
+            {
+              id: "agency-mvp",
+              title: "Agencies Building Products",
+              icon: "Building2",
+              headline: "Turn Your Service Expertise Into a Product",
+              description: "Agencies have domain expertise that could be productized — but building software isn't their core competency. We build the product so you can sell the expertise at scale.",
+              challenges: [
+                "Domain expertise that needs productization",
+                "Internal tools that could become external products",
+                "Limited technical resources for product development",
+                "Need for a technical co-founder alternative"
+              ],
+              approach: "We build agency products — turning your service expertise into software you can sell at scale, without needing to hire a technical team."
+            }
+          ]
+        }
+      },
     ],
     layout: "image-grid",
 
