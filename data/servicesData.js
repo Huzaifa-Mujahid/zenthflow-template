@@ -132,7 +132,112 @@ export const servicesShowcaseData = [
       },
       { id: "web-development", title: "Web Development" },
       { id: "landing-pages", title: "Landing Pages" },
-      { id: "wordpress", title: "WordPress" },
+      { 
+        id: "wordpress", 
+        title: "WordPress",
+        description: "Custom WordPress development with clean code, hardened security, and performance that loads fast and ranks. No bloated page builders, no plugin mess — just a site that works.",
+        serviceSection: {
+          tag: "Service 04",
+          title: "WordPress",
+          headline: "WordPress Done Right — The Platform That Runs 40% of the Web",
+          description: "Most WordPress sites rely on heavy page builders like Elementor or Divi, 15+ unmaintained plugins, and slow render-blocking scripts. We build custom themes with minimal dependencies, structured fields, and Core Web Vitals compliance for sub-2-second load times.",
+          solvesWhat: "A slow, insecure WordPress site costs you visitors, rankings, and revenue. We deliver clean, fast, and secure WordPress builds that convert and rank.",
+          features: [
+            "Custom WordPress Themes — no page-builder lock-in",
+            "WooCommerce Development — performance-tuned stores",
+            "Core Web Vitals — passing scores guaranteed",
+            "Security Hardening — malware-proof from day one"
+          ],
+          images: [
+            "/services/website_1.webp",
+            "/services/website_2.webp",
+            "/services/website_3.webp",
+            "/services/website_4.webp",
+            "/services/website_5.webp"
+          ],
+          image: "/services/website_4.webp",
+          layout: "website-scroll"
+        },
+        pageContent: {
+          whyItMatters: {
+            title: "Why It Matters",
+            headline: "WordPress runs 40% of the web — most of it badly",
+            description: "WordPress is the world's most popular CMS, but most implementations are slow, bloated, and vulnerable. Heavy page builders add unnecessary code, unmaintained plugins create security risks, and poor hosting kills performance.",
+            body: "A WordPress site built on clean code with minimal plugins loads in under 2 seconds, passes Core Web Vitals, and stays secure without constant maintenance. That's the difference between a site that costs you money and one that makes it.",
+            highlight: "We build custom WordPress themes with clean code, structured fields via ACF, and performance optimization baked in from the start — no page-builder bloat, no plugin mess."
+          },
+          intro: "WordPress powers 40% of the web, but most sites built on it are slow, insecure, and frustrating to manage. Heavy page builders like Elementor and Divi add bloat, 15+ plugins create security vulnerabilities, and poor code structure kills Core Web Vitals scores. We build custom WordPress themes from scratch — clean code, minimal dependencies, and performance that loads fast and ranks.",
+
+          included: [
+            {
+              label: "Custom WordPress Themes",
+              detail: "Purpose-built themes using clean PHP, Block Editor, and ACF — no page-builder lock-in, full ownership."
+            },
+            {
+              label: "WooCommerce Development",
+              detail: "Performance-tuned catalogs, cart, and checkout with custom product types, fields, and pricing logic."
+            },
+            {
+              label: "Core Web Vitals Optimization",
+              detail: "Sub-2-second load times with optimized images, clean queries, and lean scripts."
+            },
+            {
+              label: "Security Hardening",
+              detail: "Malware-proof setup with firewalls, login protection, and regular security audits."
+            },
+            {
+              label: "SEO Foundations",
+              detail: "Product & Review schema for Google rich results, semantic structure, and metadata built in."
+            },
+            {
+              label: "Easy Content Editing",
+              detail: "Block Editor & ACF setup so your team can update content without touching code."
+            }
+          ],
+
+          process: [
+            {
+              step: "01",
+              title: "Scope",
+              body: "Map site needs, content inventory, and performance baseline. We understand your business goals before writing code."
+            },
+            {
+              step: "02",
+              title: "Design & Plan",
+              body: "Custom theme design, content architecture with ACF, and minimal plugin stack. You approve before we build."
+            },
+            {
+              step: "03",
+              title: "Build",
+              body: "Lean code, clean queries, staging environment, and built-in SEO. We build fast and test everything."
+            },
+            {
+              step: "04",
+              title: "Launch & Verify",
+              body: "1:1 redirect mapping, security hardening, and post-launch Core Web Vitals check. Your rankings stay safe."
+            }
+          ],
+
+          faqs: [
+            {
+              q: "Is WordPress slow and insecure?",
+              a: "Not when built correctly. The problem isn't WordPress itself — it's bloated themes, too many plugins, and bad hosting. We build custom themes with clean code, minimal dependencies, and proper security hardening."
+            },
+            {
+              q: "Why not just use Elementor or Divi?",
+              a: "Page builders add 300-500KB of unnecessary code, slow down loading, and lock you into their ecosystem. Custom themes give you full control, faster speeds, and no vendor lock-in."
+            },
+            {
+              q: "Will a WordPress rebuild affect my SEO?",
+              a: "Not when done correctly. We map every redirect, preserve your content equity, and ensure Google can crawl and index your new site properly."
+            },
+            {
+              q: "Can I update the site myself after launch?",
+              area: "Yes. We set up the Block Editor with ACF fields so your team can update text, images, and pages without touching code or relying on a developer."
+            }
+          ]
+        }
+      },
       { id: "shopify", title: "Shopify" },
       { id: "ecommerce-development", title: "E-commerce Development" },
       { id: "website-migration", title: "Website Migration" },
