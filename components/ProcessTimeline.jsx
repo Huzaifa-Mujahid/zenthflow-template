@@ -39,16 +39,11 @@ const ProcessTimeline = ({ steps = defaultSteps, hideHeader = false }) => {
         </div>
       )}
 
-      {/* 
-        Horizontal scroll wrapper. 
-        On desktop it centers, on mobile it allows scrolling the wide SVG.
-      */}
       <div className="w-full overflow-x-auto hide-scrollbar pb-4 pt-8">
         <div className="min-w-[900px] max-w-[1200px] mx-auto relative">
           
           <svg viewBox="0 0 840 320" className="w-full h-auto drop-shadow-2xl">
             <defs>
-              {/* Gradient that fades at the ends to merge with the background */}
               <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#1a0a05" />
                 <stop offset="10%" stopColor="#e8602e" />
@@ -57,7 +52,6 @@ const ProcessTimeline = ({ steps = defaultSteps, hideHeader = false }) => {
               </linearGradient>
             </defs>
 
-            {/* Dark Grey Background Wave (Completes the circles) */}
             <path 
               d="M 70 100 
                  A 70 70 0 0 0 210 100 
@@ -70,7 +64,6 @@ const ProcessTimeline = ({ steps = defaultSteps, hideHeader = false }) => {
               strokeWidth="16" 
             />
 
-            {/* Orange Copper Foreground Wave (The continuous timeline) */}
             <path 
               d="M 0 170 
                  C 30 170, 40 100, 70 100 
@@ -86,19 +79,16 @@ const ProcessTimeline = ({ steps = defaultSteps, hideHeader = false }) => {
               strokeLinecap="round" 
             />
 
-            {/* Icons and Text mapped dynamically */}
             {steps.map((step, i) => {
               const cx = 140 + i * 140;
               return (
                 <g key={i}>
-                  {/* Icon */}
                   <foreignObject x={cx - 24} y={100 - 24} width="48" height="48">
                     <div className="flex items-center justify-center w-full h-full text-white/90">
                       {step.icon}
                     </div>
                   </foreignObject>
 
-                  {/* Text */}
                   <foreignObject x={cx - 70} y={190} width="140" height="120">
                     <div className="flex flex-col items-center text-center w-full h-full">
                       <h3 className="text-[15px] font-headline uppercase tracking-wider mb-2 text-white">

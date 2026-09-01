@@ -4,6 +4,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Building2, ShoppingCart, Cpu, Heart, Home, Hotel, ArrowRight } from "lucide-react";
 
+const ICON_MAP = { Building2, ShoppingCart, Cpu, Heart, Home, Hotel };
+
+function resolveIcon(icon) {
+  if (!icon) return Building2;
+  if (typeof icon === "string") return ICON_MAP[icon] || Building2;
+  return icon;
+}
+
+
 const industries = [
   {
     id: "professional-services",
@@ -91,8 +100,9 @@ const industries = [
   }
 ];
 
-export default function IndustryShowcase() {
-  const [activeIndustry, setActiveIndustry] = useState(industries[0]);
+export default function IndustryShowcase({ industries: customIndustries, subtitle }) {
+  const industriesToShow = customIndustries || industries;
+  const [activeIndustry, setActiveIndustry] = useState(industriesToShow[0]);
 
   return (
     <section className="py-6 px-3 sm:px-4 lg:px-5 bg-black relative overflow-hidden">
@@ -115,14 +125,14 @@ export default function IndustryShowcase() {
               Built for Your Industry
             </h2>
             <p className="text-[#8e9192] text-lg leading-relaxed max-w-2xl mb-12">
-              Whether you operate in any of these sectors, your website needs tailored strategy. We design service architectures and lead funnels specifically aligned with how your buyers make decisions.
+              {subtitle || "Whether you operate in any of these sectors, your website needs tailored strategy. We design service architectures and lead funnels specifically aligned with how your buyers make decisions."}
             </p>
           </motion.div>
 
           {/* Industry Tabs */}
           <div className="flex flex-wrap gap-3 mb-12">
-            {industries.map((industry) => {
-              const Icon = industry.icon;
+            {industriesToShow.map((industry) => {
+              const Icon = resolveIcon(industry.icon);
               return (
                 <button
                   key={industry.id}
@@ -154,7 +164,7 @@ export default function IndustryShowcase() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   {(() => {
-                    const Icon = activeIndustry.icon;
+                    const Icon = resolveIcon(activeIndustry.icon);
                     return <Icon size={24} className="text-[#c4c7c8]" strokeWidth={1.5} />;
                   })()}
                   <span className="text-[#a8a8a8] text-sm font-label uppercase tracking-widest">{activeIndustry.title}</span>

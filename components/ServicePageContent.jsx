@@ -5,6 +5,7 @@ import { Search, PenTool, Code2, Zap, Rocket } from "lucide-react";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import FAQ from "@/components/FAQ";
 import IndustryShowcase from "@/components/IndustryShowcase";
+import WebsiteAudit from "@/components/WebsiteAudit";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -96,10 +97,10 @@ function ProcessSection({ process }) {
   );
 }
 
-export default function ServicePageContent({ pageContent }) {
+export default function ServicePageContent({ pageContent, showAudit = false }) {
   if (!pageContent) return null;
 
-  const { whyItMatters, process, faqs } = pageContent;
+  const { whyItMatters, process, faqs, industries } = pageContent;
 
   return (
     <div className="bg-black">
@@ -117,7 +118,10 @@ export default function ServicePageContent({ pageContent }) {
         </>
       )}
 
-      <IndustryShowcase />
+      <IndustryShowcase 
+        industries={industries} 
+        subtitle={industries ? "Every industry has a distinct visual language and set of expectations. We build brand identities engineered for how your specific market thinks, feels, and buys." : undefined}
+      />
 
       {faqs?.length > 0 && (
         <>
@@ -125,6 +129,8 @@ export default function ServicePageContent({ pageContent }) {
           <FAQ items={faqs.map((f) => ({ question: f.q, answer: f.a }))} />
         </>
       )}
+
+      {showAudit && <WebsiteAudit />}
     </div>
   );
 }

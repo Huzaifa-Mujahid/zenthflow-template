@@ -41,7 +41,7 @@ export default function ServicePage({ params }) {
         )}
 
         {subService.pageContent && (
-          <ServicePageContent pageContent={subService.pageContent} />
+          <ServicePageContent pageContent={subService.pageContent} showAudit={serviceId === 'seo-growth'} />
         )}
 
         <CTABanner />
@@ -92,7 +92,7 @@ export default function ServicePage({ params }) {
 
       <ServiceSection service={{...service, isServicePage: true}} index={index} />
 
-      <ServicePageContent pageContent={service.pageContent} />
+      <ServicePageContent pageContent={service.pageContent} showAudit={serviceId === 'seo-growth'} />
 
       <CTABanner />
     </div>
