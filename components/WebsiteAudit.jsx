@@ -318,12 +318,6 @@ export default function WebsiteAudit({ initialUrl = "" }) {
                   </div>
                 )}
 
-                {/* Footer */}
-                <div className="text-center mt-6">
-                  <p className="text-[#666] text-xs">
-                    Tested on mobile • Powered by Google PageSpeed Insights • {new Date(results.fetchedAt).toLocaleString()}
-                  </p>
-                </div>
               </motion.div>
             )}
           </AnimatePresence>
