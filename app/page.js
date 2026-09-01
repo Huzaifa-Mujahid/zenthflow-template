@@ -78,6 +78,7 @@ export default function HomePage() {
   const marqueeContent = marqueeItems.join(" · ") + " · ";
   const [heroIndex, setHeroIndex] = useState(0);
   const [auditUrl, setAuditUrl] = useState("");
+  const [auditTriggerUrl, setAuditTriggerUrl] = useState("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -262,10 +263,13 @@ export default function HomePage() {
                 <button
                   onClick={() => {
                     if (auditUrl.trim()) {
-                      const section = document.getElementById('free-audit');
-                      if (section) {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                      }
+                      setAuditTriggerUrl(auditUrl.trim());
+                      setTimeout(() => {
+                        const section = document.getElementById('free-audit');
+                        if (section) {
+                          section.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }, 100);
                     }
                   }}
                   disabled={!auditUrl.trim()}
@@ -428,7 +432,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WEBSITE AUDIT ──────────────────────────── */}
-      <WebsiteAudit />
+      <WebsiteAudit initialUrl={auditTriggerUrl} />
 
       {/* ── FAQ ────────────────────────────────────── */}
       <FAQ />

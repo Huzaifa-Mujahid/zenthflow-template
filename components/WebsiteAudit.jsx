@@ -63,10 +63,18 @@ export default function WebsiteAudit({ initialUrl = "" }) {
   const [progress, setProgress] = useState(0);
   const progressInterval = useRef(null);
 
+  const prevInitialUrl = useRef("");
+
   useEffect(() => {
-    if (initialUrl && !loading && !results) {
+    if (initialUrl && initialUrl !== prevInitialUrl.current) {
+      prevInitialUrl.current = initialUrl;
       setUrl(initialUrl);
-      runAudit(initialUrl);
+      setResults(null);
+      setError(null);
+      setLoading(false);
+      setProgress(0);
+      if (progressInterval.current) clearInterval(progressInterval.current);
+      setTimeout(() => runAudit(initialUrl), 100);
     }
   }, [initialUrl]);
 
@@ -89,9 +97,9 @@ export default function WebsiteAudit({ initialUrl = "" }) {
           clearInterval(progressInterval.current);
           return 90;
         }
-        return prev + Math.random() * 8;
+        return prev + Math.random() * 4;
       });
-    }, 300);
+    }, 500);
 
     try {
       const res = await fetch(`/api/audit?url=${encodeURIComponent(formattedUrl)}&strategy=mobile`);
@@ -204,7 +212,7 @@ export default function WebsiteAudit({ initialUrl = "" }) {
                       strokeLinecap="round"
                       strokeDasharray={`${2 * Math.PI * 42}`}
                       strokeDashoffset={`${2 * Math.PI * 42 * (1 - progress / 100)}`}
-                      className="transition-all duration-300"
+                      className="transition-all duration-500"
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
