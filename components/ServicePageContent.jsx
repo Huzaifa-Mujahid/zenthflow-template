@@ -37,30 +37,38 @@ const processIcons = [
 
 function WhyItMattersSection({ data }) {
   return (
-    <section className="px-5 md:px-20 max-w-[1440px] mx-auto py-16 md:py-20 bg-gradient-to-b from-white/5 to-transparent">
-      <motion.div {...fadeUp()} className="text-center">
-        <SectionLabel text={data.title} />
-        <h2
-          className="font-display chrome-text uppercase mb-8 max-w-4xl mx-auto"
-          style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.1 }}
-        >
-          {data.headline}
-        </h2>
-      </motion.div>
+    <section className="px-5 md:px-20 max-w-[1440px] mx-auto py-16 md:py-20">
+      <div className="rounded-[24px] border border-white/10 overflow-hidden relative"
+        style={{
+          background: "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(197,112,53,0.08) 50%, rgba(255,255,255,0.05) 100%)"
+        }}
+      >
+        <div className="px-8 md:px-16 py-16 md:py-20">
+          <motion.div {...fadeUp()} className="text-center">
+            <SectionLabel text={data.title} />
+            <h2
+              className="font-display chrome-text uppercase mb-8 max-w-4xl mx-auto"
+              style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.1 }}
+            >
+              {data.headline}
+            </h2>
+          </motion.div>
 
-      <motion.div {...fadeUp(0.1)} className="max-w-4xl mx-auto text-center">
-        <p className="text-[#a8a8a8] text-lg leading-relaxed mb-6">
-          {data.description}
-        </p>
-        <p className="text-[#a8a8a8] text-lg leading-relaxed mb-8">
-          {data.body}
-        </p>
-        <div className="bg-white/5 rounded-2xl p-6 border border-white/5">
-          <p className="text-white text-lg leading-relaxed font-medium">
-            {data.highlight}
-          </p>
+          <motion.div {...fadeUp(0.1)} className="max-w-4xl mx-auto text-center">
+            <p className="text-[#a8a8a8] text-lg leading-relaxed mb-6">
+              {data.description}
+            </p>
+            <p className="text-[#a8a8a8] text-lg leading-relaxed mb-8">
+              {data.body}
+            </p>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/5">
+              <p className="text-white text-lg leading-relaxed font-medium">
+                {data.highlight}
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
