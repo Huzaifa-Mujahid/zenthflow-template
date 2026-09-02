@@ -1,5 +1,5 @@
 import { Geist } from "next/font/google";
-import Script from "next/script";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,9 +18,7 @@ export const metadata = {
     "ORBITIX DIGITAL is a full service digital agency and business systems company serving clients globally. We provide branding, website development, web applications, AI automation, SEO, and social media management.",
   keywords:
     "full service digital agency, business systems company, digital solutions company, branding web development AI automation, website development and SEO company, social media management company",
-  verification: {
-    google: "RhVQgAkCQ_L7e9Eer20iAob5Vz4g815U5ouwRcVKF-Q",
-  },
+
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -55,16 +53,7 @@ export default function RootLayout({ children }) {
       className={`${geist.variable}`}
     >
       <head>
-        {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-F562ZNDNBT" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F562ZNDNBT');
-          `
-        }} />
+
         <link rel="preload" as="image" href="/herosection%20images/1.png" />
         <script
           type="application/ld+json"
