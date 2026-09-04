@@ -22,24 +22,24 @@ if (typeof window !== "undefined") {
 
 const whyPoints = [
   {
-    title: "Unrivaled Precision",
-    desc: "Every pixel and every line of code is optimized for peak performance and visual impact.",
+    title: "Engineered Accuracy",
+    desc: "Every element and every line of code is refined for maximum performance and visual excellence.",
   },
   {
-    title: "Strategic Dominance",
-    desc: "We build market-dominating digital assets that convert visitors into customers, systematically.",
+    title: "Competitive Advantage",
+    desc: "We craft high-impact digital products that systematically transform visitors into loyal customers.",
   },
   {
-    title: "Future-Proof Technology",
-    desc: "Leveraging the latest in AI and modern architecture to keep your brand ahead of the curve.",
+    title: "Scalable Architecture",
+    desc: "Powered by cutting-edge AI and modern frameworks to keep your brand ahead of the competition.",
   },
   {
-    title: "Full Transparency",
-    desc: "Radical honesty at every stage — from engineering metrics to collaborative design cycles.",
+    title: "Complete Visibility",
+    desc: "Absolute clarity at every milestone — from performance metrics to collaborative design iterations.",
   },
   {
-    title: "Quality Delivery",
-    desc: "No false promises. We deliver exactly what we build — premium quality, on time, every time.",
+    title: "Reliable Execution",
+    desc: "No overpromising. We deliver precisely what we plan — exceptional quality, on schedule, every time.",
   },
 ];
 
@@ -214,8 +214,8 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.55 }}
                 className="font-body text-[#a8a8a8] text-base sm:text-lg leading-relaxed max-w-xl mt-6"
               >
-                Helping businesses launch, grow, and dominate with custom software,
-                web apps, and strategic digital marketing.
+                Helping businesses launch, expand, and thrive with custom software,
+                web applications, and data-driven digital strategies.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -248,7 +248,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.75 }}
               className="w-full max-w-sm"
             >
-              <p className="text-[#c4c7c8] text-sm mb-3 font-semibold">Get Free Audit of Your Website</p>
+              <p className="text-[#c4c7c8] text-sm mb-3 font-semibold">Get a Complimentary Website Audit</p>
               <div className="flex gap-2">
                 <div className="flex-1 relative">
                   <Globe size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#666] z-10 pointer-events-none" />
@@ -366,8 +366,7 @@ export default function HomePage() {
               Why Orbitix Digital?
             </h2>
             <p className="font-body text-[#8e9192] text-base leading-relaxed">
-              Not every agency is built the same. ORBITIX DIGITAL combines technical
-              depth with aesthetic precision — delivering work that lasts.
+              Not every agency operates at the same standard. ORBITIX DIGITAL merges deep technical expertise with meticulous design precision — delivering solutions that endure.
             </p>
 
             {/* Trust Image */}

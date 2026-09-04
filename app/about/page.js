@@ -20,19 +20,19 @@ import CTABanner from "@/components/CTABanner";
 const values = [
   {
     title: "Pixel Perfect",
-    desc: "Focus on design. Every pixel and every line of code is optimized for peak performance and visual impact.",
+    desc: "Obsessive attention to craft. Every element and every line of code is refined for maximum performance and visual excellence.",
     icon: Gem,
     num: "01",
   },
   {
     title: "ROI Driven",
-    desc: "Focus on results. We build market-dominating digital assets that convert visitors into customers, systematically.",
+    desc: "Results above all else. We engineer high-converting digital products that transform visitors into paying customers, methodically.",
     icon: Zap,
     num: "02",
   },
   {
     title: "Future Proof",
-    desc: "Focus on modern tech. Leveraging the latest in AI and modern architecture to keep your brand ahead of the curve.",
+    desc: "Cutting-edge technology always. Harnessing the latest in AI and modern frameworks to keep your brand ahead of the curve.",
     icon: Eye,
     num: "03",
   },
@@ -81,7 +81,7 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <RoundedPageHero
         titleLines={["WHO WE ARE"]}
-        subtitle="The story, the people, and the passion behind ORBITIX DIGITAL — a team obsessed with building digital experiences that move businesses forward."
+        subtitle="The journey, the team, and the dedication powering ORBITIX DIGITAL — a collective committed to crafting digital solutions that propel businesses forward."
       />
 
       {/* ── VALUES ── */}
@@ -194,9 +194,9 @@ export default function AboutPage() {
                     Built With<br />The Best Stack
                   </h2>
                   <p className="font-body text-[#8e9192] text-lg mt-6 leading-relaxed">
-                    Every tool in our stack was chosen for performance, scalability,
-                    and developer experience. We use the same technology that
-                    powers modern SaaS products and AI platforms — because our
+                    Every tool in our stack is selected for performance, scalability,
+                    and developer experience. We leverage the same technology that
+                    powers modern SaaS platforms and AI systems — because our
                     clients deserve nothing less.
                   </p>
                 </motion.div>

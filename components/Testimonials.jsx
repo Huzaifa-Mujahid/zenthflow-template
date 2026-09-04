@@ -115,7 +115,7 @@ export default function Testimonials() {
         </div>
         <div className="max-w-sm">
           <p className="text-[#a8a8a8] text-sm md:text-base leading-relaxed">
-            We don&apos;t just finish projects; we build success together. Here is what they think of us
+            We don&apos;t just complete projects — we cultivate lasting success. Here&apos;s what our partners have to say about working with us.
           </p>
         </div>
       </motion.div>

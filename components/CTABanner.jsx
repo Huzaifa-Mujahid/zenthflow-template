@@ -15,7 +15,7 @@ export default function CTABanner() {
       >
         <div className="relative z-10">
           <span className="font-label text-[#a8a8a8] block mb-6 tracking-widest text-xs uppercase">
-            Get Started
+            Start Your Project
           </span>
           <h2
             className="font-display chrome-text mb-10 text-center"

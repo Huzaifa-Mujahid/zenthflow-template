@@ -120,7 +120,7 @@ export default function IndustriesWeServe() {
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[#8e9192] text-[17px] leading-relaxed mb-10 max-w-[480px]"
             >
-              We partner with global enterprises across industries to solve complex challenges through practical, scalable technology services aligned with their business goals, helping them adapt, grow, and lead in a fast-changing world.
+              We collaborate with global enterprises across diverse sectors to address complex challenges through practical, scalable technology services aligned with their strategic objectives — empowering them to adapt, grow, and lead in a rapidly evolving landscape.
             </motion.p>
 
             {/* Vertical Slot Carousel */}

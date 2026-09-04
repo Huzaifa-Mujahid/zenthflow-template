@@ -146,7 +146,7 @@ export default function WebsiteAudit({ initialUrl = "" }) {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <span className="font-label text-[#a8a8a8] block mb-5">Free Website Audit</span>
+            <span className="font-label text-[#a8a8a8] block mb-5">Complimentary Website Audit</span>
             <h2
               className="font-display chrome-text uppercase mb-4"
               style={{ fontSize: "clamp(32px, 5vw, 56px)" }}
@@ -154,7 +154,7 @@ export default function WebsiteAudit({ initialUrl = "" }) {
               How Fast Is Your Website?
             </h2>
             <p className="text-[#8e9192] text-lg max-w-2xl mx-auto">
-              Enter your website URL and get a free performance report powered by Google PageSpeed Insights.
+              Input your website URL to receive a complimentary performance analysis powered by Google PageSpeed Insights.
             </p>
           </motion.div>
 

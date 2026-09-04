@@ -62,7 +62,7 @@ export default function AppleCardsCarouselDemo() {
             Our Services
           </h2>
           <p className="font-body text-white/40 text-sm md:text-base max-w-sm">
-            Scroll to explore what we build — custom websites, web apps, branding, SEO, and AI automation for growing businesses.
+            Explore our full range of services — custom websites, web applications, branding, SEO, and AI automation designed to fuel business growth.
           </p>
         </motion.div>
 

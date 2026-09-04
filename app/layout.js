@@ -13,11 +13,11 @@ const geist = Geist({
 });
 
 export const metadata = {
-  title: "ORBITIX DIGITAL | Full Service Digital Agency & Business Systems Company",
+  title: "ORBITIX DIGITAL | Premium Digital Agency & Business Technology Partners",
   description:
-    "ORBITIX DIGITAL is a full service digital agency and business systems company serving clients globally. We provide branding, website development, web applications, AI automation, SEO, and social media management.",
+    "ORBITIX DIGITAL is a premium digital agency and business technology partner serving clients worldwide. We deliver branding, website development, web applications, AI automation, SEO, and social media management solutions.",
   keywords:
-    "full service digital agency, business systems company, digital solutions company, branding web development AI automation, website development and SEO company, social media management company",
+    "premium digital agency, business technology partner, digital solutions provider, branding web development AI automation, website development and SEO company, social media management agency",
 
   icons: {
     icon: "/favicon.png",
@@ -25,9 +25,9 @@ export const metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "ORBITIX DIGITAL | Full Service Digital Agency",
+    title: "ORBITIX DIGITAL | Premium Digital Agency",
     description:
-      "ORBITIX DIGITAL is a premium full service digital agency offering business systems, web development, AI automation, and SEO solutions for businesses worldwide.",
+      "ORBITIX DIGITAL is a full-service digital agency specializing in business systems, web development, AI automation, and SEO solutions for ambitious businesses worldwide.",
     type: "website",
     url: "https://orbitixdigital.com",
     siteName: "ORBITIX DIGITAL",
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
                     "https://instagram.com/orbitixdigital",
                     "https://www.linkedin.com/company/orbitixdigital"
                   ],
-                  "description": "A full service digital agency and business systems company serving clients worldwide, offering web development, AI automation, branding, and SEO services."
+                  "description": "A premium digital agency and business technology partner serving clients worldwide, offering web development, AI automation, branding, and SEO services."
                 },
                 {
                   "@type": "LocalBusiness",
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
                      "addressCountry": "US"
                    },
                   "areaServed": "Worldwide",
-                  "description": "Providing digital solutions, business growth systems, website development, and AI automation for businesses worldwide."
+                  "description": "Delivering comprehensive digital solutions, business growth systems, website development, and AI automation for enterprises worldwide."
                 }
               ]
             })

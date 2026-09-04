@@ -90,16 +90,16 @@ export const servicesShowcaseData = [
     id: "website-development",
     tag: "Service 01",
     title: "Website Development",
-    headline: "Websites That Command Authority",
+    headline: "Websites That Establish Authority",
     description:
-      "We engineer high-performance, custom website solutions that leave lasting impressions. Every pixel is intentional — from zero-latency loading to buttery-smooth interactions.",
+      "We develop high-performance, bespoke website solutions that create lasting impressions. Every detail is purposeful — from instantaneous loading to fluid, refined interactions.",
     solvesWhat:
-      "Visitors bounce in 3 seconds because your site feels cheap. We build business website development projects that stop them dead and turn curiosity into clients.",
+      "Visitors leave within 3 seconds when your site appears unprofessional. We craft business website development projects that captivate them instantly and transform curiosity into clientele.",
     features: [
-      "95+ PageSpeed scores — faster than 97% of competitors",
-      "Mobile-first, Core Web Vitals optimized from day one",
-      "Custom CMS and ecommerce development",
-      "Micro-animations & landing page design",
+      "95+ PageSpeed scores — outperforming 97% of competitors",
+      "Mobile-first architecture, Core Web Vitals optimized from inception",
+      "Custom CMS and ecommerce solutions",
+      "Micro-animations & conversion-focused landing pages",
     ],
     images: [
       "/services/website_1.webp",
@@ -884,54 +884,54 @@ export const servicesShowcaseData = [
 
     pageContent: {
       intro:
-        "Most businesses treat their website as a brochure. We build it as a working asset — one that loads fast, ranks on Google, and actually converts visitors into enquiries. Whether you're starting from scratch or rebuilding something that hasn't been performing, we handle the entire project from design to deployment.",
+        "Most businesses treat their website as a digital brochure. We architect it as a high-performing asset — one that loads instantly, ranks prominently on Google, and effectively converts visitors into qualified leads. Whether you're launching from scratch or revamping an underperforming site, we manage the complete lifecycle from design to deployment.",
 
       included: [
         {
-          label: "Custom design, no templates",
+          label: "Bespoke design, no templates",
           detail:
-            "Every page is designed from scratch based on your brand and business goals — not adapted from a theme.",
+            "Every page is crafted from the ground up based on your brand identity and business objectives — not adapted from a pre-made theme.",
         },
         {
-          label: "Next.js or custom stack",
+          label: "Next.js or custom technology stack",
           detail:
-            "We build on Next.js for most projects — it gives us full control over performance and functionality. WordPress is available if specifically needed.",
+            "We build on Next.js for most projects — it provides complete control over performance and functionality. WordPress is available when specifically required.",
         },
         {
           label: "CMS integration",
           detail:
-            "You get a content management system so your team can update text, images, and blog posts without touching code.",
+            "You receive a content management system enabling your team to update text, images, and blog posts without touching code.",
         },
         {
           label: "Core Web Vitals optimization",
           detail:
-            "We target 95+ PageSpeed scores before handoff — not as an afterthought. Performance is built into the architecture from day one.",
+            "We achieve 95+ PageSpeed scores before handoff — not as an afterthought. Performance is embedded into the architecture from inception.",
         },
         {
           label: "Mobile-first responsive layout",
           detail:
-            "Built for every screen size and tested on real devices — not just resized in a browser.",
+            "Engineered for every screen size and validated on real devices — not simply resized in a browser.",
         },
         {
           label: "On-page SEO foundation",
           detail:
-            "Meta tags, structured data, sitemap, and robots.txt — all set up correctly from the start so your site is ready to rank.",
+            "Meta tags, structured data, sitemap, and robots.txt — all configured correctly from the start so your site is primed to rank.",
         },
       ],
 
       notIncluded:
-        "Domain registration, hosting, and third-party software subscriptions are separate costs. We'll tell you exactly what you'll need and where to get it.",
+        "Domain registration, hosting, and third-party software subscriptions are separate costs. We'll specify exactly what you'll need and where to obtain it.",
 
       process: [
         {
           step: "01",
           title: "Discovery",
-          body: "We map your goals, target audience, competitor landscape, and must-have features before anything is designed. This is the most important part.",
+          body: "We map your objectives, target audience, competitive landscape, and essential features before any design work begins. This is the most critical phase.",
         },
         {
           step: "02",
           title: "Wireframes & Design",
-          body: "You approve the page structure and visual direction before we write a single line of code. No surprises at the end.",
+          body: "You approve the page structure and visual direction before we write a single line of code. No last-minute surprises.",
         },
         {
           step: "03",
@@ -941,12 +941,12 @@ export const servicesShowcaseData = [
         {
           step: "04",
           title: "Review & Revisions",
-          body: "Two rounds of revisions are included. We address feedback systematically — page by page, section by section.",
+          body: "Two rounds of revisions are included. We address feedback methodically — page by page, section by section.",
         },
         {
           step: "05",
           title: "Handoff & Training",
-          body: "You get the live site, CMS access, and a short walkthrough video so your team knows how to manage it going forward.",
+          body: "You receive the live site, CMS access, and a concise walkthrough video so your team knows how to manage it independently.",
         },
       ],
 
@@ -972,7 +972,7 @@ export const servicesShowcaseData = [
       faqs: [
         {
           q: "Do you build on WordPress?",
-          a: "We can, but we don't default to it. Most of our builds use Next.js because it gives us full control over performance and functionality. If you have an existing WordPress site that just needs updating, we'll work with what you have.",
+          a: "We can, but we don't default to it. Most of our builds use Next.js because it gives us complete control over performance and functionality. If you have an existing WordPress site that just needs updating, we'll work with what you have.",
         },
         {
           q: "What does a website typically cost?",
@@ -994,16 +994,16 @@ export const servicesShowcaseData = [
     id: "web-applications",
     tag: "Service 02",
     title: "Web Applications",
-    headline: "Custom Web App Development",
+    headline: "Bespoke Web Application Development",
     description:
-      "From SaaS platforms to complex business tools — we build web applications with real-time capabilities, seamless UX, and architecture that scales as you grow.",
+      "From SaaS platforms to sophisticated business tools — we develop web applications with real-time capabilities, seamless user experience, and scalable architecture that grows with your business.",
     solvesWhat:
-      "Off-the-shelf tools force your team to work around their limitations. We engineer business portal solutions built around exactly what you need — no compromises, no workarounds.",
+      "Off-the-shelf solutions force your team to compromise around their constraints. We engineer bespoke portal solutions built precisely around your requirements — no compromises, no workarounds.",
     features: [
-      "Real-time dashboards with live data & instant updates",
-      "Secure auth systems + granular role-based access control",
-      "Serverless architecture that handles 10× traffic spikes",
-      "Full third-party API integrations with your existing stack",
+      "Real-time dashboards with live data & instantaneous updates",
+      "Secure authentication systems + granular role-based access control",
+      "Serverless architecture that handles 10× traffic surges",
+      "Comprehensive third-party API integrations with your existing technology stack",
     ],
     images: ["/services/webapp_3.webp"],
     image: "/services/webapp_3.webp",
@@ -1973,13 +1973,13 @@ export const servicesShowcaseData = [
 
     pageContent: {
       intro:
-        "A web application is different from a website — it's software that runs in a browser and does actual work for your business. That could be a customer portal, an internal operations tool, a SaaS dashboard, a booking system, or anything that needs logic, user accounts, and real data behind it. When a spreadsheet or a tool like Notion is doing work it was never built for, that's usually the signal.",
+        "A web application differs fundamentally from a website — it's software operating within a browser that performs essential functions for your business. This could be a customer portal, an internal operations tool, a SaaS dashboard, a booking system, or any solution requiring logic, user accounts, and real data processing. When a spreadsheet or a tool like Notion is handling work it was never designed for, that's typically the indicator.",
 
       included: [
         {
-          label: "Custom UI/UX design",
+          label: "Bespoke UI/UX design",
           detail:
-            "Interfaces designed around how your actual users work — not adapted from generic dashboard templates.",
+            "Interfaces engineered around how your actual users operate — not adapted from generic dashboard templates.",
         },
         {
           label: "Authentication system",
@@ -1989,17 +1989,17 @@ export const servicesShowcaseData = [
         {
           label: "Real-time functionality",
           detail:
-            "Live data updates, notifications, and collaborative features where the business case requires them.",
+            "Live data updates, notifications, and collaborative features where the business case necessitates them.",
         },
         {
           label: "Third-party API integrations",
           detail:
-            "Connect to payment gateways, CRMs, ERPs, and any external service your business already relies on.",
+            "Connect to payment gateways, CRMs, ERPs, and any external service your business already depends on.",
         },
         {
           label: "Serverless / cloud architecture",
           detail:
-            "Scales automatically under traffic spikes — no separate ops team or server management required on your end.",
+            "Scales automatically during traffic surges — no separate operations team or server management required on your end.",
         },
         {
           label: "Admin panel",
@@ -2012,12 +2012,12 @@ export const servicesShowcaseData = [
         {
           step: "01",
           title: "Scoping session",
-          body: "We map every user type, every action they take, and every piece of data that moves through the system — before writing a single spec.",
+          body: "We map every user type, every action they perform, and every piece of data that flows through the system — before writing a single specification.",
         },
         {
           step: "02",
           title: "Architecture design",
-          body: "Data models, API structure, and third-party integrations are decided upfront. Nothing gets rearchitected mid-build because we skipped this.",
+          body: "Data models, API structure, and third-party integrations are determined upfront. Nothing gets rearchitected mid-build because we overlooked this phase.",
         },
         {
           step: "03",
@@ -2027,7 +2027,7 @@ export const servicesShowcaseData = [
         {
           step: "04",
           title: "QA & security testing",
-          body: "Every auth flow, data input, and edge case is tested. We look for what breaks it, not just what works.",
+          body: "Every authentication flow, data input, and edge case is tested. We look for what breaks it, not just what works.",
         },
         {
           step: "05",
@@ -2594,13 +2594,13 @@ export const servicesShowcaseData = [
     id: "seo-growth",
     tag: "Service 04",
     title: "SEO & Growth",
-    headline: "Dominate Search Results",
+    headline: "Command Search Results",
     description:
-      "Data-driven technical SEO and automation funnels that compound your organic visibility. We turn search engines into a predictable, scalable revenue engine.",
+      "Data-driven technical SEO and automation funnels that compound your organic visibility. We transform search engines into a predictable, scalable revenue engine.",
     solvesWhat:
-      "You're invisible on Google — which means your competitors take every customer who searches for what you offer. We exist to change that.",
+      "You're invisible on Google — which means your competitors capture every customer who searches for what you offer. We exist to change that.",
     features: [
-      "Full technical SEO audit — find and eliminate every ranking leak",
+      "Comprehensive technical SEO audit — identify and eliminate every ranking deficiency",
       "Local SEO targeting buyer-intent keywords",
       "On-page optimization + E-E-A-T content that Google rewards",
       "Transparent monthly ranking reports with clear ROI attribution",
@@ -3777,18 +3777,18 @@ export const servicesShowcaseData = [
 
     pageContent: {
       intro:
-        "SEO is not a magic trick and it doesn't produce results in two weeks. What it does — when done correctly — is make your business findable by people who are already searching for what you offer. We work on the technical foundation, the keyword strategy, and the content together, because fixing only one of the three doesn't move rankings.",
+        "SEO is not a shortcut and it doesn't deliver results in two weeks. What it does — when executed correctly — is make your business discoverable by people who are actively searching for what you offer. We work on the technical foundation, the keyword strategy, and the content simultaneously, because addressing only one of the three doesn't move rankings.",
 
       included: [
         {
           label: "Technical SEO audit",
           detail:
-            "A full review of crawl errors, page speed issues, duplicate content, broken links, missing metadata, and Core Web Vitals — delivered as a prioritized fix list, not just a report.",
+            "A thorough review of crawl errors, page speed issues, duplicate content, broken links, missing metadata, and Core Web Vitals — delivered as a prioritized remediation list, not just a report.",
         },
         {
           label: "Keyword strategy",
           detail:
-            "We research what your actual customers search for, map terms to pages, and target buyer-intent keywords rather than high-volume terms that attract the wrong traffic.",
+            "We research what your actual customers search for, map terms to pages, and target buyer-intent keywords rather than high-volume terms that attract irrelevant traffic.",
         },
         {
           label: "On-page optimization",
@@ -3811,7 +3811,7 @@ export const servicesShowcaseData = [
         {
           step: "01",
           title: "Site audit",
-          body: "We crawl your entire site and identify every technical issue holding back rankings — in priority order, not just an alphabetical list of problems.",
+          body: "We crawl your entire site and identify every technical issue hindering rankings — in priority order, not just an alphabetical list of problems.",
         },
         {
           step: "02",
@@ -4624,16 +4624,16 @@ export const servicesShowcaseData = [
     id: "video-editing",
     tag: "Service 06",
     title: "Video Editing & Production",
-    headline: "Stories That Move. Brands That Stick.",
+    headline: "Stories That Resonate. Brands That Endure.",
     description:
-      "From raw footage to cinematic masterpieces — we craft compelling video content that captivates audiences and positions your brand as a market leader.",
+      "From raw footage to cinematic masterpieces — we produce compelling video content that captivates audiences and establishes your brand as a market authority.",
     solvesWhat:
-      "Amateurish video destroys credibility in the first 2 seconds. Cinematic content builds brands that audiences remember and trust.",
+      "Subpar video erodes credibility within the first 2 seconds. Cinematic content builds brands that audiences remember and trust.",
     features: [
       "Reels & short-form videos optimized for algorithm reach",
-      "Brand films + ad creatives engineered to convert on first watch",
+      "Brand films + ad creatives engineered to convert on first viewing",
       "Professional color grading, sound design, and motion graphics",
-      "Fast delivery — raw footage to polished cut in under 72 hours",
+      "Rapid delivery — raw footage to polished cut in under 72 hours",
     ],
     images: ["/services/video_2.webp"],
     image: "/services/video_2.webp",
@@ -5419,43 +5419,43 @@ export const servicesShowcaseData = [
 
     pageContent: {
       intro:
-        "Most businesses produce weak video for one of two reasons: either the editing is amateurish, or the content has no structure — it looks like raw footage rather than a story. We handle both. Whether you're shooting it yourself or we're coordinating the production, the output is video that actually holds attention past the first three seconds.",
+        "Most businesses produce underwhelming video for one of two reasons: either the editing is unprofessional, or the content lacks structure — it appears as raw footage rather than a cohesive narrative. We address both. Whether you're filming independently or we're coordinating the production, the outcome is video that genuinely holds attention beyond the initial three seconds.",
 
       included: [
         {
           label: "Short-form content",
           detail:
-            "Reels, TikToks, and YouTube Shorts — edited for platform algorithms, with captions, pacing, and hooks designed to retain viewers, not just get an initial click.",
+            "Reels, TikToks, and YouTube Shorts — edited for platform algorithms, with captions, pacing, and hooks designed to retain viewers, not merely generate an initial click.",
         },
         {
           label: "Brand films",
           detail:
-            "Longer-format content for your website, investor presentations, or launch campaigns — scripted, structured, and produced to a broadcast standard.",
+            "Longer-format content for your website, investor presentations, or launch campaigns — scripted, structured, and produced to broadcast standards.",
         },
         {
           label: "Ad creatives",
           detail:
-            "Video ads built to convert — opening hook, offer presentation, and clear CTA engineered into the edit, not added as an afterthought.",
+            "Video ads built to convert — opening hook, offer presentation, and clear CTA engineered into the edit, not appended as an afterthought.",
         },
         {
           label: "Professional color grading",
           detail:
-            "A real color treatment on every deliverable — not just auto-correct. Consistent look and feel across all content in the same campaign.",
+            "A genuine color treatment on every deliverable — not just auto-correct. Consistent aesthetic across all content within the same campaign.",
         },
         {
           label: "Sound design",
           detail:
-            "Licensed music, sound effects, and audio cleanup — no home-video audio quality in anything we deliver.",
+            "Licensed music, sound effects, and audio cleanup — no amateur-quality audio in anything we deliver.",
         },
         {
           label: "Motion graphics",
           detail:
-            "Lower thirds, title cards, logo reveals, and animated infographics where the story benefits from them.",
+            "Lower thirds, title cards, logo reveals, and animated infographics where the narrative benefits from them.",
         },
       ],
 
       notIncluded:
-        "Filming on location is not included by default — we edit footage you provide. If you need a full production (camera crew, director, location management), we can coordinate that as a separate scope.",
+        "On-location filming is not included by default — we edit footage you provide. If you need a full production (camera crew, director, location management), we can coordinate that as a separate scope.",
 
       process: [
         {
@@ -5503,7 +5503,7 @@ export const servicesShowcaseData = [
       ],
 
       closingCta:
-        "If you have footage on a hard drive that hasn't been edited, or you're producing content regularly but the quality isn't where it needs to be — send us a sample and let's talk about what a better output looks like. Turnaround on most short-form edits is 48–72 hours from receiving footage.",
+        "If you have footage on a hard drive that hasn't been edited, or you're producing content regularly but the quality isn't where it needs to be — send us a sample and let's discuss what a better output looks like. Turnaround on most short-form edits is 48–72 hours from receiving footage.",
 
       faqs: [
         {
@@ -5530,14 +5530,14 @@ export const servicesShowcaseData = [
     id: "ai-automation",
     tag: "Service 07",
     title: "AI & Automation",
-    headline: "AI Automation Services",
+    headline: "Intelligent Automation Solutions",
     description:
-      "Custom AI models and business automation services that eliminate repetitive tasks, reduce operational costs, and scale your output without scaling your team.",
+      "Bespoke AI models and business automation services that eliminate repetitive tasks, reduce operational costs, and scale your output without expanding your team.",
     solvesWhat:
-      "Your team burns hours on tasks a machine could do in seconds. We automate the grunt work so your best people focus on what actually grows the business.",
+      "Your team wastes hours on tasks a machine could accomplish in seconds. We automate the routine work so your best people concentrate on what genuinely grows the business.",
     features: [
       "Chatbot development resolving 80% of support tickets",
-      "Workflow automation cutting operational costs by 40%+",
+      "Workflow automation reducing operational costs by 40%+",
       "AI-powered content & report generation at scale",
       "Custom model training on your proprietary business data",
     ],
@@ -6131,7 +6131,7 @@ export const servicesShowcaseData = [
 
     pageContent: {
       intro:
-        "Most businesses have processes that repeat themselves constantly — customer questions that always get the same answer, data that gets copied from one tool to another, reports someone builds manually every week. Automation handles those. AI adds decision-making and language intelligence on top. The result is that your team stops spending time on work that shouldn't require human attention.",
+        "Most businesses have processes that repeat constantly — customer inquiries that always receive the same response, data that gets transferred from one tool to another, reports someone compiles manually every week. Automation handles those. AI adds decision-making and language intelligence on top. The result is that your team stops spending time on work that shouldn't require human attention.",
 
       included: [
         {

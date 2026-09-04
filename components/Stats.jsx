@@ -7,23 +7,23 @@ import AnimateNumbers from "@/components/AnimateNumbers";
 const statsData = [
   {
     number: "150+",
-    title: "Projects completed",
-    desc: "Trusted among the top 1% of freelancers worldwide."
+    title: "Projects Delivered",
+    desc: "Recognized among the top 1% of digital professionals globally."
   },
   {
     number: "120+",
-    title: "Clients served",
-    desc: "From startups to giants - each treated like our only one."
+    title: "Clients Supported",
+    desc: "From emerging startups to established enterprises — each receiving our undivided focus."
   },
   {
     number: "100%",
     title: "Client Satisfaction",
-    desc: "All 5-star reviews. No compromises. No \"just okay.\""
+    desc: "Consistently 5-star rated. No compromises. No half-measures."
   },
   {
     number: "7+",
-    title: "Years of experience",
-    desc: "Expertise in UX, branding, and growth-focused design."
+    title: "Years of Expertise",
+    desc: "Proven proficiency in UX design, branding, and performance-driven strategies."
   }
 ];
 

@@ -15,19 +15,19 @@ const fadeUp = (delay = 0) => ({
 const contactInfo = [
   {
     icon: Mail,
-    label: "Direct Communication",
+    label: "Email Us Directly",
     value: "info@orbitixdigital.com",
     href: "mailto:info@orbitixdigital.com",
   },
   {
     icon: Phone,
-    label: "Technical Support",
+    label: "Call Us",
     value: "+1 (510) 500-5817",
     href: "tel:+15105005817",
   },
   {
     icon: MapPin,
-    label: "Global Hub",
+    label: "Our Location",
     value: "Albany, New York 12207",
   },
 ];
@@ -58,7 +58,7 @@ export default function ContactPage() {
       {/* ── HERO ── */}
       <RoundedPageHero
         titleLines={["Let's Build", "Something Great"]}
-        subtitle="Have a project in mind? Share your goals and our team will respond within 24 hours."
+        subtitle="Have a project in mind? Share your objectives and our team will respond within 24 hours."
       />
 
       {/* ── CONTACT FORM ── */}
@@ -128,7 +128,7 @@ export default function ContactPage() {
               </span>
             </motion.div>
             <motion.p {...fadeUp(0.35)} className="font-body text-[#8e9192] text-sm leading-relaxed mt-4">
-              From concept to launch, we partner with you at every stage. Tell us about your goals, timeline, and budget — and we&apos;ll craft a solution that fits. No pressure, no hidden fees, just honest conversations and premium delivery.
+              From ideation to deployment, we collaborate with you at every phase. Share your vision, timeline, and budget — and we&apos;ll develop a tailored solution that aligns perfectly. No pressure, no concealed costs, just transparent dialogue and exceptional delivery.
             </motion.p>
           </div>
 

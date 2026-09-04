@@ -6,31 +6,31 @@ import { Plus, Minus } from "lucide-react";
 
 const faqData = [
   {
-    question: "What services does your agency provide?",
-    answer: "We offer a comprehensive suite of digital services including custom web development, mobile app creation, UI/UX design, AI integration, digital strategy, branding, and automation solutions. Our goal is to provide end-to-end tech infrastructure for your business."
+    question: "What type of solutions do you specialize in?",
+    answer: "We specialize in a wide spectrum of digital solutions including bespoke web development, mobile application design, UI/UX engineering, AI-powered automation, strategic digital consulting, brand identity creation, and workflow optimization — all tailored to build robust technology foundations for your organization."
   },
   {
-    question: "How do you approach a new project?",
-    answer: "We start with a deep dive into your business goals and technical requirements. From there, we create a strategic plan, followed by design prototypes and iterative development cycles, ensuring full transparency and alignment at every step."
+    question: "What does your project workflow look like?",
+    answer: "Our process begins with a thorough understanding of your organizational goals and technical landscape. We then architect a comprehensive strategy, move into design prototyping, and execute through iterative development sprints — maintaining complete visibility and alignment at every checkpoint."
   },
   {
-    question: "What is the typical timeline for a project?",
-    answer: "Project timelines vary depending on complexity and scope. A standard web application might take 4-8 weeks, while enterprise-level custom software or AI integrations can take 3-6 months. We provide a detailed timeline during the proposal phase."
+    question: "How long does a typical engagement take?",
+    answer: "Engagement durations depend on project scope and complexity. A standard web application generally spans 4-8 weeks, whereas enterprise-grade custom software or AI implementations may extend to 3-6 months. We outline a precise timeline as part of our initial proposal."
   },
   {
-    question: "How do you handle revisions?",
-    answer: "We believe in collaborative development. We include dedicated revision cycles during the design and development phases to ensure the final product aligns perfectly with your vision before launch."
+    question: "Do you accommodate modification requests?",
+    answer: "Absolutely. We champion a co-creative approach and build structured revision windows into both the design and development phases, ensuring the final deliverable mirrors your exact expectations prior to deployment."
   },
   {
-    question: "What are your pricing and service packages?",
-    answer: "We don't believe in rigid, one-size-fits-all price lists. Instead, we deliver the best possible service through tailored, cost-effective solutions built around your specific goals and budget. For a personalized quote and to get started, simply reach out to us and we'll take care of the rest."
+    question: "How is your pricing structured?",
+    answer: "We steer away from inflexible, standardized packages. Instead, we craft bespoke, value-driven solutions calibrated to your particular objectives and financial parameters. Reach out to us for a customized proposal and we'll manage the rest."
   }
 ];
 
 export default function FAQ({
   items = faqData,
   titleLines = ["Got questions?", "We've got", "answers"],
-  subtitle = "Everything you need to know about our process, services, and how we work together",
+  subtitle = "Everything you need to know about our process, capabilities, and how we collaborate with our partners",
 }) {
   const [openIndex, setOpenIndex] = useState(0);
 

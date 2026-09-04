@@ -19,7 +19,9 @@ export default function MegaMenu({ onClose }) {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {}, 150);
+    timeoutRef.current = setTimeout(() => {
+      setActiveService(servicesShowcaseData[0]);
+    }, 200);
   };
 
   const handlePanelEnter = () => {
@@ -64,7 +66,7 @@ export default function MegaMenu({ onClose }) {
         className="w-[280px] p-6 relative bg-[#111] border-r border-white/10"
         onMouseEnter={handlePanelEnter}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={activeService.id}
             initial={{ opacity: 0, x: -10 }}
@@ -110,7 +112,7 @@ export default function MegaMenu({ onClose }) {
         className="w-[390px] p-3 relative bg-[#111] overflow-hidden"
         onMouseEnter={handlePanelEnter}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={activeService.id}
             initial={{ opacity: 0, scale: 1.05 }}
