@@ -136,7 +136,7 @@ export default function ContactPage() {
           <motion.form
             {...fadeUp(0.15)}
             onSubmit={handleSubmit}
-            action="https://formsubmit.co/info@orbitixdigital.com"
+            action="https://formsubmit.co/support@digitalorbitsolutionsllc.com"
             method="POST"
             className="glass-card-no-hover p-8 space-y-5"
           >
