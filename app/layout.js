@@ -53,7 +53,10 @@ export default function RootLayout({ children }) {
       className={`${geist.variable}`}
     >
       <head>
-
+        <meta
+          name="google-site-verification"
+          content="q63Wjmk06QTHw6WQoktQrPiXS_iRp5V5VCEhioYi9V4"
+        />
         <link rel="preload" as="image" href="/herosection%20images/1.png" />
         <script
           type="application/ld+json"
