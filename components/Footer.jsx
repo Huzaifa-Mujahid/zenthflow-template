@@ -67,7 +67,7 @@ export default function Footer() {
                 {socialsData.map(({ href, icon: Icon, label }) => (
                   <a
                     key={label}
-                    href="#"
+                    href={href}
                     aria-label={label}
                     target="_blank"
                     rel="noopener noreferrer"

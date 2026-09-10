@@ -71,8 +71,8 @@ export default function RootLayout({ children }) {
                   "url": "https://orbitixdigital.com",
                   "logo": "https://orbitixdigital.com/logo.png",
                   "sameAs": [
-                    "https://instagram.com/orbitixdigital",
-                    "https://www.linkedin.com/company/orbitixdigital"
+                    "https://www.facebook.com/orbitixdigital",
+                    "https://www.instagram.com/orbitixdigital"
                   ],
                   "description": "A premium digital agency and business technology partner serving clients worldwide, offering web development, AI automation, branding, and SEO services."
                 },
