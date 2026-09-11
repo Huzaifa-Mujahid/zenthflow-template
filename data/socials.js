@@ -13,6 +13,6 @@ export const InstagramIcon = (props) => (
 );
 
 export const socialsData = [
-  { href: "https://www.facebook.com/orbitixdigital/", label: "Facebook", icon: FacebookIcon },
-  { href: "https://www.instagram.com/orbitixdigital/", label: "Instagram", icon: InstagramIcon },
+  { href: "https://www.facebook.com/zenithflowstudios/", label: "Facebook", icon: FacebookIcon },
+  { href: "https://www.instagram.com/zenithflowstudios/", label: "Instagram", icon: InstagramIcon },
 ];

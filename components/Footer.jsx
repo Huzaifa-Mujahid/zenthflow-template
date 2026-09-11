@@ -47,7 +47,7 @@ export default function Footer() {
             {/* Newsletter / Left Side */}
             <div className="max-w-md w-full">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-8 leading-tight tracking-tight text-white">
-                Stay updated with Orbitix news
+                Stay updated with ZenithFlow news
               </h3>
               
               {/* Input form */}
@@ -114,7 +114,7 @@ export default function Footer() {
           {/* Huge Title Section */}
           <div className="w-full mb-10 flex justify-center items-center overflow-hidden">
               <h1 className="text-[11vw] xl:text-[150px] font-bold tracking-tighter leading-none text-white whitespace-nowrap">
-                  ORBITIX DIGITAL
+                  ZENITHFLOW STUDIOS
               </h1>
           </div>
 
@@ -123,7 +123,7 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-white/60">
-            <p>Orbitix Digital © {new Date().getFullYear()}. All rights reserved.</p>
+            <p>ZenithFlow Studios © {new Date().getFullYear()}. All rights reserved.</p>
             <div className="flex gap-4 items-center">
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <span className="w-px h-3 bg-white/20"></span>

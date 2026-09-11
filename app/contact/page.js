@@ -16,14 +16,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email Us Directly",
-    value: "info@orbitixdigital.com",
-    href: "mailto:info@orbitixdigital.com",
+    value: "info@zenithflowstudios.com",
+    href: "mailto:info@zenithflowstudios.com",
   },
   {
     icon: Phone,
     label: "Call Us",
-    value: "+1 (510) 500-5817",
-    href: "tel:+15105005817",
+    value: "+1 (555) 123-4567",
+    href: "tel:+15551234567",
   },
   {
     icon: MapPin,
@@ -136,15 +136,15 @@ export default function ContactPage() {
           <motion.form
             {...fadeUp(0.15)}
             onSubmit={handleSubmit}
-            action="https://formsubmit.co/support@digitalorbitsolutionsllc.com"
+            action="https://formsubmit.co/support@zenithflowstudios.com"
             method="POST"
             className="glass-card-no-hover p-8 space-y-5"
           >
             {/* Formsubmit.co configuration */}
-            <input type="hidden" name="_subject" value="New Inquiry - Orbitix Digital" />
+            <input type="hidden" name="_subject" value="New Inquiry - ZenithFlow Studios" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://orbitixdigital.com/contact" />
+            <input type="hidden" name="_next" value="https://zenithflowstudios.com/contact" />
             <div className="relative">
               <label className="block font-label text-[#a8a8a8] mb-2 uppercase text-xs">
                 Your Name

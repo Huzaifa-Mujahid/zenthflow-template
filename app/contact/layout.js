@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "Contact Us | ORBITIX DIGITAL",
+  title: "Contact Us | ZENITHFLOW STUDIOS",
   description:
-    "Get in touch with ORBITIX DIGITAL — Let's discuss your next project. Reach out for web development, branding, SEO, and digital strategy.",
+    "Get in touch with ZENITHFLOW STUDIOS — Let's discuss your next project. Reach out for web development, branding, SEO, and digital strategy.",
   openGraph: {
-    title: "Contact Us | ORBITIX DIGITAL",
+    title: "Contact Us | ZENITHFLOW STUDIOS",
     description:
-      "Get in touch with ORBITIX DIGITAL — Let's discuss your next project. Reach out for web development, branding, SEO, and digital strategy.",
+      "Get in touch with ZENITHFLOW STUDIOS — Let's discuss your next project. Reach out for web development, branding, SEO, and digital strategy.",
   },
 };
 

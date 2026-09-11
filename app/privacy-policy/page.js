@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
       {/* ── HERO (matches blog page style) ─────────── */}
       <RoundedPageHero
         titleLines={["Privacy", "Policy"]}
-        subtitle="How ORBITIX DIGITAL collects, uses, and protects your personal information — including when you opt in to receive SMS communications from us."
+        subtitle="How ZENITHFLOW STUDIOS collects, uses, and protects your personal information — including when you opt in to receive SMS communications from us."
       />
 
       {/* ── ROUNDED CONTENT SECTION ───────────────── */}
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="relative z-10 px-5 md:px-10 lg:px-20 max-w-[1100px] mx-auto py-16 md:py-24">
             <p className="text-[#e5e2e1] text-base md:text-lg leading-relaxed mb-14 font-body">
-              ORBITIX DIGITAL values your privacy and is committed
+              ZENITHFLOW STUDIOS values your privacy and is committed
               to protecting your personal information. This Privacy Policy
               explains how we collect, use, and protect your information,
               including when you opt in to receive SMS communications from us.
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             <Section number="3" title="SMS Communications & Consent">
               <p>
                 By providing your phone number and opting in, you consent to
-                receive SMS messages from ORBITIX DIGITAL. These may
+                receive SMS messages from ZENITHFLOW STUDIOS. These may
                 include:
               </p>
               <ul className="list-disc pl-6 space-y-2 marker:text-[#e8602e]">

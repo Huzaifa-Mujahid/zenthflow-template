@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "About Us | ORBITIX DIGITAL",
+  title: "About Us | ZENITHFLOW STUDIOS",
   description:
-    "Meet ORBITIX DIGITAL — a full service digital agency delivering agency-level results through a dedicated team of specialists. Built on real code, real strategy, and a genuine obsession with quality.",
+    "Meet ZENITHFLOW STUDIOS — a full service digital agency delivering agency-level results through a dedicated team of specialists. Built on real code, real strategy, and a genuine obsession with quality.",
   openGraph: {
-  title: "About Us | ORBITIX DIGITAL",
+  title: "About Us | ZENITHFLOW STUDIOS",
     description:
-      "Meet ORBITIX DIGITAL — a full service digital agency delivering agency-level results through a dedicated team of specialists. Built on real code, real strategy, and a genuine obsession with quality.",
+      "Meet ZENITHFLOW STUDIOS — a full service digital agency delivering agency-level results through a dedicated team of specialists. Built on real code, real strategy, and a genuine obsession with quality.",
   },
 };
 

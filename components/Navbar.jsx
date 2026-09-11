@@ -94,7 +94,7 @@ export default function Navbar() {
           <Link href="/" className="relative group flex items-center z-[60] flex-none">
             <Image
               src="/logo.png"
-              alt="ORBITIX DIGITAL"
+              alt="ZENITHFLOW STUDIOS"
               width={200}
               height={64}
               className="h-12 md:h-14 w-auto"
@@ -312,11 +312,11 @@ export default function Navbar() {
                 >
                   <div>
                     <span className="font-label text-[#a8a8a8] mb-4 block tracking-widest uppercase">Contact</span>
-                    <a href="mailto:info@orbitixdigital.com" className="font-body text-xl text-white hover:chrome-text transition-all duration-300 mb-2 block">
-                      info@orbitixdigital.com
+                    <a href="mailto:info@zenithflowstudios.com" className="font-body text-xl text-white hover:chrome-text transition-all duration-300 mb-2 block">
+                      info@zenithflowstudios.com
                     </a>
-                    <a href="tel:+15105005817" className="font-body text-lg text-[#c4c7c8] hover:text-white transition-all duration-300">
-                      +1 (510) 500-5817
+                    <a href="tel:+15551234567" className="font-body text-lg text-[#c4c7c8] hover:text-white transition-all duration-300">
+                      +1 (555) 123-4567
                     </a>
                   </div>
 

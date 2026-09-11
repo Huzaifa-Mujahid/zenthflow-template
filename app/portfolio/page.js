@@ -269,7 +269,7 @@ function ProjectCard({ project }) {
                 className="font-display chrome-text text-5xl mb-2"
                 style={{ fontFamily: "var(--font-geist)" }}
               >
-                ZVX
+                ZFS
               </div>
             </div>
           </div>

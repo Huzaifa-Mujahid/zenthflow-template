@@ -41,21 +41,21 @@ export async function generateMetadata({ params }) {
   const post = getPostBySlug(slug);
   if (!post) {
     return {
-      title: "Blog | ORBITIX DIGITAL",
-      description: "Read the latest insights from ORBITIX DIGITAL.",
+      title: "Blog | ZENITHFLOW STUDIOS",
+      description: "Read the latest insights from ZENITHFLOW STUDIOS.",
     };
   }
   return {
-    title: `${post.title} | ORBITIX DIGITAL Blog`,
+    title: `${post.title} | ZENITHFLOW STUDIOS Blog`,
     description: post.description,
     alternates: {
-      canonical: `https://orbitixdigital.com/blog/${post.slug}`,
+      canonical: `https://zenithflowstudios.com/blog/${post.slug}`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `https://orbitixdigital.com/blog/${post.slug}`,
+      url: `https://zenithflowstudios.com/blog/${post.slug}`,
       publishedTime: post.date,
       authors: [post.author],
     },

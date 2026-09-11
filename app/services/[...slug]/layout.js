@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
 
   if (!service) {
     return {
-      title: "Service Not Found | ORBITIX DIGITAL",
+      title: "Service Not Found | ZENITHFLOW STUDIOS",
       description: "The requested service could not be found.",
     };
   }
@@ -20,15 +20,15 @@ export async function generateMetadata({ params }) {
     const subService = service.subServices?.find((sub) => sub.id === subServiceId);
     if (!subService) {
       return {
-        title: "Service Not Found | ORBITIX DIGITAL",
+      title: "Service Not Found | ZENITHFLOW STUDIOS",
         description: "The requested service could not be found.",
       };
     }
     return {
-      title: `${subService.title} | ORBITIX DIGITAL`,
+        title: `${subService.title} | ZENITHFLOW STUDIOS`,
       description: service.description,
       openGraph: {
-        title: `${subService.title} | ORBITIX DIGITAL`,
+      title: `${subService.title} | ZENITHFLOW STUDIOS`,
         description: service.description,
         images: service.image ? [{ url: service.image }] : [],
       },
@@ -36,10 +36,10 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${service.title} | ORBITIX DIGITAL`,
+      title: `${service.title} | ZENITHFLOW STUDIOS`,
     description: service.description,
     openGraph: {
-      title: `${service.title} | ORBITIX DIGITAL`,
+    title: `${service.title} | ZENITHFLOW STUDIOS`,
       description: service.description,
       images: service.image ? [{ url: service.image }] : [],
     },

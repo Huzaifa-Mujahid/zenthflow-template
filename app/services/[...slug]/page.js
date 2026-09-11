@@ -54,9 +54,9 @@ export default function ServicePage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://orbitixdigital.com" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://orbitixdigital.com/services" },
-      { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://orbitixdigital.com/services/${service.id}` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zenithflowstudios.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://zenithflowstudios.com/services" },
+      { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://zenithflowstudios.com/services/${service.id}` }
     ]
   };
 
@@ -64,7 +64,7 @@ export default function ServicePage({ params }) {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": service.title,
-    "provider": { "@type": "LocalBusiness", "name": "ORBITIX DIGITAL" },
+    "provider": { "@type": "LocalBusiness", "name": "ZENITHFLOW STUDIOS" },
     "areaServed": { "@type": "Country", "name": "Worldwide" },
     "description": service.description
   };

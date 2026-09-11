@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const WHATSAPP_NUMBER = "15105005817";
+const WHATSAPP_NUMBER = "15551234567";
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);

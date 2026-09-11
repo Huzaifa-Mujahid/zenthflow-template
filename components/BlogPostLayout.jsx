@@ -137,15 +137,15 @@ function ArticleJsonLd({ title, description, date, author, slug }) {
     author: { "@type": "Organization", name: author },
     publisher: {
       "@type": "Organization",
-      name: "ORBITIX DIGITAL",
+      name: "ZENITHFLOW STUDIOS",
       logo: {
         "@type": "ImageObject",
-        url: "https://orbitixdigital.com/logo.png",
+        url: "https://zenithflowstudios.com/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://orbitixdigital.com/blog/${slug}`,
+      "@id": `https://zenithflowstudios.com/blog/${slug}`,
     },
   };
   return (
@@ -208,7 +208,7 @@ function Divider() {
 export default function BlogPostLayout({
   title = "Blog Post Title",
   category = "Blog",
-  author = "ORBITIX Team",
+   author = "ZENITHFLOW Team",
   date = "January 10, 2025",
   heroImage = null,
   content = null,

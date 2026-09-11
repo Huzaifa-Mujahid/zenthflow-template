@@ -363,10 +363,10 @@ export default function HomePage() {
                 fontSize: "clamp(36px, 5vw, 72px)",
               }}
             >
-              Why Orbitix Digital?
+              Why ZenithFlow Studios?
             </h2>
             <p className="font-body text-[#8e9192] text-base leading-relaxed">
-              Not every agency operates at the same standard. ORBITIX DIGITAL merges deep technical expertise with meticulous design precision — delivering solutions that endure.
+              Not every agency operates at the same standard. ZENITHFLOW STUDIOS merges deep technical expertise with meticulous design precision — delivering solutions that endure.
             </p>
 
             {/* Trust Image */}

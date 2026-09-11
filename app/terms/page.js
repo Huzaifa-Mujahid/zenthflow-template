@@ -27,7 +27,7 @@ export default function TermsPage() {
       {/* ── HERO (matches privacy policy / blog style) ─────────── */}
       <RoundedPageHero
         titleLines={["Terms &", "Conditions"]}
-        subtitle="The following terms govern the services provided by ORBITIX DIGITAL. By engaging our services, you agree to the terms outlined below."
+        subtitle="The following terms govern the services provided by ZENITHFLOW STUDIOS. By engaging our services, you agree to the terms outlined below."
       />
 
       {/* ── ROUNDED CONTENT SECTION ───────────────── */}
@@ -87,7 +87,7 @@ export default function TermsPage() {
 
             <Section number="07" title="Intellectual Property">
               <p>
-                Work remains the property of ORBITIX DIGITAL until
+                Work remains the property of ZENITHFLOW STUDIOS until
                 full payment is received. Reselling or duplicating our proprietary
                 code without permission is prohibited.
               </p>

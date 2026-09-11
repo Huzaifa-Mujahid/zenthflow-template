@@ -81,7 +81,7 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <RoundedPageHero
         titleLines={["WHO WE ARE"]}
-        subtitle="The journey, the team, and the dedication powering ORBITIX DIGITAL — a collective committed to crafting digital solutions that propel businesses forward."
+        subtitle="The journey, the team, and the dedication powering ZENITHFLOW STUDIOS — a collective committed to crafting digital solutions that propel businesses forward."
       />
 
       {/* ── VALUES ── */}

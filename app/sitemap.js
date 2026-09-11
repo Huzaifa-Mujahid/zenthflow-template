@@ -1,6 +1,6 @@
 import { servicesShowcaseData } from "@/data/servicesData";
 
-const baseUrl = "https://orbitixdigital.com";
+const baseUrl = "https://zenithflowstudios.com";
 
 export default async function sitemap() {
   const staticPages = [

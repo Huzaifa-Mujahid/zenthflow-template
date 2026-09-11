@@ -1,19 +1,19 @@
-# ZOVEREX
+# ZENITHFLOW STUDIOS
 > A premium tech services agency engineering digital excellence. Built for performance, crafted for impact.
 
 ## About
-ZOVEREX is a one-person agency by Huzaifa Bin Mujahid, delivering agency-level results in web development, UI/UX design, branding, mobile apps, automation, and AI.
+ZENITHFLOW STUDIOS is a full-service digital agency delivering agency-level results in web development, UI/UX design, branding, mobile apps, automation, and AI.
 
 ## Services
-- [Website Development](https://zoverex.com/services/website-development)
-- [Web Applications](https://zoverex.com/services/web-applications)
-- [Branding & Identity](https://zoverex.com/services/branding-identity)
-- [SEO & Growth](https://zoverex.com/services/seo-growth)
-- [Social Media Marketing](https://zoverex.com/services/social-media)
-- [Video Editing & Production](https://zoverex.com/services/video-editing)
-- [AI & Automation](https://zoverex.com/services/ai-automation)
+- [Website Development](https://zenithflowstudios.com/services/website-development)
+- [Web Applications](https://zenithflowstudios.com/services/web-applications)
+- [Branding & Identity](https://zenithflowstudios.com/services/branding-identity)
+- [SEO & Growth](https://zenithflowstudios.com/services/seo-growth)
+- [Social Media Marketing](https://zenithflowstudios.com/services/social-media)
+- [Video Editing & Production](https://zenithflowstudios.com/services/video-editing)
+- [AI & Automation](https://zenithflowstudios.com/services/ai-automation)
 
 ## Contact
-- Email: info@orbitixdigital.com
-- Phone: +1 (510) 500-5817
+- Email: info@zenithflowstudios.com
+- Phone: +1 (555) 123-4567
 - Location: Albany, New York 12207

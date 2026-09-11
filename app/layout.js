@@ -14,9 +14,9 @@ const geist = Geist({
 });
 
 export const metadata = {
-  title: "ORBITIX DIGITAL | Premium Digital Agency & Business Technology Partners",
+  title: "ZENITHFLOW STUDIOS | Premium Digital Agency & Business Technology Partners",
   description:
-    "ORBITIX DIGITAL is a premium digital agency and business technology partner serving clients worldwide. We deliver branding, website development, web applications, AI automation, SEO, and social media management solutions.",
+    "ZENITHFLOW STUDIOS is a premium digital agency and business technology partner serving clients worldwide. We deliver branding, website development, web applications, AI automation, SEO, and social media management solutions.",
   keywords:
     "premium digital agency, business technology partner, digital solutions provider, branding web development AI automation, website development and SEO company, social media management agency",
 
@@ -26,12 +26,12 @@ export const metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "ORBITIX DIGITAL | Premium Digital Agency",
+    title: "ZENITHFLOW STUDIOS | Premium Digital Agency",
     description:
-      "ORBITIX DIGITAL is a full-service digital agency specializing in business systems, web development, AI automation, and SEO solutions for ambitious businesses worldwide.",
+      "ZENITHFLOW STUDIOS is a full-service digital agency specializing in business systems, web development, AI automation, and SEO solutions for ambitious businesses worldwide.",
     type: "website",
-    url: "https://orbitixdigital.com",
-    siteName: "ORBITIX DIGITAL",
+    url: "https://zenithflowstudios.com",
+    siteName: "ZENITHFLOW STUDIOS",
   },
 };
 
@@ -79,23 +79,23 @@ export default function RootLayout({ children }) {
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://orbitixdigital.com/#organization",
-                  "name": "ORBITIX DIGITAL",
-                  "url": "https://orbitixdigital.com",
-                  "logo": "https://orbitixdigital.com/logo.png",
+                  "@id": "https://zenithflowstudios.com/#organization",
+                  "name": "ZENITHFLOW STUDIOS",
+                  "url": "https://zenithflowstudios.com",
+                  "logo": "https://zenithflowstudios.com/logo.png",
                   "sameAs": [
-                    "https://www.facebook.com/orbitixdigital",
-                    "https://www.instagram.com/orbitixdigital"
+                    "https://www.facebook.com/zenithflowstudios",
+                    "https://www.instagram.com/zenithflowstudios"
                   ],
                   "description": "A premium digital agency and business technology partner serving clients worldwide, offering web development, AI automation, branding, and SEO services."
                 },
                 {
                   "@type": "LocalBusiness",
-                  "@id": "https://orbitixdigital.com/#localbusiness",
-                  "name": "ORBITIX DIGITAL",
-                  "url": "https://orbitixdigital.com",
-                   "telephone": "+15105005817",
-                   "email": "info@orbitixdigital.com",
+                  "@id": "https://zenithflowstudios.com/#localbusiness",
+                  "name": "ZENITHFLOW STUDIOS",
+                  "url": "https://zenithflowstudios.com",
+                   "telephone": "+15551234567",
+                   "email": "info@zenithflowstudios.com",
                    "address": {
                      "@type": "PostalAddress",
                      "streetAddress": "Albany, New York 12207",

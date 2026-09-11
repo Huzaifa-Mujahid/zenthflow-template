@@ -1,4 +1,4 @@
-// ── ORBITIX DIGITAL Services Data ─────────────────────────────────────────────────────
+// ── ZENITHFLOW STUDIOS Services Data ─────────────────────────────────────────────────────
 // Each service maps to actual images in /public/services/
 // layout: "image-left" | "image-right" | "image-full" | "image-grid" | "website-scroll" | "image-showcase"
 

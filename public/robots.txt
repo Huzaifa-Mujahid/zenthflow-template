@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zoverex.com/sitemap.xml
+Sitemap: https://zenithflowstudios.com/sitemap.xml
