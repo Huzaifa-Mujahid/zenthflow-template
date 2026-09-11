@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Geist } from "next/font/google";
 
 import "./globals.css";
@@ -53,6 +54,18 @@ export default function RootLayout({ children }) {
       className={`${geist.variable}`}
     >
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-S11FHY2NDK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-S11FHY2NDK');
+          `}
+        </Script>
         <meta
           name="google-site-verification"
           content="q63Wjmk06QTHw6WQoktQrPiXS_iRp5V5VCEhioYi9V4"
